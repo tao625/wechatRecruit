@@ -49,9 +49,9 @@ class Wj(BaseTable):
         (1, "已发布"),
     )
 
-    title = models.CharField(max_length=255, verbose_name="试卷名", null=False, unique=True)
+    title = models.CharField(max_length=255, verbose_name="试卷名", unique=True)
     status = models.IntegerField(choices=status_type, verbose_name='是否发布', default=0)
-    desc = models.TextField(verbose_name="问卷说明", null=True)
+    desc = models.TextField(verbose_name="问卷说明", null=True, blank=True)
     create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者")
 
     def __str__(self):
@@ -60,7 +60,7 @@ class Wj(BaseTable):
 
 class Question(BaseTable):
     """
-    问题表
+    试题表
     """
 
     class Meta:
@@ -82,6 +82,7 @@ class Question(BaseTable):
     def __str__(self):
         return self.title
 
+
 class Options(BaseTable):
     """
     选项表
@@ -93,26 +94,11 @@ class Options(BaseTable):
 
     questionId = models.ForeignKey(Question, verbose_name="关联题目", on_delete=models.CASCADE)
     title = models.CharField(max_length=100, verbose_name='选项名')
+    score = models.IntegerField(verbose_name="分数", null=True, blank=True)
 
     def __str__(self):
         return self.title
 
-class Submit(BaseTable):
-    """
-    提交信息表
-    """
-
-    class Meta:
-        verbose_name = "提交信息"
-        verbose_name_plural = verbose_name
-
-    wjId = models.IntegerField(verbose_name='关联问卷id')
-    submitIp = models.CharField(max_length=15, verbose_name='提交ip', null=False)
-    submitUser = models.ForeignKey(Respondents, verbose_name="提交人", on_delete=models.CASCADE)
-    useTime = models.IntegerField(verbose_name='填写用时')  # 单位：秒
-
-    def __str__(self):
-        return Wj.objects.filter(id=self.wjId).title
 
 class Answer(BaseTable):
     """
@@ -123,12 +109,13 @@ class Answer(BaseTable):
         verbose_name = "回答表"
         verbose_name_plural = verbose_name
 
-    questionId = models.IntegerField(verbose_name='关联问题id')
-    submitId = models.IntegerField(verbose_name='关联提交id')
-    wjId = models.IntegerField(verbose_name='问卷id')
-    type = models.CharField(max_length=20, verbose_name='题目类型')
-    answer = models.IntegerField(verbose_name='答案', blank=True, null=True)
+    wj = models.ForeignKey(Wj, on_delete=models.CASCADE, verbose_name="问卷")
+    submitIp = models.CharField(max_length=15, verbose_name='提交人IP', null=True, blank=True)
+    submitUser = models.ForeignKey(Respondents, verbose_name="提交人", on_delete=models.CASCADE, null=True, blank=True)
+    useTime = models.IntegerField(verbose_name='答题耗时', null=True, blank=True)  # 单位：秒
+    answerChoice = models.CharField(verbose_name='选择题答案', blank=True, null=True, max_length=255)
     answerText = models.TextField(verbose_name='文本答案', blank=True, null=True)
 
+
     def __str__(self):
-        return Submit.objects.filter(id=self.submitId).submitUser
+        return self.wj.title

@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 import xadmin
 from xadmin import views
-from recruit.models import Respondents, Wj, Question, Options, Submit, Answer
+from recruit.models import Respondents, Wj, Question, Options, Answer
 
 
 class GlobalSettings(object):
@@ -35,26 +35,18 @@ class QuestionAdmin(object):
 
 
 class OptionsAdmin(object):
-    list_display = ["questionId", "title"]
+    list_display = ["questionId", "title", "score"]
     list_display_link = ["title"]
-    search_fields = ["title"]
-    list_filter = ["title", "questionId"]
-    ordering = ['-update_time']
-
-
-class SubmitAdmin(object):
-    list_display = ["wjId", "submitIp", "submitUser", "useTime"]
-    list_display_link = ["wjId", "submitUser"]
-    search_fields = ["wjId", "submitIp", "submitUser", "useTime"]
-    list_filter = ["wjId", "submitIp", "submitUser", "useTime"]
+    search_fields = ["title", "score"]
+    list_filter = ["title", "questionId", "score"]
     ordering = ['-update_time']
 
 
 class AnswerAdmin(object):
-    list_display = ["questionId", "submitId", "wjId", "type", "answer", "answerText"]
-    list_display_link = ["submitId", "wjId"]
-    search_fields = ["submitId", "wjId", "type"]
-    list_filter = ["submitId", "wjId", "type"]
+    list_display = ["wj", "submitUser", "useTime", "answerChoice", "answerText"]
+    list_display_link = ["wj", "submitUser"]
+    search_fields = ["wj", "submitIp"]
+    list_filter = ["wj", "submitIp", "submitUser"]
     ordering = ['-update_time']
 
 
@@ -63,5 +55,4 @@ xadmin.site.register(Respondents, RespondentsAdmin)
 xadmin.site.register(Wj, WjAdmin)
 xadmin.site.register(Question, QuestionAdmin)
 xadmin.site.register(Options, OptionsAdmin)
-xadmin.site.register(Submit, SubmitAdmin)
 xadmin.site.register(Answer, AnswerAdmin)
