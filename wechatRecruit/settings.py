@@ -199,7 +199,7 @@ REST_FRAMEWORK = {
                                'rest_framework.parsers.MultiPartParser',
                                'rest_framework.parsers.FileUploadParser',
                                ],
-    'DEFAULT_PAGINATION_CLASS': 'FasterRunner.pagination.MyPageNumberPagination',
+    'DEFAULT_PAGINATION_CLASS': 'wechatRecruit.pagination.MyPageNumberPagination',
 }
 
 

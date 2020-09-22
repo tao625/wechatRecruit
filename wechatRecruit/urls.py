@@ -16,9 +16,15 @@ Including another URLconf
 import xadmin
 from django.urls import path, include
 from django.conf.urls import url
+from rest_framework.authtoken import views
+from rest_framework_jwt.views import obtain_jwt_token
 
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
-    path('recruit', include('recruit.urls'))
+    # drf自带的token认证模式
+    url(r'^api-token-auth/', views.obtain_auth_token),
+    # jwt的认证接口
+    url(r'^api/user/login/', obtain_jwt_token),
+    path(r'recruit/', include('recruit.urls')),
 ]

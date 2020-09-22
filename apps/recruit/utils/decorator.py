@@ -3,7 +3,7 @@ import logging
 
 from recruit.utils import parser
 
-logger = logging.getLogger('FasterRunner')
+logger = logging.getLogger('recruit')
 
 
 def request_log(level):

@@ -82,6 +82,9 @@ class Question(BaseTable):
     def __str__(self):
         return self.title
 
+    def get_options(self):
+        return Options.objects.filter(questionId=self.id)
+
 
 class Options(BaseTable):
     """
