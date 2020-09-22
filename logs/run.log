@@ -1,0 +1,2067 @@
+2020-09-21 17:46:09,368 [WARNING] - Not Found: /
+2020-09-21 17:46:16,409 [ERROR] - Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'wechatrecruit.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'wechatrecruit.xadmin_usersettings' doesn't exist")
+2020-09-21 18:17:18,283 [WARNING] - Forbidden (Permission denied): /xadmin/recruit/respondents/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 271, in view
+    self = cls(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 499, in __init__
+    super(ModelAdminView, self).__init__(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 266, in __init__
+    self.init_request(*args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 122, in init_request
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2020-09-21 18:17:20,580 [WARNING] - Forbidden (Permission denied): /xadmin/users/user/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 271, in view
+    self = cls(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 499, in __init__
+    super(ModelAdminView, self).__init__(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 266, in __init__
+    self.init_request(*args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 122, in init_request
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2020-09-21 18:17:22,128 [WARNING] - Forbidden (Permission denied): /xadmin/users/user/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 271, in view
+    self = cls(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 499, in __init__
+    super(ModelAdminView, self).__init__(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 266, in __init__
+    self.init_request(*args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 122, in init_request
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2020-09-21 18:51:50,858 [ERROR] - Internal Server Error: /xadmin/recruit/wj/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'intention_position'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Wj has no field named 'intention_position'
+2020-09-21 18:52:04,928 [ERROR] - Internal Server Error: /xadmin/recruit/wj/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'intention_position'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Wj has no field named 'intention_position'
+2020-09-22 09:32:34,990 [WARNING] - Not Found: /
+2020-09-22 09:32:35,087 [WARNING] - Not Found: /favicon.ico
+2020-09-22 10:05:12,862 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+2020-09-22 10:08:54,987 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+2020-09-22 10:14:51,396 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+2020-09-22 10:17:39,980 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+2020-09-22 10:17:46,676 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+2020-09-22 10:24:56,468 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+2020-09-22 11:53:01,272 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'score'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Options has no field named 'score'
+2020-09-22 11:53:09,097 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'score'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Options has no field named 'score'
+2020-09-22 12:09:42,701 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'score'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Options has no field named 'score'
+2020-09-22 12:13:04,811 [ERROR] - Internal Server Error: /xadmin/recruit/options/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_options.score' in 'field list'")
+2020-09-22 12:13:59,762 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'submitId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Answer has no field named 'submitId'
+2020-09-22 12:14:25,473 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'submitId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Answer has no field named 'submitId'
+2020-09-22 12:14:40,163 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'submitId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Answer has no field named 'submitId'
+2020-09-22 12:14:42,837 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'submitId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Answer has no field named 'submitId'
+2020-09-22 12:14:47,491 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'submitId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Answer has no field named 'submitId'
+2020-09-22 12:16:24,828 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 565, in get_field
+    return self.fields_map[field_name]
+KeyError: 'wjId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 120, in get_list_queryset
+    self.model, field_path)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\admin\utils.py", line 482, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\options.py", line 567, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Answer has no field named 'wjId'
+2020-09-22 12:16:40,986 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_answer.submitIp' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 124, in get_list_queryset
+    self.model, self.admin_view, field_path=field_path)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\filters.py", line 100, in create
+    model, admin_view, field_path=field_path)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\filters.py", line 502, in __init__
+    self.lookup_choices = [str(it) for it in queryset.values_list(field_path, flat=True) if str(it).strip() != ""]
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 274, in __iter__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 182, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1092, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_answer.submitIp' in 'field list'")
+2020-09-22 12:19:04,672 [ERROR] - Internal Server Error: /xadmin/recruit/answer/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'recruit_answer.submitIp' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 401, in get
+    response = self.get_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\filters.py", line 124, in get_list_queryset
+    self.model, self.admin_view, field_path=field_path)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\filters.py", line 100, in create
+    model, admin_view, field_path=field_path)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\filters.py", line 502, in __init__
+    self.lookup_choices = [str(it) for it in queryset.values_list(field_path, flat=True) if str(it).strip() != ""]
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 274, in __iter__
+    self._fetch_all()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\query.py", line 182, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1092, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\models\sql\compiler.py", line 1140, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'recruit_answer.submitIp' in 'field list'")
+2020-09-22 12:25:05,996 [ERROR] - Internal Server Error: /xadmin/xadmin/userwidget/add/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py", line 203, in render
+    c = self.get_render(context).flatten()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py", line 120, in get_render
+    actual_form, node_context, template_pack=self.template_pack
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\helper.py", line 301, in render_layout
+    html = self.layout.render(form, self.form_style, context, template_pack=template_pack)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 135, in render
+    return self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 66, in render_field
+    return field.render(form, form_style, context, template_pack=template_pack,)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 367, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 66, in render_field
+    return field.render(form, form_style, context, template_pack=template_pack,)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 367, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 66, in render_field
+    return field.render(form, form_style, context, template_pack=template_pack,)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 289, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 139, in render_field
+    html = template.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\templatetags\crispy_forms_field.py", line 155, in render
+    return str(field)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\forms\boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\forms\boundfield.py", line 93, in as_widget
+    renderer=self.form.renderer,
+TypeError: render() got an unexpected keyword argument 'renderer'
+2020-09-22 12:28:07,850 [ERROR] - Internal Server Error: /xadmin/xadmin/userwidget/add/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py", line 203, in render
+    c = self.get_render(context).flatten()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py", line 120, in get_render
+    actual_form, node_context, template_pack=self.template_pack
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\helper.py", line 301, in render_layout
+    html = self.layout.render(form, self.form_style, context, template_pack=template_pack)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 135, in render
+    return self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 66, in render_field
+    return field.render(form, form_style, context, template_pack=template_pack,)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 367, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 66, in render_field
+    return field.render(form, form_style, context, template_pack=template_pack,)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 367, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 66, in render_field
+    return field.render(form, form_style, context, template_pack=template_pack,)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 289, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in get_rendered_fields
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\layout.py", line 98, in <genexpr>
+    for field in self.fields
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\utils.py", line 139, in render_field
+    html = template.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\crispy_forms\templatetags\crispy_forms_field.py", line 155, in render
+    return str(field)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\forms\boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\forms\boundfield.py", line 93, in as_widget
+    renderer=self.form.renderer,
+TypeError: render() got an unexpected keyword argument 'renderer'
+2020-09-22 12:34:37,156 [ERROR] - Internal Server Error: /xadmin/recruit/answer/add/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "c:\users\dingyutao\appdata\local\programs\python\python36\Lib\contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\edit.py", line 292, in post
+    self.save_models()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\edit.py", line 269, in save_models
+    self.log(flag, self.change_message(), self.new_obj)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 231, in log
+    log.object_repr = force_text(obj)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\utils\encoding.py", line 67, in force_text
+    s = str(s)
+TypeError: __str__ returned non-string (type Wj)

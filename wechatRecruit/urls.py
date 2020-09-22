@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 import xadmin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls import url
 
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
+    path('recruit', include('recruit.urls'))
 ]
