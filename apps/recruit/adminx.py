@@ -19,26 +19,31 @@ class RespondentsAdmin(object):
 
 
 class WjAdmin(object):
-    list_display = ["title", "status", "desc", "create_by"]
+    list_display = ["id", "title", "get_questions", "status", "desc", "create_by"]
     list_display_link = ["title", "status", "create_by"]
     search_fields = ["title", "status", "create_by"]
     list_filter = ["title", "status", "create_by", 'create_time', 'update_time']
     ordering = ['-update_time']
 
+    def get_questions(self, obj):
+        return Question.objects.filter(wjId=obj.id).count()
+
+    get_questions.short_description = "试题总数"
+    get_questions.allow_tags = True
 
 class QuestionAdmin(object):
-    list_display = ["title", "type", "wjId", "must", "create_by"]
+    list_display = ["id", "title", "type", "wjId", "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
     search_fields = ["title", "type", "create_by"]
     list_filter = ["title", "type", "create_by", 'create_time', 'update_time']
-    ordering = ['-update_time']
+    ordering = ['id']
 
 
 class OptionsAdmin(object):
-    list_display = ["questionId", "title", "score"]
+    list_display = ["title", "score"]
     list_display_link = ["title"]
     search_fields = ["title", "score"]
-    list_filter = ["title", "questionId", "score"]
+    list_filter = ["title", "score"]
     ordering = ['-update_time']
 
 

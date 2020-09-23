@@ -35,6 +35,10 @@ class Respondents(BaseTable):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+        return "答题人"
+
+
 class Wj(BaseTable):
     """
     问卷表
@@ -57,6 +61,28 @@ class Wj(BaseTable):
     def __str__(self):
         return self.title
 
+    def __repr__(self):
+        return "问卷表"
+
+
+class Options(BaseTable):
+    """
+    选项表
+    """
+
+    class Meta:
+        verbose_name = "选项"
+        verbose_name_plural = verbose_name
+
+    title = models.CharField(max_length=100, verbose_name='选项名')
+    score = models.IntegerField(verbose_name="分数", null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    def __repr__(self):
+        return "选项表"
+
 
 class Question(BaseTable):
     """
@@ -77,30 +103,14 @@ class Question(BaseTable):
     type = models.IntegerField(verbose_name='题目类型', choices=q_type, default=1)
     wjId = models.ForeignKey(Wj, on_delete=models.CASCADE, verbose_name="所属问卷")
     must = models.BooleanField(verbose_name='是否必填')
+    options = models.ManyToManyField(Options, verbose_name="选项")
     create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者")
 
     def __str__(self):
         return self.title
 
-    def get_options(self):
-        return Options.objects.filter(questionId=self.id)
-
-
-class Options(BaseTable):
-    """
-    选项表
-    """
-
-    class Meta:
-        verbose_name = "选项"
-        verbose_name_plural = verbose_name
-
-    questionId = models.ForeignKey(Question, verbose_name="关联题目", on_delete=models.CASCADE)
-    title = models.CharField(max_length=100, verbose_name='选项名')
-    score = models.IntegerField(verbose_name="分数", null=True, blank=True)
-
-    def __str__(self):
-        return self.title
+    # def __repr__(self):
+    #     return "试题表"
 
 
 class Answer(BaseTable):
@@ -119,6 +129,8 @@ class Answer(BaseTable):
     answerChoice = models.CharField(verbose_name='选择题答案', blank=True, null=True, max_length=255)
     answerText = models.TextField(verbose_name='文本答案', blank=True, null=True)
 
-
     def __str__(self):
         return self.wj.title
+
+    def __repr__(self):
+        return "回答表"
