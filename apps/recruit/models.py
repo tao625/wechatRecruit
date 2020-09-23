@@ -74,6 +74,19 @@ class Options(BaseTable):
     def __str__(self):
         return self.title
 
+class Animal(BaseTable):
+    """
+    题目所属动物
+    """
+    class Meta:
+        verbose_name = "动物"
+        verbose_name_plural = verbose_name
+
+    name = models.CharField(max_length=100, verbose_name='动物名')
+
+    def __str__(self):
+        return self.name
+
 
 class Question(BaseTable):
     """
@@ -83,23 +96,24 @@ class Question(BaseTable):
     class Meta:
         verbose_name = "试题"
         verbose_name_plural = verbose_name
+        unique_together = [["qid", "wjId"]]
 
     q_type = (
         (1, "单选题"),
         (2, "多选题"),
         (3, "主观题"),
     )
-
+    qid = models.IntegerField(verbose_name='题目序号', null=True)
     title = models.CharField(max_length=100, verbose_name='题目标题')
     type = models.IntegerField(verbose_name='题目类型', choices=q_type, default=1)
     wjId = models.ForeignKey(Wj, on_delete=models.CASCADE, verbose_name="所属问卷")
     must = models.BooleanField(verbose_name='是否必填')
     options = models.ManyToManyField(Options, verbose_name="选项")
     create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者")
+    animal = models.ForeignKey(Animal, on_delete=models.CASCADE, null=True, blank=True, verbose_name='动物')
 
     def __str__(self):
         return self.title
-
 
 
 class Answer(BaseTable):
@@ -108,7 +122,7 @@ class Answer(BaseTable):
     """
 
     class Meta:
-        verbose_name = "回答表"
+        verbose_name = "答卷"
         verbose_name_plural = verbose_name
 
     wj = models.ForeignKey(Wj, on_delete=models.CASCADE, verbose_name="问卷")

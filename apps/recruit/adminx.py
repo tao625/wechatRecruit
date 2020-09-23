@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 import xadmin
 from xadmin import views
-from recruit.models import Respondents, Wj, Question, Options, Answer
+from recruit.models import Respondents, Wj, Question, Options, Answer, Animal
 
 
 class GlobalSettings(object):
@@ -32,11 +32,11 @@ class WjAdmin(object):
     get_questions.allow_tags = True
 
 class QuestionAdmin(object):
-    list_display = ["id", "title", "type", "wjId", "must", "create_by"]
+    list_display = ["qid", "title", "type", "wjId", "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
     search_fields = ["title", "type", "create_by"]
     list_filter = ["title", "type", "create_by", 'create_time', 'update_time']
-    ordering = ['id']
+    ordering = ['qid']
 
 
 class OptionsAdmin(object):
@@ -55,9 +55,17 @@ class AnswerAdmin(object):
     ordering = ['-update_time']
 
 
+class AnimalAdmin(object):
+    list_display = ["name"]
+    list_display_link = ["name"]
+    search_fields = ["name"]
+    list_filter = ["name", "id"]
+
+
 xadmin.site.register(views.CommAdminView, GlobalSettings)
 xadmin.site.register(Respondents, RespondentsAdmin)
 xadmin.site.register(Wj, WjAdmin)
 xadmin.site.register(Question, QuestionAdmin)
 xadmin.site.register(Options, OptionsAdmin)
 xadmin.site.register(Answer, AnswerAdmin)
+xadmin.site.register(Animal, AnimalAdmin)
