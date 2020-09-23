@@ -132,3 +132,4 @@ dmypy.json
 .pyre/
 /extract_apps/xadmin/locale/
 /logs/
+/logs/

@@ -35,9 +35,6 @@ class Respondents(BaseTable):
     def __str__(self):
         return self.name
 
-    def __repr__(self):
-        return "答题人"
-
 
 class Wj(BaseTable):
     """
@@ -61,9 +58,6 @@ class Wj(BaseTable):
     def __str__(self):
         return self.title
 
-    def __repr__(self):
-        return "问卷表"
-
 
 class Options(BaseTable):
     """
@@ -80,9 +74,6 @@ class Options(BaseTable):
     def __str__(self):
         return self.title
 
-    def __repr__(self):
-        return "选项表"
-
 
 class Question(BaseTable):
     """
@@ -96,7 +87,7 @@ class Question(BaseTable):
     q_type = (
         (1, "单选题"),
         (2, "多选题"),
-        (3, "填空题"),
+        (3, "主观题"),
     )
 
     title = models.CharField(max_length=100, verbose_name='题目标题')
@@ -109,8 +100,6 @@ class Question(BaseTable):
     def __str__(self):
         return self.title
 
-    # def __repr__(self):
-    #     return "试题表"
 
 
 class Answer(BaseTable):
@@ -131,6 +120,3 @@ class Answer(BaseTable):
 
     def __str__(self):
         return self.wj.title
-
-    def __repr__(self):
-        return "回答表"
