@@ -259,7 +259,7 @@ LOGGING = {
         },
         'recruit': {
             'handlers': ['script_handler', 'console'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': True
         }
     }

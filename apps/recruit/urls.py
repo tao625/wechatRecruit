@@ -13,5 +13,9 @@ urlpatterns = [
 
     path(r'wj/<int:pk>/', api.WjView.as_view({
         "get": "single",
+    })),
+
+    path(r'answer/', api.AnserView.as_view({
+        'post': 'post',
     }))
 ]
