@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 import xadmin
 from xadmin import views
-from recruit.models import Respondents, Wj, Question, Options, Answer, Animal
+from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character
 
 
 class GlobalSettings(object):
@@ -62,6 +62,13 @@ class AnimalAdmin(object):
     list_filter = ["name", "id"]
 
 
+class CharacterAdmin(object):
+    list_display = ["name", "alias", "animal", "content", "professional", "wj"]
+    list_display_link = ["name"]
+    search_fields = ["name", "alias"]
+    list_filter = ["name", "alias"]
+
+
 xadmin.site.register(views.CommAdminView, GlobalSettings)
 xadmin.site.register(Respondents, RespondentsAdmin)
 xadmin.site.register(Wj, WjAdmin)
@@ -69,3 +76,4 @@ xadmin.site.register(Question, QuestionAdmin)
 xadmin.site.register(Options, OptionsAdmin)
 xadmin.site.register(Answer, AnswerAdmin)
 xadmin.site.register(Animal, AnimalAdmin)
+xadmin.site.register(Character, CharacterAdmin)

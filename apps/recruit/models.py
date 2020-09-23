@@ -87,6 +87,23 @@ class Animal(BaseTable):
     def __str__(self):
         return self.name
 
+class Character(BaseTable):
+    """
+    性格分析
+    """
+    class Meta:
+        verbose_name = "性格分析"
+        verbose_name_plural = verbose_name
+
+    name = models.CharField(max_length=255, null=True, blank=True, verbose_name="名称")
+    alias = models.CharField(max_length=255, verbose_name="性格别名", null=True, blank=True)
+    animal = models.OneToOneField(Animal, null=True, blank=True, on_delete=models.CASCADE, help_text="仅PDP性格测试需要选择", verbose_name="动物")
+    content = models.TextField(verbose_name='主要表现', null=True, blank=True)
+    professional = models.TextField(verbose_name='代表职业', null=True, blank=True)
+    wj = models.ForeignKey(Wj, on_delete=models.CASCADE, verbose_name="试卷", null=True)
+
+    def __str__(self):
+        return self.name
 
 class Question(BaseTable):
     """
@@ -130,7 +147,7 @@ class Answer(BaseTable):
     submitUser = models.ForeignKey(Respondents, verbose_name="提交人", on_delete=models.CASCADE, null=True, blank=True)
     useTime = models.IntegerField(verbose_name='答题耗时', null=True, blank=True)  # 单位：秒
     answerChoice = models.CharField(verbose_name='选择题答案', blank=True, null=True, max_length=255)
-    answerText = models.TextField(verbose_name='文本答案', blank=True, null=True)
+    answerText = models.TextField(verbose_name='主观题答案', blank=True, null=True)
 
     def __str__(self):
         return self.wj.title
