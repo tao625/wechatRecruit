@@ -60,14 +60,13 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
           }
     }
 
-
     """
     queryset = models.Answer.objects
 
     @method_decorator(request_log(level='DEBUG'))
     def post(self, request):
         wj_id = request.data['wj_id']
-        submit_user_id = request.data['submit_answer_id']
+        submit_user_id = request.data['submit_user_id']
         submit_ip = request.data.get('submit_ip', '')
         use_time = request.data['use_time']
         answer_choice = json.dumps(request.data.get('answer_choice', ""))
@@ -79,21 +78,22 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
         except:
             return Response(response.ANSWER_PARA_ERROR)
 
-        _, tag = models.Answer.objects.update_or_create(
-            wj=wj,
-            submitIp=submit_ip,
-            submitUser=submit_user,
-            defaults={
-                "answerChoice": answer_choice,
-                "answerText": answer_text,
-                "useTime": use_time
-            }
-        )
+        data = {
+            'wj': wj,
+            'submit_ip': submit_ip,
+            'submit_user': submit_user,
+            'answer_choice': answer_choice,
+            'answer_text': answer_text,
+            'use_time': use_time
+        }
         answer_sheet = dict(
             submit_user=submit_user.name,
             wj=wj.title,
         )
-        if tag:
+        s = serializers.AnswerSerializer(data=data)
+        if s.is_valid():
+            s.save(wj=wj, submit_user=submit_user)
+            s.save()
             answer_sheet.update(response.ANSWER_SAVE_SUCCESS)
             return Response(answer_sheet)
         else:
@@ -106,7 +106,6 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
         :param request:
         :return:
         """
-
         querset = self.get_queryset()
         serializer = serializers.AnswerSerializer(querset, many=True)
 

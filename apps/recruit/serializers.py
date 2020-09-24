@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from rest_framework import serializers
-from recruit.models import Wj, Question, Options, Answer, Respondents
+from recruit.models import Wj, Question, Options, Answer, Respondents, Character
 
 class OptionsSerializer(serializers.ModelSerializer):
 
@@ -55,13 +55,29 @@ class AnswerSerializer(serializers.ModelSerializer):
     答题卡序列化
     """
     submit_user = serializers.SerializerMethodField()
+    wj = serializers.SerializerMethodField()
 
     class Meta:
         model = Answer
-        fields = '__all__'
+        fields = ['id', 'submit_ip', 'use_time', 'answer_choice', 'answer_text', 'submit_user', 'wj']
         depth = 1
 
     def get_submit_user(self, obj):
-        user = Respondents.objects.filter(id=obj.submitUser.id)
+        user = Respondents.objects.filter(id=obj.submit_user.id)
         serializer = RespondentsSerializer(user, many=True)
         return serializer.data
+
+    def get_wj(self, obj):
+        wj_obj = Wj.objects.filter(id=obj.wj.id)
+        serializer = WJSerializer(wj_obj, many=True)
+        return serializer.data
+
+class CharacterSerializer(serializers.ModelSerializer):
+    """
+    性格分析序列化
+    """
+
+    class Meta:
+        model = Character
+        fields = '__all__'
+        depth = 1

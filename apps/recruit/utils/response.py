@@ -24,5 +24,5 @@ ANSWER_PARA_ERROR = {
 ANSWER_SAVE_ERROR = {
     "code": "0203",
     "success": False,
-    "msg": "相同答题卡已存在"
+    "msg": "传入的字段不符合要求"
 }

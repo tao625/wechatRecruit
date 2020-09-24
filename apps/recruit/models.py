@@ -143,11 +143,11 @@ class Answer(BaseTable):
         verbose_name_plural = verbose_name
 
     wj = models.ForeignKey(Wj, on_delete=models.CASCADE, verbose_name="问卷")
-    submitIp = models.CharField(max_length=15, verbose_name='提交人IP', null=True, blank=True)
-    submitUser = models.ForeignKey(Respondents, verbose_name="提交人", on_delete=models.CASCADE, null=True, blank=True)
-    useTime = models.IntegerField(verbose_name='答题耗时', null=True, blank=True)  # 单位：秒
-    answerChoice = models.CharField(verbose_name='选择题答案', blank=True, null=True, max_length=255)
-    answerText = models.TextField(verbose_name='主观题答案', blank=True, null=True)
+    submit_ip = models.CharField(max_length=15, verbose_name='提交人IP', null=True, blank=True)
+    submit_user = models.ForeignKey(Respondents, verbose_name="提交人", on_delete=models.CASCADE, null=True, blank=True)
+    use_time = models.IntegerField(verbose_name='答题耗时', null=True, blank=True)  # 单位：秒
+    answer_choice = models.CharField(verbose_name='选择题答案', blank=True, null=True, max_length=255)
+    answer_text = models.TextField(verbose_name='主观题答案', blank=True, null=True)
 
     def __str__(self):
         return self.wj.title
