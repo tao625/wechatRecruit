@@ -7,12 +7,16 @@ from django.utils.decorators import method_decorator
 from recruit import serializers, models
 from rest_framework.viewsets import GenericViewSet, mixins, ModelViewSet
 from rest_framework.response import Response
+from rest_framework.permissions import DjangoModelPermissions
 from recruit.utils import response, parser
 from recruit.utils.decorator import request_log
+from wechatRecruit import pagination
 
 
 class WjView(GenericViewSet):
     serializer_class = serializers.WJSerializer
+    pagination_class = pagination.MyCursorPagination
+    permission_classes = DjangoModelPermissions
     queryset = models.Wj.objects
 
     @method_decorator(request_log(level='DEBUG'))
@@ -62,6 +66,8 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
     """
     serializer_class = serializers.AnswerSerializer
+    pagination_class = pagination.MyCursorPagination
+    permission_classes = DjangoModelPermissions
     queryset = models.Answer.objects
 
     @method_decorator(request_log(level='DEBUG'))
@@ -138,6 +144,12 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
 
 class RespondentsView(GenericViewSet, mixins.ListModelMixin):
+    """
+    应聘者信息
+    """
+
+    pagination_class = pagination.MyCursorPagination
+    permission_classes = DjangoModelPermissions
     serializer_class = serializers.RespondentsSerializer
     queryset = models.Respondents.objects
 
