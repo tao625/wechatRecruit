@@ -16,7 +16,7 @@ from wechatRecruit import pagination
 class WjView(GenericViewSet):
     serializer_class = serializers.WJSerializer
     pagination_class = pagination.MyCursorPagination
-    permission_classes = DjangoModelPermissions
+    permission_classes = (DjangoModelPermissions,)
     queryset = models.Wj.objects
 
     @method_decorator(request_log(level='DEBUG'))
@@ -67,7 +67,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
     """
     serializer_class = serializers.AnswerSerializer
     pagination_class = pagination.MyCursorPagination
-    permission_classes = DjangoModelPermissions
+    permission_classes = (DjangoModelPermissions,)
     queryset = models.Answer.objects
 
     @method_decorator(request_log(level='DEBUG'))
@@ -149,7 +149,7 @@ class RespondentsView(GenericViewSet, mixins.ListModelMixin):
     """
 
     pagination_class = pagination.MyCursorPagination
-    permission_classes = DjangoModelPermissions
+    permission_classes = (DjangoModelPermissions,)
     serializer_class = serializers.RespondentsSerializer
     queryset = models.Respondents.objects
 
