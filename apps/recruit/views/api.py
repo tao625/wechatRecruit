@@ -46,7 +46,7 @@ class WjView(GenericViewSet):
 class AnswerView(GenericViewSet, mixins.ListModelMixin):
     """
         {
-          "submit_answer_id": 1,
+          "submit_user_id": 1,
           "submit_ip": "172.3.100.101",
           "use_time": 100,
           "wj_id": 1,
@@ -135,3 +135,22 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
+
+
+class RespondentsView(GenericViewSet, mixins.ListModelMixin):
+    serializer_class = serializers.RespondentsSerializer
+    queryset = models.Respondents.objects
+
+    def get(self, request):
+        user_id = request.query_params.get('user_id')
+        if user_id:
+            try:
+                respondent = self.queryset.filter(id=user_id)
+            except:
+                return Response(response.RESPONDENT_NOT_EXIST)
+        else:
+            respondent = self.get_queryset()
+
+        s = self.get_serializer(respondent, many=True)
+        return Response(s.data)
+

@@ -40,3 +40,9 @@ CHARATER_NOT_EXISTS = {
     "success": False,
     "msg": "此数据没有配套的性格分析表"
 }
+
+RESPONDENT_NOT_EXIST = {
+    "code": "0220",
+    "success": False,
+    "msg": "此应聘者不存在"
+}

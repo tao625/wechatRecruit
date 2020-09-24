@@ -19,5 +19,10 @@ urlpatterns = [
 
     path(r'answer/<int:pk>/', api.AnswerView.as_view({
         'get': 'single',
-    }))
+    })),
+
+    path(r'user/', api.RespondentsView.as_view({
+        'get': 'get',
+    })),
+
 ]
