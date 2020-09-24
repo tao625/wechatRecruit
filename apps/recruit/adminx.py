@@ -48,10 +48,10 @@ class OptionsAdmin(object):
 
 
 class AnswerAdmin(object):
-    list_display = ["wj", "submitUser", "useTime", "answerChoice", "answerText"]
-    list_display_link = ["wj", "submitUser"]
-    search_fields = ["wj", "submitIp"]
-    list_filter = ["wj", "submitIp", "submitUser"]
+    list_display = ["wj", "submit_user", "use_time", "answer_choice", "answer_text"]
+    list_display_link = ["wj", "submit_user"]
+    search_fields = ["wj", "submit_ip"]
+    list_filter = ["wj", "submit_ip", "submit_user"]
     ordering = ['-update_time']
 
 
