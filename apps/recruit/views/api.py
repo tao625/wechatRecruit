@@ -23,36 +23,24 @@ class WjView(GenericViewSet):
         """
         pk = kwargs['pk']
         try:
-            obj = models.Wj.objects.get(id=pk)
+            obj = models.Wj.objects.filter(id=pk)
         except:
             return Response(response.WJ_NOT_EXISTS)
 
-        questions = parser.get_question_detail(pk)
-
-        wj_detail = {
-            "name": obj.title,
-            "desc": obj.desc,
-            "status": obj.status,
-            "questions": questions
-        }
-
-        return Response(wj_detail)
+        serializer = self.get_serializer(obj, many=True)
+        return Response(serializer.data)
 
     @method_decorator(request_log(level='DEBUG'))
     def list(self, request):
-        result = []
-        wjs = self.queryset.all().values('id', 'title', 'desc', 'status')
-        for wj in wjs:
-            detail_wj = parser.get_question_detail(wj['id'])
-            wj_detail = {
-                "name": wj['title'],
-                "desc": wj['desc'],
-                "status": wj['status'],
-                "questions": detail_wj
-            }
-            result.append(wj_detail)
+        """
+        获取所有问卷
+        :param request:
+        :return:
+        """
+        obj = models.Wj.objects.all()
+        serializer = self.get_serializer(obj, many=True)
 
-        return Response(result)
+        return Response(serializer.data)
 
 
 class AnserView(GenericViewSet):
