@@ -12,7 +12,8 @@ urlpatterns = [
         "get": "single",
     })),
 
-    path(r'answer/', api.AnserView.as_view({
+    path(r'answer/', api.AnswerView.as_view({
         'post': 'post',
+        'get': 'list'
     }))
 ]

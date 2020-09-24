@@ -43,7 +43,7 @@ class WjView(GenericViewSet):
         return Response(serializer.data)
 
 
-class AnserView(GenericViewSet):
+class AnswerView(GenericViewSet, mixins.ListModelMixin):
     """
         {
           "submit_answer_id": 1,
@@ -62,6 +62,7 @@ class AnserView(GenericViewSet):
 
 
     """
+    queryset = models.Answer.objects
 
     @method_decorator(request_log(level='DEBUG'))
     def post(self, request):
@@ -98,3 +99,15 @@ class AnserView(GenericViewSet):
         else:
             answer_sheet.update(response.ANSWER_SAVE_ERROR)
             return Response(answer_sheet)
+
+    def list(self, request):
+        """
+        展示所有答题卡
+        :param request:
+        :return:
+        """
+
+        querset = self.get_queryset()
+        serializer = serializers.AnswerSerializer(querset, many=True)
+
+        return Response(serializer.data)
