@@ -61,10 +61,17 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
     }
 
     """
+    serializer_class = serializers.AnswerSerializer
     queryset = models.Answer.objects
 
     @method_decorator(request_log(level='DEBUG'))
     def post(self, request):
+        """
+        保存答卷
+        :param request:
+        :return:
+        """
+
         wj_id = request.data['wj_id']
         submit_user_id = request.data['submit_user_id']
         submit_ip = request.data.get('submit_ip', '')
@@ -90,23 +97,41 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
             submit_user=submit_user.name,
             wj=wj.title,
         )
-        s = serializers.AnswerSerializer(data=data)
+        s = self.get_serializer(data=data)
         if s.is_valid():
             s.save(wj=wj, submit_user=submit_user)
-            s.save()
             answer_sheet.update(response.ANSWER_SAVE_SUCCESS)
             return Response(answer_sheet)
         else:
             answer_sheet.update(response.ANSWER_SAVE_ERROR)
             return Response(answer_sheet)
 
+    @method_decorator(request_log(level='DEBUG'))
     def list(self, request):
         """
         展示所有答题卡
         :param request:
         :return:
         """
-        querset = self.get_queryset()
-        serializer = serializers.AnswerSerializer(querset, many=True)
 
+        querset = self.get_queryset()
+        serializer = self.get_serializer(querset, many=True)
+
+        return Response(serializer.data)
+
+    @method_decorator(request_log(level='DEBUG'))
+    def single(self, request, **kwargs):
+        """
+        查询指定答卷
+        :param request:
+        :param kwargs: pk
+        :return:
+        """
+
+        try:
+            queryset = self.queryset.filter(id=kwargs['pk'])
+        except:
+            return Response(response.ANSWER_NOT_EXIST)
+
+        serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)

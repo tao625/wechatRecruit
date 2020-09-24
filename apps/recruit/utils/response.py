@@ -1,7 +1,3 @@
-"""
-0001 ~ 0200: 成功
-0201 ~ 0400： 失败
-"""
 
 ANSWER_SAVE_SUCCESS = {
     "code": "0001",
@@ -25,4 +21,22 @@ ANSWER_SAVE_ERROR = {
     "code": "0203",
     "success": False,
     "msg": "传入的字段不符合要求"
+}
+
+ANSWER_NOT_EXIST = {
+    "code": "0204",
+    "success": False,
+    "msg": "查无此卷"
+}
+
+ANSWER_UPDATE_SUCCESS = {
+    "code": "0205",
+    "success": False,
+    "msg": "答卷更新成功"
+}
+
+CHARATER_NOT_EXISTS = {
+    "code": "0210",
+    "success": False,
+    "msg": "此数据没有配套的性格分析表"
 }

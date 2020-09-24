@@ -15,5 +15,9 @@ urlpatterns = [
     path(r'answer/', api.AnswerView.as_view({
         'post': 'post',
         'get': 'list'
+    })),
+
+    path(r'answer/<int:pk>/', api.AnswerView.as_view({
+        'get': 'single',
     }))
 ]
