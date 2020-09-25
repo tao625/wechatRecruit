@@ -2,6 +2,7 @@
 # -*- encoding: utf-8 -*-
 import xadmin
 from xadmin import views
+from recruit.utils.character_analysis import get_answer_choices, get_scores
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character
 
 
@@ -39,7 +40,7 @@ class WjAdmin(object):
     get_questions_qid.allow_tags = True
 
 class QuestionAdmin(object):
-    list_display = ["qid", "title", "type", "wjId", 'get_options', "must", "create_by"]
+    list_display = ["qid", "title", "type", "wjId", 'belong_animal', 'get_options', "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
     search_fields = ["title", "type", "create_by"]
     list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
@@ -52,6 +53,13 @@ class QuestionAdmin(object):
     get_options.short_description = "选项"
     get_options.allow_tags = True
 
+    def belong_animal(self, obj):
+        name = obj.animal
+        return name
+
+    belong_animal.short_description = "代表动物"
+    belong_animal.allow_tags = True
+
 
 class OptionsAdmin(object):
     list_display = ["title", "score"]
@@ -62,12 +70,19 @@ class OptionsAdmin(object):
 
 
 class AnswerAdmin(object):
-    list_display = ["wj", "submit_user", "use_time", "answer_choice", "answer_text"]
+    list_display = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text", "results_analysis"]
     list_display_link = ["wj", "submit_user"]
     search_fields = ["wj", "submit_ip"]
     list_filter = ["wj", "submit_ip", "submit_user"]
     ordering = ['-update_time']
 
+    def results_analysis(self, obj):
+        op_ids = get_answer_choices(obj.id)
+        result = get_scores(op_ids)
+        return result
+
+    results_analysis.short_description = "得分"
+    results_analysis.allow_tags = True
 
 class AnimalAdmin(object):
     list_display = ["name"]

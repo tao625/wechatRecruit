@@ -10,5 +10,12 @@ from recruit.utils import character_analysis
 
 # Create your tests here.
 if __name__ == '__main__':
-    
-    print(character_analysis.get_charater_detail(1))
+    from recruit import models
+
+    # print(character_analysis.get_charater_detail(1))
+
+    answer = character_analysis.get_answer_choices(26)
+    print(answer)
+
+    scores = character_analysis.get_scores(answer)
+    print(scores)
