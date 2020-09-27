@@ -18,10 +18,11 @@ from django.urls import path, include
 from django.conf.urls import url
 from rest_framework.authtoken import views
 from rest_framework_jwt.views import obtain_jwt_token
-
+from constance.admin import admin
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
+    path('xadmin/constance/', admin.site.urls),
     # drf自带的token认证模式
     url(r'^api-token-auth/', views.obtain_auth_token),
     # jwt的认证接口

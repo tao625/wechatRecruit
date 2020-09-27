@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 import xadmin
 from xadmin import views
-from recruit.utils.character_analysis import get_answer_choices, get_scores
+from recruit.utils.character_analysis import AnalyzeCharacter
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character
 
 
@@ -70,19 +70,21 @@ class OptionsAdmin(object):
 
 
 class AnswerAdmin(object):
-    list_display = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text", "results_analysis"]
+    list_display = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text"]
     list_display_link = ["wj", "submit_user"]
     search_fields = ["wj", "submit_ip"]
     list_filter = ["wj", "submit_ip", "submit_user"]
     ordering = ['-update_time']
 
-    def results_analysis(self, obj):
-        op_ids = get_answer_choices(obj.id)
-        result = get_scores(op_ids)
-        return result
-
-    results_analysis.short_description = "得分"
-    results_analysis.allow_tags = True
+    # def results_analysis(self, obj):
+    #     # op_ids = get_answer_choices(obj.id)
+    #     # result = get_scores(op_ids)
+    #     obj = AnalyzeCharacter(obj.id)
+    #     result = obj.execute(type=1, pk=26)
+    #     return result
+    #
+    # results_analysis.short_description = "得分"
+    # results_analysis.allow_tags = True
 
 class AnimalAdmin(object):
     list_display = ["name"]

@@ -54,6 +54,7 @@ class Wj(BaseTable):
     status = models.IntegerField(choices=status_type, verbose_name='是否发布', default=0)
     desc = models.TextField(verbose_name="问卷说明", null=True, blank=True)
     create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者")
+    type = models.IntegerField(verbose_name="分析类型", null=True)
 
     def __str__(self):
         return self.title

@@ -63,7 +63,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework.authtoken',
     'xadmin',
-    'DjangoUeditor'
+    'DjangoUeditor',
+    'constance',
+    'constance.backends.database',
 ]
 
 MIDDLEWARE = [
@@ -263,4 +265,15 @@ LOGGING = {
             'propagate': True
         }
     }
+}
+
+
+# 常量动态管理
+CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
+CONSTANCE_IGNORE_ADMIN_VERSION_CHECK = True
+
+CONSTANCE_CONFIG = {
+    'BALANCE': (3, '各项分数小于此值是面面俱到性格', int),
+    'COMMON': (3, '某两项分均超过此值, 大众性格', int),
+    'PROMINENT': (5, '某一项分高于其它四项中此值以上，性格突出'),
 }
