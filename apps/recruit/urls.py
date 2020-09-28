@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from django.urls import path
-from recruit.views import api
+from recruit.views import api, analyze
 
 urlpatterns = [
     path(r'wj/', api.WjView.as_view({
@@ -22,6 +22,10 @@ urlpatterns = [
     })),
 
     path(r'user/', api.RespondentsView.as_view({
+        'get': 'get',
+    })),
+
+    path(r'report/<int:pk>/', analyze.AnalysisCharacterView.as_view({
         'get': 'get',
     })),
 

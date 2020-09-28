@@ -17,7 +17,6 @@ class BaseTable(models.Model):
     create_time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
     update_time = models.DateTimeField(verbose_name="更新时间", auto_now=True)
 
-
 class Respondents(BaseTable):
     """
     答题人
@@ -34,7 +33,6 @@ class Respondents(BaseTable):
 
     def __str__(self):
         return self.name
-
 
 class Wj(BaseTable):
     """
@@ -59,7 +57,6 @@ class Wj(BaseTable):
     def __str__(self):
         return self.title
 
-
 class Options(BaseTable):
     """
     选项表
@@ -77,13 +74,14 @@ class Options(BaseTable):
 
 class Animal(BaseTable):
     """
-    题目所属动物
+    性格别名
     """
     class Meta:
-        verbose_name = "动物"
+        verbose_name = "性格别名"
         verbose_name_plural = verbose_name
 
-    name = models.CharField(max_length=100, verbose_name='动物名')
+    name = models.CharField(max_length=100, verbose_name='性格别名')
+    wj = models.ForeignKey(Wj, verbose_name="问卷", on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name
@@ -97,8 +95,7 @@ class Character(BaseTable):
         verbose_name_plural = verbose_name
 
     name = models.CharField(max_length=255, null=True, blank=True, verbose_name="名称")
-    alias = models.CharField(max_length=255, verbose_name="性格别名", null=True, blank=True)
-    animal = models.OneToOneField(Animal, null=True, blank=True, on_delete=models.CASCADE, help_text="仅PDP性格测试需要选择", verbose_name="动物")
+    animal = models.OneToOneField(Animal, null=True, blank=True, on_delete=models.CASCADE, help_text="仅PDP性格测试需要选择", verbose_name="性格别名")
     content = models.TextField(verbose_name='主要表现', null=True, blank=True)
     professional = models.TextField(verbose_name='代表职业', null=True, blank=True)
     wj = models.ForeignKey(Wj, on_delete=models.CASCADE, verbose_name="试卷", null=True)
@@ -133,7 +130,6 @@ class Question(BaseTable):
     def __str__(self):
         return self.title
 
-
 class Answer(BaseTable):
     """
     回答表
@@ -152,3 +148,19 @@ class Answer(BaseTable):
 
     def __str__(self):
         return self.wj.title
+
+class AnalysisData(BaseTable):
+    """存储一些性格分析的资料信息,
+
+    """
+    class Meta:
+        verbose_name = "性格分析资料"
+        verbose_name_plural = verbose_name
+
+    name = models.CharField(max_length=255, verbose_name="文件名", null=True)
+    tags = models.ManyToManyField(Animal, verbose_name="标记", null=True)
+    content = models.TextField(verbose_name="内容", null=True, blank=True)
+    wj = models.ManyToManyField(Wj, verbose_name="试卷", null=True, blank=True)
+
+    def __str__(self):
+        return self.name

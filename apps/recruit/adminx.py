@@ -3,8 +3,8 @@
 import xadmin
 from xadmin import views
 from recruit.utils.character_analysis import AnalyzeCharacter
-from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character
-
+from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData
+from django.utils.safestring import mark_safe
 
 class GlobalSettings(object):
     site_title = "瑞云招聘小助手后台管理系统"
@@ -70,7 +70,7 @@ class OptionsAdmin(object):
 
 
 class AnswerAdmin(object):
-    list_display = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text"]
+    list_display = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text", "analyze"]
     list_display_link = ["wj", "submit_user"]
     search_fields = ["wj", "submit_ip"]
     list_filter = ["wj", "submit_ip", "submit_user"]
@@ -86,19 +86,29 @@ class AnswerAdmin(object):
     # results_analysis.short_description = "得分"
     # results_analysis.allow_tags = True
 
+    def analyze(self, obj):
+        return mark_safe('<a href="http://172.16.4.110:8000/recruit/report/26/">aaaa</a>')
+
+
 class AnimalAdmin(object):
-    list_display = ["name"]
-    list_display_link = ["name"]
-    search_fields = ["name"]
-    list_filter = ["name", "id"]
+    list_display = ["name", "wj"]
+    list_display_link = ["name", "wj"]
+    search_fields = ["name", "wj"]
+    list_filter = ["name", "id", "wj"]
 
 
 class CharacterAdmin(object):
-    list_display = ["name", "alias", "animal", "content", "professional", "wj"]
+    list_display = ["name", "animal", "content", "professional", "wj"]
     list_display_link = ["name"]
-    search_fields = ["name", "alias"]
-    list_filter = ["name", "alias"]
+    search_fields = ["name"]
+    list_filter = ["name"]
 
+
+class AnalysisDataAdmin(object):
+    list_display = ["name", "tags", "content", "wj"]
+    list_display_link = ["name", "tags", "wj"]
+    search_fields = ["name", "tags", "wj"]
+    list_filter = ["name", "tags", "wj"]
 
 xadmin.site.register(views.CommAdminView, GlobalSettings)
 xadmin.site.register(Respondents, RespondentsAdmin)
@@ -108,3 +118,4 @@ xadmin.site.register(Options, OptionsAdmin)
 xadmin.site.register(Answer, AnswerAdmin)
 xadmin.site.register(Animal, AnimalAdmin)
 xadmin.site.register(Character, CharacterAdmin)
+xadmin.site.register(AnalysisData, AnalysisDataAdmin)
