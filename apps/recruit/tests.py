@@ -13,3 +13,4 @@ if __name__ == '__main__':
 
     obj = character_analysis.AnalyzeCharacter()
     print(obj.execute(pk=26))
+    print(obj.execute(pk=27))

@@ -36,7 +36,7 @@ class AnalyzeCharacter(object):
         elif data[0][1] < config.BALANCE:
             charater = 0
 
-        return charater
+        return dict(charater)
 
     def analyze_2(self, scores):
         """分析霍兰德职业测试
@@ -44,9 +44,8 @@ class AnalyzeCharacter(object):
         :return:
         """
         data = sorted(scores.items(), key=lambda item: item[1], reverse=True)
-        if data[2][1] == data[3][1]:
-            chrs = [data[0][0], data[1][0], data[2][0]]
-
+        print(data)
+        return dict([data[0], data[1], data[2]])
 
     def get_answer_1(self, pk):
         """
