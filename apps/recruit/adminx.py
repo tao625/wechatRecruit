@@ -1,10 +1,16 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
+from __future__ import absolute_import, unicode_literals
+
 import xadmin
 from xadmin import views
-from recruit.utils.character_analysis import AnalyzeCharacter
+from djcelery.models import (
+    TaskState, WorkerState,
+    PeriodicTask, IntervalSchedule, CrontabSchedule,
+)
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData
 from django.utils.safestring import mark_safe
+
 
 class GlobalSettings(object):
     site_title = "瑞云招聘小助手后台管理系统"
@@ -111,6 +117,15 @@ class AnalysisDataAdmin(object):
     search_fields = ["name", "tags", "wj"]
     list_filter = ["name", "tags", "wj"]
 
+
+# 定时任务表
+xadmin.site.register(IntervalSchedule)  # 存储循环任务设置的时间
+xadmin.site.register(CrontabSchedule)  # 存储定时任务设置的时间
+xadmin.site.register(PeriodicTask)  # 存储任务
+xadmin.site.register(TaskState)  # 存储任务执行状态
+xadmin.site.register(WorkerState)  # 存储执行任务的worker
+
+# 自定义表
 xadmin.site.register(views.CommAdminView, GlobalSettings)
 xadmin.site.register(Respondents, RespondentsAdmin)
 xadmin.site.register(Wj, WjAdmin)

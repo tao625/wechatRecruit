@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 import configparser
 import os
+import djcelery
 
 # *******configThis******** get form config.conf 快速切换环境
 import sys
@@ -58,6 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'recruit',
     'users',
+    'djcelery',
     'crispy_forms',
     'rest_framework',
     'corsheaders',
@@ -279,3 +281,20 @@ CONSTANCE_CONFIG = {
     'COMMON': (3, '某两项分均超过此值, 大众性格', int),
     'PROMINENT': (5, '某一项分高于其它四项中此值以上，性格突出'),
 }
+
+
+djcelery.setup_loader()
+BROKER_URL = 'redis://localhost:6379'
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'  # 定时任务
+CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERYD_MAX_TASKS_PER_CHILD = 40
+CELERY_TIMEZONE = 'Asia/Shanghai'
+
+CELERY_TASK_RESULT_EXPIRES = 3600
+CELERYD_CONCURRENCY = 1 if DEBUG else 4  # 并发的worker数量
+CELERYD_MAX_TASKS_PER_CHILD = 100  # 每个worker最多执行100次任务被销毁，防止内存泄漏
+CELERY_FORCE_EXECV = True  # 有些情况可以防止死锁
+CELERY_TASK_TIME_LIMIT = 3*60*60  # 单个任务最大运行时间

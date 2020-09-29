@@ -46,3 +46,9 @@ RESPONDENT_NOT_EXIST = {
     "success": False,
     "msg": "此应聘者不存在"
 }
+
+REPORT_NOT_EXIST = {
+    "code": "0221",
+    "success": False,
+    "msg": "分析报告不存在"
+}

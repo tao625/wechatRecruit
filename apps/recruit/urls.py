@@ -27,6 +27,7 @@ urlpatterns = [
 
     path(r'report/<int:pk>/', analyze.AnalysisCharacterView.as_view({
         'get': 'get',
+        'post': 'post'
     })),
 
 ]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from rest_framework import serializers
-from recruit.models import Wj, Question, Options, Answer, Respondents, Character
+from recruit.models import Wj, Question, Options, Answer, Respondents, Character, Report
 
 class OptionsSerializer(serializers.ModelSerializer):
 
@@ -79,5 +79,16 @@ class CharacterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Character
+        fields = '__all__'
+        depth = 1
+
+
+class ReportSerializer(serializers.ModelSerializer):
+    """
+    最终分析报告
+    """
+
+    class Meta:
+        model = Report
         fields = '__all__'
         depth = 1

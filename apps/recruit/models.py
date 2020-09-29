@@ -165,3 +165,15 @@ class AnalysisData(BaseTable):
 
     def __str__(self):
         return self.name
+
+class Report(BaseTable):
+    class Meta:
+        verbose_name = "分析报告"
+        verbose_name_plural = verbose_name
+
+    respondenter = models.ForeignKey(Respondents, on_delete=models.CASCADE, verbose_name='答题者')
+    answer = models.OneToOneField(Answer, on_delete=models.CASCADE, verbose_name='答卷')
+    result = models.TextField(verbose_name='最终报告', null=True, blank=True)
+
+    def __str__(self):
+        return self.result
