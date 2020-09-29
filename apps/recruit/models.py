@@ -82,6 +82,7 @@ class Animal(BaseTable):
 
     name = models.CharField(max_length=100, verbose_name='性格别名')
     wj = models.ForeignKey(Wj, verbose_name="问卷", on_delete=models.CASCADE, null=True)
+    feature = models.TextField(verbose_name='性格特征', null=True)
 
     def __str__(self):
         return self.name

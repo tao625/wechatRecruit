@@ -153,6 +153,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
 
 # 处理跨域
 CORS_ALLOW_CREDENTIALS = True

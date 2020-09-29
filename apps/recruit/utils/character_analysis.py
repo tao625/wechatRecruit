@@ -44,7 +44,6 @@ class AnalyzeCharacter(object):
         :return:
         """
         data = sorted(scores.items(), key=lambda item: item[1], reverse=True)
-        print(data)
         return dict([data[0], data[1], data[2]])
 
     def get_answer_1(self, pk):

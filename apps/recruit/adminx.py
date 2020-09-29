@@ -87,7 +87,8 @@ class AnswerAdmin(object):
     # results_analysis.allow_tags = True
 
     def analyze(self, obj):
-        return mark_safe('<a href="http://172.16.4.110:8000/recruit/report/26/">aaaa</a>')
+        url = "http://172.16.4.110:8000/recruit/report/{id}/".format(id=str(obj.id))
+        return mark_safe('<a href={url}>分析结果</a>'.format(url=url))
 
 
 class AnimalAdmin(object):
