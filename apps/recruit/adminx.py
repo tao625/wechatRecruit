@@ -53,6 +53,7 @@ class QuestionAdmin(object):
     list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
     ordering = ['qid']
     list_editable = ["title", "type", "wjId", 'belong_animal', 'get_options', "must", "create_by"]
+    list_per_page = 20
 
     def get_options(self, obj):
         options = Question.objects.get(id=obj.id).options.values('title')
@@ -84,7 +85,7 @@ class AnswerAdmin(object):
     search_fields = ["wj", "submit_ip"]
     list_filter = ["wj", "submit_ip", "submit_user"]
     ordering = ['-update_time']
-
+    readonly_fields = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text"]
 
     def analyze(self, obj):
         url = "http://172.16.4.110:8000/recruit/report/{id}/".format(id=str(obj.id))
