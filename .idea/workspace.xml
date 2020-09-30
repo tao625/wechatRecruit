@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: readonly_fields">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recruit/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recruit/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/run.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/run.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wechatRecruit/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechatRecruit/settings.py" afterDir="false" />
@@ -72,7 +73,7 @@
       <recent name="D:\myproject\wechatRecruit\wechatRecruit" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tests">
+  <component name="RunManager" selected="Django server.wechatRecruit">
     <configuration name="change_list.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/wechatRecruit/site-packages/constance/templates/admin/constance/change_list.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -181,7 +182,7 @@
       <option name="port" value="8000" />
       <option name="host" value="172.16.4.110" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
+      <option name="browserUrl" value="http://172.16.4.110:8000/xadmin/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -243,6 +244,7 @@
       <workItem from="1601256616958" duration="631000" />
       <workItem from="1601275373537" duration="42620000" />
       <workItem from="1601430075189" duration="15780000" />
+      <workItem from="1601455554017" duration="1289000" />
     </task>
     <task id="LOCAL-00001" summary="feat: create project wechatRecruit">
       <created>1600686635730</created>
@@ -454,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601439182248</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="feat: readonly_fields">
+      <created>1601455711318</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1601455711318</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,46 +506,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Notifications/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600738333632" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600934252303">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601456308352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600934252303" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601456308352" />
     <state x="1125" y="366" key="#xdebugger.evaluate" timestamp="1601432373458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1125" y="366" key="#xdebugger.evaluate/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601432373458" />
-    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2" timestamp="1601439180006">
+    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2" timestamp="1601455708345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601439180006" />
+    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601455708345" />
     <state x="2474" y="112" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600686988066" />
     <state x="808" y="443" key="Github.Dialog.Accounts.Choose" timestamp="1600756256581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="443" key="Github.Dialog.Accounts.Choose/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600756256581" />
-    <state width="1877" height="226" key="GridCell.Tab.0.bottom" timestamp="1601440073202">
+    <state width="1877" height="222" key="GridCell.Tab.0.bottom" timestamp="1601456916911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042299" />
-    <state width="1877" height="226" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601440073202" />
+    <state width="1877" height="222" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601456916911" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870047" />
-    <state width="1877" height="226" key="GridCell.Tab.0.center" timestamp="1601440073202">
+    <state width="1877" height="222" key="GridCell.Tab.0.center" timestamp="1601456916910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
-    <state width="1877" height="226" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601440073202" />
+    <state width="1877" height="222" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601456916910" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870046" />
-    <state width="1877" height="226" key="GridCell.Tab.0.left" timestamp="1601440073202">
+    <state width="1877" height="222" key="GridCell.Tab.0.left" timestamp="1601456916910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
-    <state width="1877" height="226" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601440073202" />
+    <state width="1877" height="222" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601456916910" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870046" />
-    <state width="1877" height="226" key="GridCell.Tab.0.right" timestamp="1601440073202">
+    <state width="1877" height="222" key="GridCell.Tab.0.right" timestamp="1601456916911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
-    <state width="1877" height="226" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601440073202" />
+    <state width="1877" height="222" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601456916911" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870047" />
     <state width="1877" height="226" key="GridCell.Tab.1.bottom" timestamp="1601440073202">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -566,10 +575,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="976" y="466" key="VCS.ChangelistChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431030639" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601439193384">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601455713108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601439193384" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601455713108" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600686991584" />
     <state width="855" height="528" key="XDebugger.FullValuePopup" timestamp="1601434894162">
       <screen x="0" y="0" width="1920" height="1040" />

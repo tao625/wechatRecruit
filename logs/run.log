@@ -11864,3 +11864,5 @@ Traceback (most recent call last):
   File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\export.py", line 50, in <listcomp>
     'export_types': [{'type': et, 'name': self.export_names[et]} for et in self.list_export],
 KeyError: 'txt'
+2020-09-30 16:58:06,716 [WARNING] - Not Found: /
+2020-09-30 16:58:06,796 [WARNING] - Not Found: /favicon.ico
