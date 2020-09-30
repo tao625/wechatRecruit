@@ -159,9 +159,9 @@ class AnalysisData(BaseTable):
         verbose_name_plural = verbose_name
 
     name = models.CharField(max_length=255, verbose_name="文件名", null=True)
-    tags = models.ManyToManyField(Animal, verbose_name="标记", null=True)
+    tags = models.ManyToManyField(Animal, verbose_name="标记")
     content = models.TextField(verbose_name="内容", null=True, blank=True)
-    wj = models.ManyToManyField(Wj, verbose_name="试卷", null=True, blank=True)
+    wj = models.ManyToManyField(Wj, verbose_name="试卷")
 
     def __str__(self):
         return self.name

@@ -31,6 +31,7 @@ class WjAdmin(object):
     search_fields = ["title", "status", "create_by"]
     list_filter = ["title", "status", "create_by", 'create_time', 'update_time']
     ordering = ['id']
+    list_editable = ['status']
 
     def get_questions(self, obj):
         return Question.objects.filter(wjId=obj.id).count()
@@ -51,6 +52,7 @@ class QuestionAdmin(object):
     search_fields = ["title", "type", "create_by"]
     list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
     ordering = ['qid']
+    list_editable = ["title", "type", "wjId", 'belong_animal', 'get_options', "must", "create_by"]
 
     def get_options(self, obj):
         options = Question.objects.get(id=obj.id).options.values('title')
@@ -73,6 +75,7 @@ class OptionsAdmin(object):
     search_fields = ["title", "score"]
     list_filter = ["title", "score"]
     ordering = ['-update_time']
+    list_editable = ['title', 'score']
 
 
 class AnswerAdmin(object):
@@ -102,6 +105,7 @@ class AnimalAdmin(object):
     list_display_link = ["name", "wj"]
     search_fields = ["name", "wj"]
     list_filter = ["name", "id", "wj"]
+    list_editable = ['name', 'wj']
 
 
 class CharacterAdmin(object):
@@ -109,6 +113,7 @@ class CharacterAdmin(object):
     list_display_link = ["name"]
     search_fields = ["name"]
     list_filter = ["name"]
+    list_editable = ['name', 'animal', 'wj']
 
 
 class AnalysisDataAdmin(object):

@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: add requirements.txt">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/wechatRecruit.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/recruit/migrations/0010_auto_20200930_0954.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/beat.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/worker.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recruit/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recruit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/run.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\myproject\wechatRecruit\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hnv2B8YhMFwkFr1NXrOD5m7pXr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/images" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myproject\wechatRecruit\media\images" />
+      <recent name="D:\myproject\wechatRecruit\static\boostrap\js" />
+      <recent name="D:\myproject\wechatRecruit\static\boostrap\css" />
+      <recent name="D:\myproject\wechatRecruit\apps\recruit\utils" />
+      <recent name="D:\myproject\wechatRecruit\wechatRecruit" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myproject\wechatRecruit\static\boostrap\css" />
+      <recent name="D:\myproject\wechatRecruit\apps\recruit" />
+      <recent name="D:\myproject\wechatRecruit\docs" />
+      <recent name="D:\myproject\wechatRecruit\apps" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.wechatRecruit">
+    <configuration name="change_list.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/wechatRecruit/site-packages/constance/templates/admin/constance/change_list.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="celery" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wechatRecruit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechatRecruit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\myproject\wechatRecruit\wechatRecruit\celery.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="character_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wechatRecruit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/recruit/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/recruit/utils/character_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tasks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wechatRecruit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/recruit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/recruit/tasks.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wechatRecruit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/recruit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/recruit/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wechatRecruit" type="Python.DjangoServer" factoryName="Django server">
+      <module name="wechatRecruit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="wechatRecruit.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\dingyutao\Envs\wechat_server\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="172.16.4.110" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.wechatRecruit" />
+      <item itemvalue="JavaScript Debug.change_list.html" />
+      <item itemvalue="Python.celery" />
+      <item itemvalue="Python.character_analysis" />
+      <item itemvalue="Python.tests" />
+      <item itemvalue="Python.tasks" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tasks" />
+        <item itemvalue="Python.tests" />
+        <item itemvalue="JavaScript Debug.change_list.html" />
+        <item itemvalue="Python.character_analysis" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="" />
+      <created>1600659385178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600659385178</updated>
+      <workItem from="1600659462951" duration="14647000" />
+      <workItem from="1600680363492" duration="1852000" />
+      <workItem from="1600682635976" duration="4186000" />
+      <workItem from="1600686854001" duration="272000" />
+      <workItem from="1600738301192" duration="6537000" />
+      <workItem from="1600754574239" duration="17408000" />
+      <workItem from="1600824391690" duration="42876000" />
+      <workItem from="1600927984485" duration="41898000" />
+      <workItem from="1601170060691" duration="26222000" />
+      <workItem from="1601214067616" duration="607000" />
+      <workItem from="1601256616958" duration="631000" />
+      <workItem from="1601275373537" duration="42620000" />
+      <workItem from="1601430075189" duration="826000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: create project wechatRecruit">
+      <created>1600686635730</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600686635730</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Add docs&#10;&#10;- 助理小瑞-测试题出版.xlsx&#10;- wechat_survey_db_table.xlsx">
+      <created>1600686989369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600686989369</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Optimization model">
+      <created>1600756247468</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600756247468</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Adjust the structure&#10;&#10;- add recruit/utils and recruit/views">
+      <created>1600758295285</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600758295285</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: update function0922">
+      <created>1600772991398</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600772991398</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: Update wj interface&#10;&#10;- get and list">
+      <created>1600843839426</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600843839426</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: Add answer interface&#10;&#10;- 增加答题保存接口">
+      <created>1600849931352</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600849931352</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: Optimization model">
+      <created>1600850956386</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600850956386</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: fixbug for plugin">
+      <created>1600855006219</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600855006219</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: Optimization model">
+      <created>1600859090561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600859090561</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: 优化代码结构">
+      <created>1600915820248</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1600915820248</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: 序列化答题卡">
+      <created>1600917257951</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600917257951</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: 更改结构">
+      <created>1600921866511</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600921866511</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: 修复xadmin bug">
+      <created>1600922047514</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600922047514</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: add requirements.txt">
+      <created>1600927534603</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1600927534603</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: update">
+      <created>1600934715002</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1600934715002</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: 增加获取答题者接口">
+      <created>1600936851892</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1600936851892</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: 前端展示增加权限和分页">
+      <created>1600941492943</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1600941492943</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix: 修复前端权限bug">
+      <created>1600942834520</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1600942834520</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: 更新性格分析">
+      <created>1601016572709</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1601016572709</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: 性格分析更新">
+      <created>1601202520704</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1601202520704</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: 增加结果分析">
+      <created>1601276787517</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1601276787518</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: update0928">
+      <created>1601290354877</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1601290354877</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: over game">
+      <created>1601362513976</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1601362513976</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: 增加异步生成报告">
+      <created>1601376975967</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1601376975967</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: create project wechatRecruit" />
+    <MESSAGE value="feat: Add docs&#10;&#10;- 助理小瑞-测试题出版.xlsx&#10;- wechat_survey_db_table.xlsx" />
+    <MESSAGE value="feat: Adjust the structure&#10;&#10;- add recruit/utils and recruit/views" />
+    <MESSAGE value="feat: update function0922" />
+    <MESSAGE value="feat: Update wj interface&#10;&#10;- get and list" />
+    <MESSAGE value="feat: Add answer interface&#10;&#10;- 增加答题保存接口" />
+    <MESSAGE value="feat: fixbug for plugin" />
+    <MESSAGE value="feat: Optimization model" />
+    <MESSAGE value="feat: 优化代码结构" />
+    <MESSAGE value="feat: 序列化答题卡" />
+    <MESSAGE value="feat: 更改结构" />
+    <MESSAGE value="feat: 修复xadmin bug" />
+    <MESSAGE value="feat: add requirements.txt" />
+    <MESSAGE value="feat: update" />
+    <MESSAGE value="feat: 增加获取答题者接口" />
+    <MESSAGE value="feat: 前端展示增加权限和分页" />
+    <MESSAGE value="fix: 修复前端权限bug" />
+    <MESSAGE value="feat: 更新性格分析" />
+    <MESSAGE value="feat: 性格分析更新" />
+    <MESSAGE value="feat: 增加结果分析" />
+    <MESSAGE value="feat: update0928" />
+    <MESSAGE value="feat: over game" />
+    <MESSAGE value="feat: 增加异步生成报告" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 增加异步生成报告" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Notifications" timestamp="1600738333632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Notifications/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600738333632" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600934252303">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600934252303" />
+    <state x="1125" y="366" key="#xdebugger.evaluate" timestamp="1601348364172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1125" y="366" key="#xdebugger.evaluate/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601348364172" />
+    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2" timestamp="1601431013231">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431013231" />
+    <state x="2474" y="112" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600686988066" />
+    <state x="808" y="443" key="Github.Dialog.Accounts.Choose" timestamp="1600756256581">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="443" key="Github.Dialog.Accounts.Choose/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600756256581" />
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1601430870047">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042299" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890924" />
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870047" />
+    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1601430870046">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890924" />
+    <state width="1877" height="298" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870046" />
+    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1601430870046">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890924" />
+    <state width="1877" height="298" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870046" />
+    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1601430870047">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890924" />
+    <state width="1877" height="298" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870047" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1601376890925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890925" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1601376890925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890925" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1601376890925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890925" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1601376890925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376890925" />
+    <state x="965" y="262" key="RollbackChangesDialog" timestamp="1601023420831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="965" y="262" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601023420831" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1601370161650">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601370161650" />
+    <state x="976" y="466" key="VCS.ChangelistChooser" timestamp="1601430996510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="976" y="466" key="VCS.ChangelistChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601430996510" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601376979753">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376979753" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600686991584" />
+    <state width="855" height="528" key="XDebugger.FullValuePopup" timestamp="1601352079090">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="855" height="528" key="XDebugger.FullValuePopup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601352079090" />
+    <state x="506" y="225" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1601351025424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="506" y="225" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601351025423" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600835377252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600835377252" />
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601376838452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601376838452" />
+    <state x="567" y="220" width="786" height="600" key="find.popup" timestamp="1601361305672">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="567" y="220" width="786" height="600" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601361305672" />
+    <state x="660" y="311" key="git4idea.merge.GitPullDialog" timestamp="1600686480425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="660" y="311" key="git4idea.merge.GitPullDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600686480425" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601375405645">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601375405645" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/views/api.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/views/analyze.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/views/analyze.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/views/analyze.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="name" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wechatRecruit$character_analysis.coverage" NAME="character_analysis Coverage Results" MODIFIED="1600932755599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/recruit/utils" />
+    <SUITE FILE_PATH="coverage/wechatRecruit$tests.coverage" NAME="tests Coverage Results" MODIFIED="1601275408748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/recruit" />
+    <SUITE FILE_PATH="coverage/wechatRecruit$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1601367802604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/recruit" />
+    <SUITE FILE_PATH="coverage/wechatRecruit$celery.coverage" NAME="celery Coverage Results" MODIFIED="1601366766496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wechatRecruit" />
+  </component>
+</project>
