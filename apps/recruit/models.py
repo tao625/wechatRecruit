@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.html import format_html
+
 from users.models import User
 
 
