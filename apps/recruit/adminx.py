@@ -85,15 +85,6 @@ class AnswerAdmin(object):
     list_filter = ["wj", "submit_ip", "submit_user"]
     ordering = ['-update_time']
 
-    # def results_analysis(self, obj):
-    #     # op_ids = get_answer_choices(obj.id)
-    #     # result = get_scores(op_ids)
-    #     obj = AnalyzeCharacter(obj.id)
-    #     result = obj.execute(type=1, pk=26)
-    #     return result
-    #
-    # results_analysis.short_description = "得分"
-    # results_analysis.allow_tags = True
 
     def analyze(self, obj):
         url = "http://172.16.4.110:8000/recruit/report/{id}/".format(id=str(obj.id))

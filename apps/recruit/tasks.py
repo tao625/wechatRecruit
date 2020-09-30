@@ -5,7 +5,7 @@ import json
 import logging
 import random
 import traceback
-from celery import task, shared_task
+from celery import shared_task
 
 from recruit.utils.character_analysis import AnalyzeCharacter
 from recruit import models

@@ -5,10 +5,10 @@ import json
 from django.utils.decorators import method_decorator
 
 from recruit import serializers, models
-from rest_framework.viewsets import GenericViewSet, mixins, ModelViewSet
+from rest_framework.viewsets import GenericViewSet, mixins
 from rest_framework.response import Response
 from rest_framework.permissions import DjangoModelPermissions
-from recruit.utils import response, parser
+from recruit.utils import response
 from recruit.utils.decorator import request_log
 from wechatRecruit import pagination
 from recruit import tasks

@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: 增加list_editable">
-      <change afterPath="$PROJECT_DIR$/celerybeat.pid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/beat.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/worker.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/0.jpg" afterDir="false" />
+    <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: 提交答卷的时候自动分析">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recruit/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/adminx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recruit/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recruit/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recruit/utils/character_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/utils/character_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recruit/views/analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/views/analyze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recruit/views/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/views/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/run.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/run.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/result_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result_report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +242,7 @@
       <workItem from="1601214067616" duration="607000" />
       <workItem from="1601256616958" duration="631000" />
       <workItem from="1601275373537" duration="42620000" />
-      <workItem from="1601430075189" duration="7859000" />
+      <workItem from="1601430075189" duration="8176000" />
     </task>
     <task id="LOCAL-00001" summary="feat: create project wechatRecruit">
       <created>1600686635730</created>
@@ -441,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601431135032</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: 提交答卷的时候自动分析">
+      <created>1601438460056</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1601438460056</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +475,8 @@
     <MESSAGE value="feat: over game" />
     <MESSAGE value="feat: 增加异步生成报告" />
     <MESSAGE value="feat: 增加list_editable" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 增加list_editable" />
+    <MESSAGE value="feat: 提交答卷的时候自动分析" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 提交答卷的时候自动分析" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1600738333632">
@@ -491,10 +491,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1125" y="366" key="#xdebugger.evaluate/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601432373458" />
-    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2" timestamp="1601431149808">
+    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2" timestamp="1601438457787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431149808" />
+    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601438457787" />
     <state x="2474" y="112" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600686988066" />
     <state x="808" y="443" key="Github.Dialog.Accounts.Choose" timestamp="1600756256581">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -596,12 +596,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/recruit/views/analyze.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/recruit/views/analyze.py</url>
-          <line>21</line>
+          <line>18</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
