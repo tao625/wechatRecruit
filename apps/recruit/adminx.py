@@ -8,8 +8,9 @@ from djcelery.models import (
     TaskState, WorkerState,
     PeriodicTask, IntervalSchedule, CrontabSchedule,
 )
-from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData
+from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report
 from django.utils.safestring import mark_safe
+from constance import config
 
 
 class GlobalSettings(object):
@@ -33,6 +34,7 @@ class WjAdmin(object):
     ordering = ['id']
     list_editable = ['status']
 
+
     def get_questions(self, obj):
         return Question.objects.filter(wjId=obj.id).count()
 
@@ -47,12 +49,12 @@ class WjAdmin(object):
     get_questions_qid.allow_tags = True
 
 class QuestionAdmin(object):
-    list_display = ["qid", "title", "type", "wjId", 'belong_animal', 'get_options', "must", "create_by"]
+    list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
     search_fields = ["title", "type", "create_by"]
     list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
     ordering = ['qid']
-    list_editable = ["title", "type", "wjId", 'belong_animal', 'get_options', "must", "create_by"]
+    list_editable = ["title", "type", "wjId", 'animal', 'get_options', "must", "create_by"]
     list_per_page = 20
 
     def get_options(self, obj):
@@ -61,13 +63,6 @@ class QuestionAdmin(object):
 
     get_options.short_description = "选项"
     get_options.allow_tags = True
-
-    def belong_animal(self, obj):
-        name = obj.animal
-        return name
-
-    belong_animal.short_description = "代表动物"
-    belong_animal.allow_tags = True
 
 
 class OptionsAdmin(object):
@@ -86,9 +81,11 @@ class AnswerAdmin(object):
     list_filter = ["wj", "submit_ip", "submit_user"]
     ordering = ['-update_time']
     readonly_fields = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text"]
+    refresh_times = [1, 30, 60, 300]
+    list_export = ["json", "xls", "csv"]
 
     def analyze(self, obj):
-        url = "http://172.16.4.110:8000/recruit/report/{id}/".format(id=str(obj.id))
+        url = "{ip}/recruit/report/{id}/".format(ip=config.URL, id=str(obj.id))
         return mark_safe('<a href={url}>分析结果</a>'.format(url=url))
 
 
@@ -106,6 +103,7 @@ class CharacterAdmin(object):
     search_fields = ["name"]
     list_filter = ["name"]
     list_editable = ['name', 'animal', 'wj']
+    list_export = ["json", "xls", "csv"]
 
 
 class AnalysisDataAdmin(object):
@@ -113,6 +111,12 @@ class AnalysisDataAdmin(object):
     list_display_link = ["name", "tags", "wj"]
     search_fields = ["name", "tags", "wj"]
     list_filter = ["name", "tags", "wj"]
+    list_export = ["json", "xls", "csv"]
+    style_fields = {'tags': 'm2m_transfer'}
+
+
+class ReportAdmin(object):
+    list_display = ['respondenter', 'answer', 'result']
 
 
 # 定时任务表
@@ -132,3 +136,4 @@ xadmin.site.register(Answer, AnswerAdmin)
 xadmin.site.register(Animal, AnimalAdmin)
 xadmin.site.register(Character, CharacterAdmin)
 xadmin.site.register(AnalysisData, AnalysisDataAdmin)
+xadmin.site.register(Report, ReportAdmin)
