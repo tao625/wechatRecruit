@@ -11,6 +11,7 @@ from rest_framework.permissions import DjangoModelPermissions
 from recruit.utils import response, parser
 from recruit.utils.decorator import request_log
 from wechatRecruit import pagination
+from recruit import tasks
 
 
 class WjView(GenericViewSet):
@@ -105,8 +106,9 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
         )
         s = self.get_serializer(data=data)
         if s.is_valid():
-            s.save(wj=wj, submit_user=submit_user)
+            anwser = s.save(wj=wj, submit_user=submit_user)
             answer_sheet.update(response.ANSWER_SAVE_SUCCESS)
+            tasks.async_analysis.delay(anwser.id)
             return Response(answer_sheet)
         else:
             answer_sheet.update(response.ANSWER_SAVE_ERROR)

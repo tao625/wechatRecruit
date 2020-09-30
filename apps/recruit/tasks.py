@@ -2,6 +2,7 @@
 # -*- encoding: utf-8 -*-
 import time
 import json
+import logging
 import random
 import traceback
 from celery import task, shared_task
@@ -9,6 +10,7 @@ from celery import task, shared_task
 from recruit.utils.character_analysis import AnalyzeCharacter
 from recruit import models
 
+logger = logging.getLogger('recruit')
 
 @shared_task
 def async_analysis(pk):
@@ -16,6 +18,7 @@ def async_analysis(pk):
 
     :return:
     """
+    logger.info('分析结果开始..................')
     anaylze_result = {}
     answer_id = pk
     obj = AnalyzeCharacter()
@@ -41,7 +44,7 @@ def async_analysis(pk):
         if set(t) == set(result.keys()):
             anaylze_result['job'] = c
         else:
-            anaylze_result['job'] = ""
+            anaylze_result['job'] = "无符合的职业推荐"
 
     data = {}
     for k in result.keys():
@@ -49,11 +52,12 @@ def async_analysis(pk):
         num = str(random.randint(1, 3))
         data[k] = [feature, num]
 
-    anaylze_result['features'] = data
+    anaylze_result['features'] = data if bool(result) else {'无': ['无符合的性格推荐', "0"]}
 
-    flag = models.Report.objects.create(
+    flag = models.Report.objects.update_or_create(
         respondenter=answer.submit_user,
         answer=answer,
-        result=json.dumps(anaylze_result, ensure_ascii=False)
+        defaults={"result": json.dumps(anaylze_result, ensure_ascii=False)}
     )
-    print(flag)
+    logger.info(anaylze_result)
+    logger.info("分析结果完成.....")

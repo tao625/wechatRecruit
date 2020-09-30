@@ -28,6 +28,7 @@ class AnalyzeCharacter(object):
 
         :return: [()]
         """
+        charater = []
         data = sorted(scores.items(), key=lambda item: item[1], reverse=True)
         if data[0][1] - data[1][1] > config.PROMINENT:
             charater = [data[0]]
