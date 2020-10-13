@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
-
+import json
 import xadmin
 from xadmin import views
 from djcelery.models import (
@@ -60,7 +60,7 @@ class QuestionAdmin(object):
 
     def get_options(self, obj):
         options = Question.objects.get(id=obj.id).options.values('title')
-        return [i['title'] for i in options]
+        return json.dumps([i['title'] for i in options], ensure_ascii=False)
 
     get_options.short_description = "选项"
     get_options.allow_tags = True

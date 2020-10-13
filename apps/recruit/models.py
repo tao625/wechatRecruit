@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils.html import format_html
-
+from django.utils.encoding import python_2_unicode_compatible
 from users.models import User
 
 
 # Create your models here.
 
+@python_2_unicode_compatible
 class BaseTable(models.Model):
     """
     公共字段序列
@@ -19,6 +20,8 @@ class BaseTable(models.Model):
     create_time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
     update_time = models.DateTimeField(verbose_name="更新时间", auto_now=True)
 
+
+@python_2_unicode_compatible
 class Respondents(BaseTable):
     """
     答题人
@@ -36,6 +39,8 @@ class Respondents(BaseTable):
     def __str__(self):
         return self.name
 
+
+@python_2_unicode_compatible
 class Wj(BaseTable):
     """
     问卷表
@@ -59,6 +64,8 @@ class Wj(BaseTable):
     def __str__(self):
         return self.title
 
+
+@python_2_unicode_compatible
 class Options(BaseTable):
     """
     选项表
@@ -74,6 +81,8 @@ class Options(BaseTable):
     def __str__(self):
         return self.title
 
+
+@python_2_unicode_compatible
 class Animal(BaseTable):
     """
     性格别名
@@ -89,6 +98,8 @@ class Animal(BaseTable):
     def __str__(self):
         return self.name
 
+
+@python_2_unicode_compatible
 class Character(BaseTable):
     """
     性格分析
@@ -106,6 +117,8 @@ class Character(BaseTable):
     def __str__(self):
         return self.name
 
+
+@python_2_unicode_compatible
 class Question(BaseTable):
     """
     试题表
@@ -133,6 +146,9 @@ class Question(BaseTable):
     def __str__(self):
         return self.title
 
+
+
+@python_2_unicode_compatible
 class Answer(BaseTable):
     """
     回答表
@@ -146,12 +162,14 @@ class Answer(BaseTable):
     submit_ip = models.CharField(max_length=15, verbose_name='提交人IP', null=True, blank=True)
     submit_user = models.ForeignKey(Respondents, verbose_name="提交人", on_delete=models.CASCADE, null=True, blank=True)
     use_time = models.IntegerField(verbose_name='答题耗时', null=True, blank=True)  # 单位：秒
-    answer_choice = models.CharField(verbose_name='选择题答案', blank=True, null=True, max_length=255)
+    answer_choice = models.TextField(verbose_name='选择题答案', blank=True, null=True)
     answer_text = models.TextField(verbose_name='主观题答案', blank=True, null=True)
 
     def __str__(self):
         return self.wj.title
 
+
+@python_2_unicode_compatible
 class AnalysisData(BaseTable):
     """存储一些性格分析的资料信息,
 
@@ -168,6 +186,8 @@ class AnalysisData(BaseTable):
     def __str__(self):
         return self.name
 
+
+@python_2_unicode_compatible
 class Report(BaseTable):
     class Meta:
         verbose_name = "分析报告"

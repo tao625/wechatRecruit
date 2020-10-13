@@ -4,7 +4,7 @@ import json
 from recruit import models
 from recruit.conf import character_2
 from constance import config
-
+from . import logger
 
 class AnalyzeCharacter(object):
     """性格分析
@@ -17,9 +17,11 @@ class AnalyzeCharacter(object):
             answer = self.get_answer_1(pk)
             scores = self.get_scores_1(answer)
             character = self.analyze_1(scores)
+            logger.info({"pk": pk, "type": 1, "answer": answer, "scores": scores, "character": character})
         elif type == 2:
             scores = self.get_answer_2(pk)
             character = self.analyze_2(scores)
+            logger.info({"pk": pk, "type": 2, "scores": scores, "character": character})
 
         return character
 

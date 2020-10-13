@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 import json
-
+from . import logger
 from django.utils.decorators import method_decorator
 
 from recruit import serializers, models
@@ -111,6 +111,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
             tasks.async_analysis.delay(anwser.id)
             return Response(answer_sheet)
         else:
+            logger.info(s.errors)
             answer_sheet.update(response.ANSWER_SAVE_ERROR)
             return Response(answer_sheet)
 

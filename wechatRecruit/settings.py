@@ -237,11 +237,12 @@ LOGGING = {
             'maxBytes': 1073741824,
             'backupCount': 5,
             'formatter': 'standard',
+            'encoding': 'utf-8',
         },
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'standard'
+            'formatter': 'standard',
         },
         'request_handler': {
             'level': 'INFO',
@@ -250,6 +251,7 @@ LOGGING = {
             'maxBytes': 1073741824,
             'backupCount': 5,
             'formatter': 'standard',
+            'encoding': 'utf-8',
         },
         'script_handler': {
             'level': 'INFO',
@@ -258,6 +260,7 @@ LOGGING = {
             'maxBytes': 1073741824,
             'backupCount': 5,
             'formatter': 'standard',
+            'encoding': 'utf-8',
         },
     },
     'loggers': {
