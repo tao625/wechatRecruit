@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: 美化后台">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recruit/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/passwords.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract_apps/xadmin/plugins/passwords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract_apps/xadmin/views/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/run.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/run.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/result_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result_report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechatRecruit/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechatRecruit/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +250,7 @@
       <workItem from="1602309860442" duration="1306000" />
       <workItem from="1602482742896" duration="1535000" />
       <workItem from="1602484436340" duration="17528000" />
-      <workItem from="1602552512936" duration="6873000" />
+      <workItem from="1602552512936" duration="9476000" />
     </task>
     <task id="LOCAL-00001" summary="feat: create project wechatRecruit">
       <created>1600686635730</created>
@@ -494,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602212742476</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="feat: 美化后台">
+      <created>1602560493496</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1602560493497</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,9 +531,9 @@
     <MESSAGE value="feat: 提交答卷的时候自动分析" />
     <MESSAGE value="feat: 去除多余的代码" />
     <MESSAGE value="feat: readonly_fields" />
-    <MESSAGE value="feat: 美化后台" />
     <MESSAGE value="feat: Update requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update requirements.txt" />
+    <MESSAGE value="feat: 美化后台" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 美化后台" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1600738333632">
@@ -545,71 +548,71 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1125" y="366" key="#xdebugger.evaluate/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601432373458" />
-    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2" timestamp="1602310131625">
+    <state x="477" y="17" width="971" height="790" key="CommitChangelistDialog2" timestamp="1602560490516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="392" y="152" width="971" height="790" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602310131625" />
+    <state x="477" y="17" width="971" height="790" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560490516" />
     <state x="2474" y="112" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600686988066" />
-    <state x="808" y="443" key="Github.Dialog.Accounts.Choose" timestamp="1600756256581">
+    <state x="808" y="443" key="Github.Dialog.Accounts.Choose" timestamp="1602560507357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="808" y="443" key="Github.Dialog.Accounts.Choose/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600756256581" />
-    <state width="1877" height="313" key="GridCell.Tab.0.bottom" timestamp="1602560276233">
+    <state x="808" y="443" key="Github.Dialog.Accounts.Choose/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560507357" />
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042299" />
-    <state width="1877" height="313" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276233" />
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870047" />
-    <state width="1877" height="313" key="GridCell.Tab.0.center" timestamp="1602560276233">
+    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
-    <state width="1877" height="313" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276233" />
+    <state width="1877" height="242" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870046" />
-    <state width="1877" height="313" key="GridCell.Tab.0.left" timestamp="1602560276233">
+    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
-    <state width="1877" height="313" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276233" />
+    <state width="1877" height="242" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870046" />
-    <state width="1877" height="313" key="GridCell.Tab.0.right" timestamp="1602560276233">
+    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601377042298" />
-    <state width="1877" height="313" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276233" />
+    <state width="1877" height="242" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1601430870047" />
-    <state width="1877" height="313" key="GridCell.Tab.1.bottom" timestamp="1602560276168">
+    <state width="1877" height="242" key="GridCell.Tab.1.bottom" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="313" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276168" />
-    <state width="1877" height="313" key="GridCell.Tab.1.center" timestamp="1602560276168">
+    <state width="1877" height="242" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
+    <state width="1877" height="242" key="GridCell.Tab.1.center" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="313" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276168" />
-    <state width="1877" height="313" key="GridCell.Tab.1.left" timestamp="1602560276168">
+    <state width="1877" height="242" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
+    <state width="1877" height="242" key="GridCell.Tab.1.left" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="313" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276168" />
-    <state width="1877" height="313" key="GridCell.Tab.1.right" timestamp="1602560276168">
+    <state width="1877" height="242" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
+    <state width="1877" height="242" key="GridCell.Tab.1.right" timestamp="1602563013718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="313" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560276168" />
+    <state width="1877" height="242" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602563013718" />
     <state x="965" y="262" key="RollbackChangesDialog" timestamp="1601431051175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="965" y="262" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431051175" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1602560419605">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1602562191083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560419605" />
+    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602562191083" />
     <state x="976" y="466" key="VCS.ChangelistChooser" timestamp="1601431030639">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="976" y="466" key="VCS.ChangelistChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431030639" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602212745521">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602560497942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602212745521" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602560497942" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600686991584" />
     <state width="855" height="528" key="XDebugger.FullValuePopup" timestamp="1601434894162">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -623,10 +626,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600835377252" />
-    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602496060486">
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602562247199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602496060486" />
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602562247199" />
     <state x="567" y="220" width="786" height="600" key="find.popup" timestamp="1602558411179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -660,12 +663,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/extract_apps/xadmin/plugins/passwords.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/extract_apps/xadmin/plugins/passwords.py</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -673,10 +671,10 @@
           <line>43</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/extract_apps/xadmin/plugins/passwords.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="114" />
+          <line>81</line>
+          <option name="timeStamp" value="117" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

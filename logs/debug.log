@@ -20721,3 +20721,201 @@ AttributeError: 'PasswordResetConfirmView' object has no attribute 'user'
 2020-10-13 11:37:32,637 [INFO] - "GET /xadmin/users/user/1/update/ HTTP/1.1" 200 32489
 2020-10-13 11:38:02,370 [INFO] - "GET /xadmin/ HTTP/1.1" 200 27759
 2020-10-13 11:38:02,415 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 11:42:32,699 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 11:42:32,749 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 11:45:41,727 [INFO] - Watching for file changes with StatReloader
+2020-10-13 11:47:36,246 [INFO] - Watching for file changes with StatReloader
+2020-10-13 11:47:37,666 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 11:47:37,728 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+2020-10-13 11:54:13,883 [INFO] - Watching for file changes with StatReloader
+2020-10-13 11:54:15,391 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 11:54:15,437 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+2020-10-13 11:54:16,169 [WARNING] - Forbidden (CSRF cookie not set.): /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+2020-10-13 11:54:16,170 [WARNING] - "POST /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/ HTTP/1.1" 403 2837
+2020-10-13 11:54:26,214 [WARNING] - Forbidden (CSRF cookie not set.): /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+2020-10-13 11:54:26,216 [WARNING] - "POST /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/ HTTP/1.1" 403 2837
+2020-10-13 11:55:22,237 [INFO] - Watching for file changes with StatReloader
+2020-10-13 11:55:23,567 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 11:55:23,617 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+2020-10-13 11:56:32,759 [INFO] - Watching for file changes with StatReloader
+2020-10-13 11:56:34,526 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 11:56:34,572 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+2020-10-13 11:56:48,449 [INFO] - Watching for file changes with StatReloader
+2020-10-13 11:56:49,922 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 11:56:49,965 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+2020-10-13 11:57:21,876 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 4 were given
+2020-10-13 11:57:21,879 [ERROR] - "GET /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/ HTTP/1.1" 500 111368
+2020-10-13 11:59:19,073 [INFO] - D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py changed, reloading.
+2020-10-13 11:59:21,811 [INFO] - Watching for file changes with StatReloader
+2020-10-13 11:59:48,703 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 4 were given
+2020-10-13 12:01:46,711 [INFO] - Watching for file changes with StatReloader
+2020-10-13 12:01:48,043 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 12:01:48,089 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+2020-10-13 12:03:21,889 [INFO] - Watching for file changes with StatReloader
+2020-10-13 12:03:23,293 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30593
+2020-10-13 12:03:23,338 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+2020-10-13 12:05:54,052 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 2 were given
+2020-10-13 12:05:54,060 [ERROR] - "GET /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/ HTTP/1.1" 500 110326
+2020-10-13 12:07:49,111 [INFO] - D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py changed, reloading.
+2020-10-13 12:07:52,068 [INFO] - Watching for file changes with StatReloader
+2020-10-13 12:09:07,502 [INFO] - C:\Users\dingyutao\Envs\wechat_server\Lib\site-packages\django\contrib\admin\templatetags\__init__.py changed, reloading.
+2020-10-13 12:10:00,271 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30613
+2020-10-13 12:10:00,331 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:10:09,753 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 4 were given
+2020-10-13 12:10:09,987 [ERROR] - "GET /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/ HTTP/1.1" 500 109655
+2020-10-13 12:12:33,688 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30613
+2020-10-13 12:12:33,733 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:12:39,065 [INFO] - "GET /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/ HTTP/1.1" 200 2625
+2020-10-13 12:12:44,893 [INFO] - "GET /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/ HTTP/1.1" 200 2625
+2020-10-13 12:12:44,954 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:12:53,971 [INFO] - "GET /xadmin/logout/ HTTP/1.1" 200 2669
+2020-10-13 12:12:54,010 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:12:55,296 [INFO] - "GET /xadmin/ HTTP/1.1" 200 4163
+2020-10-13 12:12:55,332 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:12:56,074 [INFO] - "GET /xadmin/xadmin/password_reset/ HTTP/1.1" 200 3252
+2020-10-13 12:12:56,108 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:12:59,618 [INFO] - "POST /xadmin/xadmin/password_reset/ HTTP/1.1" 200 2458
+2020-10-13 12:12:59,652 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:13:16,610 [INFO] - "GET /xadmin/xadmin/password_reset/MQ-5kp-797a32a20efaea3ef876/ HTTP/1.1" 200 4101
+2020-10-13 12:13:16,662 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:17:41,181 [INFO] - "GET /xadmin/ HTTP/1.1" 200 4163
+2020-10-13 12:17:41,236 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:17:43,310 [INFO] - "GET /xadmin/xadmin/password_reset/ HTTP/1.1" 200 3252
+2020-10-13 12:17:43,342 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:17:55,071 [INFO] - "GET /xadmin/ HTTP/1.1" 200 4163
+2020-10-13 12:18:12,185 [INFO] - "GET /xadmin/xadmin/password_reset/ HTTP/1.1" 200 3252
+2020-10-13 12:18:45,293 [INFO] - "GET /xadmin/ HTTP/1.1" 200 4163
+2020-10-13 12:18:57,949 [INFO] - "POST /xadmin/ HTTP/1.1" 302 0
+2020-10-13 12:18:58,262 [INFO] - "GET /xadmin/ HTTP/1.1" 200 30613
+2020-10-13 12:18:58,300 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:19:00,743 [INFO] - "GET /xadmin/users/user/ HTTP/1.1" 200 40722
+2020-10-13 12:19:00,783 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:19:04,248 [INFO] - "GET /xadmin/users/user/2/update/ HTTP/1.1" 200 35040
+2020-10-13 12:19:04,289 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:19:14,689 [INFO] - "POST /xadmin/users/user/2/update/ HTTP/1.1" 302 0
+2020-10-13 12:19:14,856 [INFO] - "GET /xadmin/users/user/ HTTP/1.1" 200 40968
+2020-10-13 12:19:14,913 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:19:23,674 [INFO] - "GET /xadmin/logout/ HTTP/1.1" 200 2669
+2020-10-13 12:19:23,708 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:19:24,760 [INFO] - "GET /xadmin/ HTTP/1.1" 200 4163
+2020-10-13 12:19:24,794 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:19:26,573 [INFO] - "GET /xadmin/xadmin/password_reset/ HTTP/1.1" 200 3252
+2020-10-13 12:19:26,605 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:19:37,673 [INFO] - "POST /xadmin/xadmin/password_reset/ HTTP/1.1" 200 2458
+2020-10-13 12:19:37,713 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:20:20,253 [INFO] - "GET /xadmin/xadmin/password_reset/Mg-5kp-ff662797fc1d4ed26ad2/ HTTP/1.1" 200 4101
+2020-10-13 12:20:20,307 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:20:30,751 [INFO] - "POST /xadmin/xadmin/password_reset/Mg-5kp-ff662797fc1d4ed26ad2/ HTTP/1.1" 302 0
+2020-10-13 12:20:30,766 [INFO] - "GET /xadmin/xadmin/password_reset/complete/ HTTP/1.1" 200 2496
+2020-10-13 12:20:30,810 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:20:35,056 [INFO] - "GET /xadmin/ HTTP/1.1" 200 4163
+2020-10-13 12:20:35,090 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 4170
+2020-10-13 12:20:42,013 [INFO] - "POST /xadmin/ HTTP/1.1" 302 0
+2020-10-13 12:20:42,119 [INFO] - "GET /xadmin/ HTTP/1.1" 200 6704
+2020-10-13 12:20:42,158 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:20:45,240 [INFO] - "GET /xadmin/recruit/respondents/ HTTP/1.1" 200 30116
+2020-10-13 12:20:45,280 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:20:46,988 [INFO] - "GET /xadmin/recruit/answer/ HTTP/1.1" 200 37497
+2020-10-13 12:20:47,041 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:20:49,717 [INFO] - "GET /recruit/report/37/ HTTP/1.1" 200 4350
+2020-10-13 12:20:51,477 [INFO] - "GET /xadmin/recruit/answer/ HTTP/1.1" 200 37497
+2020-10-13 12:20:52,587 [INFO] - "GET /xadmin/recruit/respondents/ HTTP/1.1" 200 30116
+2020-10-13 12:20:52,633 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:20:53,593 [INFO] - "GET /xadmin/ HTTP/1.1" 200 6704
+2020-10-13 12:20:53,634 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:20:58,596 [INFO] - "GET /xadmin/account/password/ HTTP/1.1" 200 8886
+2020-10-13 12:20:58,651 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:21:01,809 [INFO] - "GET /xadmin/ HTTP/1.1" 200 6704
+2020-10-13 12:21:08,224 [INFO] - "GET /xadmin/recruit/respondents/?_q_= HTTP/1.1" 200 30339
+2020-10-13 12:21:08,268 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:21:34,150 [INFO] - "GET /xadmin/recruit/respondents/?_do_=export&export_type=xls&all=on HTTP/1.1" 200 5632
+2020-10-13 12:22:05,968 [INFO] - "GET /xadmin/recruit/respondents/?_do_=export&export_type=xls&export_xls_header=on&all=on HTTP/1.1" 200 5632
+2020-10-13 12:22:17,709 [INFO] - "GET /xadmin/recruit/answer/ HTTP/1.1" 200 37497
+2020-10-13 12:22:17,745 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:22:26,656 [INFO] - "GET /xadmin/recruit/answer/?_do_=export&export_type=xls&export_xls_header=on&all=on HTTP/1.1" 200 9728
+2020-10-13 12:23:03,755 [INFO] - "GET /xadmin/recruit/respondents/ HTTP/1.1" 200 30116
+2020-10-13 12:23:03,809 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:23:07,689 [INFO] - "GET /xadmin/ HTTP/1.1" 200 6704
+2020-10-13 12:23:07,729 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-13 12:23:16,299 [INFO] - "GET /xadmin/xadmin/password_reset/Mg-5kp-ff662797fc1d4ed26ad2/ HTTP/1.1" 200 2625
+2020-10-13 12:23:16,360 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684

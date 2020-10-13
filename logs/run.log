@@ -13468,3 +13468,87 @@ Traceback (most recent call last):
   File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\contrib\auth\views.py", line 296, in get_form_kwargs
     kwargs['user'] = self.user
 AttributeError: 'PasswordResetConfirmView' object has no attribute 'user'
+2020-10-13 11:57:21,876 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 4 were given
+2020-10-13 11:59:48,703 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 4 were given
+2020-10-13 12:05:54,052 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 2 were given
+2020-10-13 12:10:09,753 [ERROR] - Internal Server Error: /xadmin/xadmin/password_reset/MQ-5ko-2f68de055d246ba9edd2/
+Traceback (most recent call last):
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\dingyutao\Envs\wechat_server\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\views\base.py", line 281, in view
+    return handler(request, *args, **kwargs)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 89, in get
+    return self.do_view(request, uidb36, token)
+  File "D:\myproject\wechatRecruit\extract_apps\xadmin\plugins\passwords.py", line 86, in do_view
+    current_app=self.admin_site.name, extra_context=context)
+TypeError: __init__() takes 1 positional argument but 4 were given
