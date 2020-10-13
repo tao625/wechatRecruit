@@ -257,8 +257,7 @@ class BaseAdminView(BaseAdminObject, View):
         self.request_method = request.method.lower()
         self.user = request.user
 
-        self.base_plugins = [p(self) for p in getattr(self,
-                                                      "plugin_classes", [])]
+        self.base_plugins = [p(self) for p in getattr(self, "plugin_classes", [])]
 
         self.args = args
         self.kwargs = kwargs

@@ -25,13 +25,13 @@
 <body>
 <div class="container">
     <div class="row">
-        <h2 style="color: #0000cc">符合性格:</h2>
+        <h2 style="color: #0000cc">分析结果:</h2>
         {% for k, v in anaylze_result.features.items %}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
                         <img class="media-object" src="/media/images/{{ v.1 }}.jpg" alt=".."
-                             style="width: 150px; height: 150px; border-radius: 50%" title="别摸我">
+                             style="width: 150px; height: 150px; border-radius: 50%">
                     </a>
                 </div>
                 <div class="media-body">
@@ -43,7 +43,7 @@
             </div>
         {% endfor %}
     </div>
-    <h2 style="color: #0000cc">职位推荐:</h2>
+    <h2 style="color: #0000cc">综合推荐:</h2>
     <h3 style="color: red">{{ anaylze_result.job }}</h3>
 </div>
 

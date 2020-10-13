@@ -8,7 +8,7 @@ from django.utils.translation import ugettext as _
 from xadmin.sites import site
 from xadmin.views.base import BaseAdminPlugin, BaseAdminView, csrf_protect_m
 from xadmin.views.website import LoginView
-
+from wechatRecruit import settings
 
 class ResetPasswordSendView(BaseAdminView):
 
@@ -39,7 +39,8 @@ class ResetPasswordSendView(BaseAdminView):
                 'token_generator': self.password_reset_token_generator,
                 'email_template_name': self.password_reset_email_template,
                 'request': request,
-                'domain_override': request.get_host()
+                'domain_override': request.get_host(),
+                'from_email': settings.EMAIL_FROM
             }
 
             if self.password_reset_from_email:

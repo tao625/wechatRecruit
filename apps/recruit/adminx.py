@@ -121,7 +121,7 @@ class ReportAdmin(object):
 
 class ConstanceAdmin(object):
     list_display = ['key', 'value']
-    list_editable = ['value']
+    list_editable = ['key', 'value']
 
 
 # 定时任务表
