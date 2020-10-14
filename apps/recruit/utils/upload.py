@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 import json
+import os
+
 import pandas as pd
-from recruit.models import Question, Wj, User, Animal, Options
+from recruit.models import Question, Wj, User, Animal, Options, UploadFile
+from . import logger
+from celery import shared_task
 
 def get_type(str1):
     for k, v in dict(Question.q_type).items():
@@ -10,11 +14,7 @@ def get_type(str1):
             return k
 
 def insert_data(datas):
-    # names = ['qid', 'title', 'type', 'wjId', 'animal', 'options', 'must', 'create_by']
-    # df = pd.read_excel(io=path, names=names).fillna(value="")
-    # datas = df.to_dict(orient='records')
     for q in datas:
-        print(q)
         wj = Wj.objects.get(title=q['wjId'])
         create_by = User.objects.get(username=q['create_by'])
         animal = None if q['animal'] == "空" or not q['animal'] else Animal.objects.get(name=q['animal'])
@@ -27,10 +27,17 @@ def insert_data(datas):
         obj, flag = Question.objects.update_or_create(**q)
         obj.options.set(options_list)
 
-def get_data(path):
+@shared_task
+def get_data(path, id=None):
     names = ['qid', 'title', 'type', 'wjId', 'animal', 'options', 'must', 'create_by']
     dfs = pd.read_excel(io=path, names=names, sheet_name=None)
     for sheet_name, df in dfs.items():
         df = df.fillna(value="")
         datas = df.to_dict(orient='records')
+        logger.info(datas)
         insert_data(datas)
+    if os.path.exists(path):
+        if id:
+            UploadFile.objects.filter(id=id).update(status=2)
+            logger.info({"id": id, "message": "文件状态修改成功", "path": path})
+        os.remove(path)

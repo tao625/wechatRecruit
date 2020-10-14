@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from django.urls import path
-from recruit.views import api, analyze
+from recruit.views import api, analyze, files
 
 urlpatterns = [
     path(r'wj/', api.WjView.as_view({
@@ -29,5 +29,9 @@ urlpatterns = [
         'get': 'get',
         'post': 'post'
     })),
+
+    path(r'file/', files.FileView.as_view({
+        'post': 'create',
+    }))
 
 ]

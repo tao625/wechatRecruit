@@ -199,3 +199,23 @@ class Report(BaseTable):
 
     def __str__(self):
         return self.result
+
+
+@python_2_unicode_compatible
+class UploadFile(BaseTable):
+    class Meta:
+        verbose_name = "批量添加试题"
+        verbose_name_plural = verbose_name
+
+    status_type = (
+        (1, "存在"),
+        (2, "已删除"),
+    )
+
+    name = models.CharField(max_length=50)
+    file = models.FileField(upload_to='excel_data', unique=True, null=True, blank=True)
+    status = models.IntegerField(choices=status_type, default=1, verbose_name="文档是否存在")
+    create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者", null=True)
+
+    def __str__(self):
+        return self.name

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from rest_framework import serializers
-from recruit.models import Wj, Question, Options, Answer, Respondents, Character, Report
+from recruit.models import Wj, Question, Options, Answer, Respondents, Character, Report, UploadFile
 
 class OptionsSerializer(serializers.ModelSerializer):
 
@@ -92,3 +92,14 @@ class ReportSerializer(serializers.ModelSerializer):
         model = Report
         fields = '__all__'
         depth = 1
+
+class FileSerializer(serializers.ModelSerializer):
+    """
+    文件信息序列化
+    """
+    file = serializers.FileField(required=True, write_only=True, allow_empty_file=False, use_url='excel_data', label="文件",
+                                 help_text="文件", error_messages={"blank": "请上传文件", "required": "请上传文件"})
+
+    class Meta:
+        model = UploadFile
+        fields = '__all__'
