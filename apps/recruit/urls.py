@@ -32,6 +32,7 @@ urlpatterns = [
 
     path(r'file/', files.FileView.as_view({
         'post': 'create',
+        'get': 'get',
     }))
 
 ]

@@ -9,7 +9,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 from wechatRecruit.settings import MEDIA_ROOT
 from . import logger
-
+from django.shortcuts import render
 
 class FileView(GenericViewSet, mixins.CreateModelMixin, mixins.ListModelMixin, mixins.DestroyModelMixin):
     serializer_class = serializers.FileSerializer
@@ -30,3 +30,6 @@ class FileView(GenericViewSet, mixins.CreateModelMixin, mixins.ListModelMixin, m
             upload.get_data.delay(path, id=obj.id)
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=201, headers=headers)
+
+    def get(self, request):
+        return render(request, 'upload_excel.html')
