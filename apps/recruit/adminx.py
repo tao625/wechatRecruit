@@ -30,7 +30,7 @@ class RespondentsAdmin(object):
 class WjAdmin(object):
     list_display = ["id", "title", "get_questions", "get_questions_qid", "status", "desc", "create_by"]
     list_display_link = ["title", "status", "create_by"]
-    search_fields = ["title", "status", "create_by"]
+    search_fields = ["title", "status"]
     list_filter = ["title", "status", "create_by", 'create_time', 'update_time']
     ordering = ['id']
     list_editable = ['status']
@@ -52,7 +52,7 @@ class WjAdmin(object):
 class QuestionAdmin(object):
     list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
-    search_fields = ["title", "type", "create_by"]
+    search_fields = ["title", "type"]
     list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
     ordering = ['qid']
     list_editable = ["title", "type", "wjId", 'animal', 'get_options', "must", "create_by"]
@@ -78,8 +78,8 @@ class OptionsAdmin(object):
 class AnswerAdmin(object):
     list_display = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text", "analyze"]
     list_display_link = ["wj", "submit_user"]
-    search_fields = ["wj", "submit_ip"]
-    list_filter = ["wj", "submit_ip", "submit_user"]
+    search_fields = ["submit_ip", "use_time"]
+    list_filter = ["wj", "submit_user"]
     ordering = ['-update_time']
     readonly_fields = ['id', "wj", "submit_user", "use_time", "answer_choice", "answer_text"]
     refresh_times = [1, 30, 60, 300]
@@ -93,7 +93,7 @@ class AnswerAdmin(object):
 class AnimalAdmin(object):
     list_display = ["name", "wj"]
     list_display_link = ["name", "wj"]
-    search_fields = ["name", "wj"]
+    search_fields = ["name", "feature"]
     list_filter = ["name", "id", "wj"]
     list_editable = ['name', 'wj']
 
@@ -110,7 +110,7 @@ class CharacterAdmin(object):
 class AnalysisDataAdmin(object):
     list_display = ["name", "tags", "content", "wj"]
     list_display_link = ["name", "tags", "wj"]
-    search_fields = ["name", "tags", "wj"]
+    search_fields = ["name", "content"]
     list_filter = ["name", "tags", "wj"]
     list_export = ["json", "xls", "csv"]
     style_fields = {'tags': 'm2m_transfer'}

@@ -5,7 +5,6 @@ from django.utils.decorators import method_decorator
 from recruit import serializers, models
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.response import Response
-from recruit.utils import response
 from recruit.utils.decorator import request_log
 from django.shortcuts import render
 from recruit import tasks
@@ -25,8 +24,9 @@ class AnalysisCharacterView(GenericViewSet):
             answer = models.Answer.objects.get(id=kwargs['pk'])
             result = models.Report.objects.get(id=answer.report.id).result
         except:
-            return Response(response.REPORT_NOT_EXIST)
+            tasks.async_analysis(pk=kwargs["pk"])
+            answer = models.Answer.objects.get(id=kwargs['pk'])
+            result = models.Report.objects.get(id=answer.report.id).result
 
         anaylze_result = json.loads(result)
-
         return render(request, 'result_report.html', context={"anaylze_result": anaylze_result})
