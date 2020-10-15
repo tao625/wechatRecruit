@@ -52,3 +52,15 @@ REPORT_NOT_EXIST = {
     "success": False,
     "msg": "分析报告不存在"
 }
+
+UPLOAD_EXCEL_FILE = {
+    "code": "0222",
+    "success": True,
+    "msg": "批量导入试题成功"
+}
+
+NOT_FOUND_EXCEL = {
+    "code": "0223",
+    "success": False,
+    "msg": "本地文件不存在"
+}
