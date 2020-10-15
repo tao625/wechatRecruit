@@ -16,9 +16,8 @@ class FileView(GenericViewSet, mixins.CreateModelMixin, mixins.ListModelMixin, m
     queryset = models.UploadFile.objects
 
     def create(self, request, **kwargs):
-        create_by = request.data.get('create_by')
-        user_obj = models.User.objects.get(username=create_by)
-        request.data['create_by'] = user_obj.id
+        request.data['create_by'] = request.user.id
+        request.data['name'] = request.FILES['file'].name
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         obj = serializer.save()
