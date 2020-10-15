@@ -2,6 +2,9 @@
 # -*- encoding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 import json
+
+from constance.admin import ConstanceAdmin
+
 import xadmin
 from xadmin import views
 from djcelery.models import (
@@ -126,7 +129,7 @@ class ConstanceAdmin(object):
 
 class UploadFileAdmin(object):
     list_display = ['name', 'file', 'status', 'create_by']
-    readonly_fields = ['name', 'status', 'create_by']
+    readonly_fields = ['name', 'status', 'create_by', 'file']
 
 
 # 定时任务表
