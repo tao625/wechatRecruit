@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 import configparser
 import os
+from collections import OrderedDict
+
 import djcelery
 
 # *******configThis******** get form config.conf 快速切换环境
@@ -287,12 +289,12 @@ LOGGING = {
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 CONSTANCE_IGNORE_ADMIN_VERSION_CHECK = True
 
-CONSTANCE_CONFIG = {
+CONSTANCE_CONFIG = OrderedDict({
     'BALANCE': (3, '各项分数小于此值是面面俱到性格', int),
     'COMMON': (3, '某两项分均超过此值, 大众性格', int),
     'PROMINENT': (5, '某一项分高于其它四项中此值以上，性格突出'),
     'URL': ('http://172.16.4.110:8000', '分析结果的跳转地址')
-}
+})
 
 
 djcelery.setup_loader()
