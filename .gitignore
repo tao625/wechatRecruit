@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # pycharm
-.idea/
+.idea
 
 # C extensions
 *.so
@@ -130,3 +130,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/extract_apps/xadmin/locale/
+/logs/
+/logs/
+/logs/
