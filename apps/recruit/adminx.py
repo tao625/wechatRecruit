@@ -3,8 +3,6 @@
 from __future__ import absolute_import, unicode_literals
 import json
 
-from constance.admin import ConstanceAdmin
-
 import xadmin
 from xadmin import views
 from djcelery.models import (
