@@ -24,11 +24,11 @@ from django.views.static import serve
 
 urlpatterns = [
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('xadmin/database/constance/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
-    path('xadmin/constance/', admin.site.urls),
     # drf自带的token认证模式
-    url(r'^api-token-auth/', views.obtain_auth_token),
+    # url(r'^api-token-auth/', views.obtain_auth_token),
     # jwt的认证接口
-    url(r'^api/user/login/', obtain_jwt_token),
+    # url(r'^api/user/login/', obtain_jwt_token),
     path(r'recruit/', include('recruit.urls')),
 ]
