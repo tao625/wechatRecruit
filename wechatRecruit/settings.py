@@ -23,7 +23,7 @@ env = 'dev'
 # ***************configThis********************
 
 cf = configparser.ConfigParser()
-cf.read(r"D:\myproject\wechatRecruit\config.conf")
+cf.read(r"./config.conf")
 
 database_name = cf.get(env + '-config', 'NAME')
 database_user = cf.get(env + '-config', 'USER')
