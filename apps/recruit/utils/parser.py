@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 import json
 from recruit import models
-
+from random import Random
 
 def format_json(value):
     try:
@@ -24,3 +24,11 @@ def get_question_detail(pk):
         new_question.append(q)
 
     return new_question
+
+def get_token():
+    length_r = 32
+    token = ''
+    random = Random()
+    for i in range(length_r):
+        token += random.choice("abcdefghihijklmnopqrstuvwxyz123456789")
+    return token

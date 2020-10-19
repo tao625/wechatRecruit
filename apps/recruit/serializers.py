@@ -2,6 +2,7 @@
 # -*- encoding: utf-8 -*-
 from rest_framework import serializers
 from recruit.models import Wj, Question, Options, Answer, Respondents, Character, Report, UploadFile
+from recruit.utils.parser import get_token
 
 class OptionsSerializer(serializers.ModelSerializer):
 

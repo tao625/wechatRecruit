@@ -9,10 +9,11 @@ from rest_framework.viewsets import GenericViewSet, mixins
 from rest_framework.response import Response
 from rest_framework.permissions import DjangoModelPermissions
 from recruit.utils import response
+from recruit.utils.base_return import BaseResponse
 from recruit.utils.decorator import request_log
 from wechatRecruit import pagination
 from recruit import tasks
-
+from recruit.utils import parser
 
 class WjView(GenericViewSet):
     serializer_class = serializers.WJSerializer
@@ -169,3 +170,26 @@ class RespondentsView(GenericViewSet, mixins.ListModelMixin):
         s = self.get_serializer(respondent, many=True)
         return Response(s.data)
 
+    def post(self, request, *args, **kwargs):
+        ret = BaseResponse()
+        serializer = self.serializer_class(data=request.data, context={'request': request})
+        if serializer.is_valid():
+            user = serializer.save()
+            try:
+                token = models.RespondentToken.objects.get(respondents=user)
+                token.delete()
+            except:
+                pass
+            finally:
+                t_key_new = parser.get_token()
+                token, created = models.RespondentToken.objects.get_or_create(key=t_key_new, respondents=user)
+            # 自定义返回内容
+            ret.msg = "信息保存成功！"
+            ser_obj = self.serializer_class(user)
+            ret.data = ser_obj.data
+            ret.token = token.key
+        else:
+            # 登录失败时返回的内容
+            ret.code = 1013
+            ret.msg = "登录失败！参数错误！"
+        return Response(ret.dict)

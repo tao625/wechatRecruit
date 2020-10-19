@@ -9,7 +9,8 @@ from djcelery.models import (
     TaskState, WorkerState,
     PeriodicTask, IntervalSchedule, CrontabSchedule,
 )
-from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, UploadFile
+from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, \
+    UploadFile, RespondentToken
 from django.utils.safestring import mark_safe
 from constance import config
 from constance.backends.database.models import Constance
@@ -20,12 +21,25 @@ class GlobalSettings(object):
     site_footer = "recruit"
 
 
+class RespondentTokenAdmin(object):
+    list_display = ['key', 'expiration_time', 'create_time', 'respondents']
+    readonly_fields = ['key', 'create_time']
+
+
 class RespondentsAdmin(object):
-    list_display = ["name", "email", "phone", "intention_position"]
+    list_display = ["name", "email", "phone", "intention_position", 'get_token']
     list_display_link = ["name"]
     search_fields = ["name", "email", "phone", "intention_position"]
     list_filter = ['name', 'intention_position', 'create_time', 'update_time']
     ordering = ['-update_time']
+
+    def get_token(self, obj):
+        key = RespondentToken.objects.get(respondents_id=obj).key
+        return key
+
+
+    get_token.short_description = "Token"
+    get_token.allow_tags = True
 
 
 class WjAdmin(object):
@@ -49,6 +63,7 @@ class WjAdmin(object):
 
     get_questions_qid.short_description = "试题序号"
     get_questions_qid.allow_tags = True
+
 
 class QuestionAdmin(object):
     list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "get_wj_alias", "must", "create_by"]
@@ -158,3 +173,4 @@ xadmin.site.register(Character, CharacterAdmin)
 xadmin.site.register(AnalysisData, AnalysisDataAdmin)
 xadmin.site.register(Report, ReportAdmin)
 xadmin.site.register(UploadFile, UploadFileAdmin)
+xadmin.site.register(RespondentToken, RespondentTokenAdmin)

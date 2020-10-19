@@ -3,7 +3,6 @@ from django.utils.html import format_html
 from django.utils.encoding import python_2_unicode_compatible
 from users.models import User
 
-
 # Create your models here.
 
 @python_2_unicode_compatible
@@ -38,6 +37,21 @@ class Respondents(BaseTable):
 
     def __str__(self):
         return self.name
+
+
+@python_2_unicode_compatible
+class RespondentToken(BaseTable):
+    """自定义答题者Token"""
+    class Meta:
+        verbose_name = "Respondent Token"
+        verbose_name_plural = verbose_name
+
+    key = models.CharField(max_length=255, verbose_name="key", null=False)
+    expiration_time = models.IntegerField(verbose_name='过期时间', default=60*60)
+    respondents = models.OneToOneField(Respondents, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.key
 
 
 @python_2_unicode_compatible
