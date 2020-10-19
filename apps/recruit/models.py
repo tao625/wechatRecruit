@@ -56,6 +56,7 @@ class Wj(BaseTable):
     )
 
     title = models.CharField(max_length=255, verbose_name="试卷名", unique=True)
+    wj_alias = models.CharField(max_length=255, verbose_name="试卷别名", unique=True, null=True)
     status = models.IntegerField(choices=status_type, verbose_name='是否发布', default=0)
     desc = models.TextField(verbose_name="问卷说明", null=True, blank=True)
     create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者")

@@ -29,7 +29,7 @@ class RespondentsAdmin(object):
 
 
 class WjAdmin(object):
-    list_display = ["id", "title", "get_questions", "get_questions_qid", "status", "desc", "create_by"]
+    list_display = ["title", "wj_alias", "get_questions", "get_questions_qid", "status", "desc", "create_by"]
     list_display_link = ["title", "status", "create_by"]
     search_fields = ["title", "status"]
     list_filter = ["title", "status", "create_by", 'create_time', 'update_time']
@@ -51,7 +51,7 @@ class WjAdmin(object):
     get_questions_qid.allow_tags = True
 
 class QuestionAdmin(object):
-    list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "must", "create_by"]
+    list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "get_wj_alias", "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
     search_fields = ["title", "type"]
     list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
@@ -65,6 +65,12 @@ class QuestionAdmin(object):
 
     get_options.short_description = "选项"
     get_options.allow_tags = True
+
+    def get_wj_alias(self, obj):
+        return obj.wjId.wj_alias
+
+    get_wj_alias.short_description = "问卷别名"
+    get_wj_alias.allow_tags = True
 
 
 class OptionsAdmin(object):
