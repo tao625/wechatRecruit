@@ -1,25 +1,31 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 import json
+
+from rest_framework.authentication import SessionAuthentication
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+
 from . import logger
 from django.utils.decorators import method_decorator
 
 from recruit import serializers, models
 from rest_framework.viewsets import GenericViewSet, mixins
 from rest_framework.response import Response
-from rest_framework.permissions import DjangoModelPermissions
+from rest_framework.permissions import DjangoModelPermissions, AllowAny
 from recruit.utils import response
 from recruit.utils.base_return import BaseResponse
 from recruit.utils.decorator import request_log
 from wechatRecruit import pagination
 from recruit import tasks
 from recruit.utils import parser
+from ..utils.permissions import CheckTokenPermission
+
 
 class WjView(GenericViewSet):
     serializer_class = serializers.WJSerializer
     pagination_class = pagination.MyCursorPagination
-    permission_classes = (DjangoModelPermissions,)
     queryset = models.Wj.objects
+    permission_classes = (CheckTokenPermission,)
 
     @method_decorator(request_log(level='DEBUG'))
     def single(self, request, **kwargs):
@@ -69,7 +75,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
     """
     serializer_class = serializers.AnswerSerializer
     pagination_class = pagination.MyCursorPagination
-    permission_classes = (DjangoModelPermissions,)
+    permission_classes = (CheckTokenPermission,)
     queryset = models.Answer.objects
 
     @method_decorator(request_log(level='DEBUG'))
@@ -79,9 +85,8 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
         :param request:
         :return:
         """
-
+        token = request.data['token']
         wj_id = request.data['wj_id']
-        submit_user_id = request.data['submit_user_id']
         submit_ip = request.data.get('submit_ip', '')
         use_time = request.data['use_time']
         answer_choice = json.dumps(request.data.get('answer_choice', ""))
@@ -89,7 +94,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
         try:
             wj = models.Wj.objects.get(id=wj_id)
-            submit_user = models.Respondents.objects.get(id=submit_user_id)
+            submit_user = models.RespondentToken.objects.get(key=token).respondents
         except:
             return Response(response.ANSWER_PARA_ERROR)
 
@@ -153,7 +158,7 @@ class RespondentsView(GenericViewSet, mixins.ListModelMixin):
     """
 
     pagination_class = pagination.MyCursorPagination
-    permission_classes = (DjangoModelPermissions,)
+    permission_classes = (CheckTokenPermission, )
     serializer_class = serializers.RespondentsSerializer
     queryset = models.Respondents.objects
 

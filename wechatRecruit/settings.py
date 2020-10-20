@@ -207,8 +207,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
-    'UNAUTHENTICATED_USER': None,
-    'UNAUTHENTICATED_TOKEN': None,
     # json form 渲染
     'DEFAULT_PARSER_CLASSES': ['rest_framework.parsers.JSONParser',
                                'rest_framework.parsers.FormParser',
