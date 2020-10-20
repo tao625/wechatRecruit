@@ -24,9 +24,9 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 
 urlpatterns = [
+    path('xadmin/database/constance/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    path('xadmin/database/constance/', admin.site.urls),
     # drf自带的token认证模式
     url(r'^api-token-auth/', views.obtain_auth_token),
     url(r'^api/user/login/', obtain_jwt_token),
