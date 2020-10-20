@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: Django和xadmin兼容性修改&#10;&#10;1. Django版本修改为2.0.13&#10;2. 重构重置密码逻辑">
+    <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: 自定义权限">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recruit/utils/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/utils/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechatRecruit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechatRecruit/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,14 +254,7 @@
       <workItem from="1602735084570" duration="25272000" />
       <workItem from="1602847503719" duration="868000" />
       <workItem from="1603089530757" duration="26750000" />
-      <workItem from="1603165342171" duration="15739000" />
-    </task>
-    <task id="LOCAL-00005" summary="feat: update function0922">
-      <created>1600772991398</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1600772991398</updated>
+      <workItem from="1603165342171" duration="17664000" />
     </task>
     <task id="LOCAL-00006" summary="feat: Update wj interface&#10;&#10;- get and list">
       <created>1600843839426</created>
@@ -598,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603188570689</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="feat: 自定义权限">
+      <created>1603189370607</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1603189370607</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +610,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 性格分析更新" />
     <MESSAGE value="feat: 增加结果分析" />
     <MESSAGE value="feat: update0928" />
     <MESSAGE value="feat: over game" />
@@ -634,7 +634,8 @@
     <MESSAGE value="feat: Django和xadmin兼容性修改&#10;&#10;1. Django版本修改为2.0.13&#10;2. 重构重置密码逻辑" />
     <MESSAGE value="feat: 自动生成接口文档" />
     <MESSAGE value="feat: update" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update" />
+    <MESSAGE value="feat: 自定义权限" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 自定义权限" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1600738333632">
@@ -649,38 +650,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1125" y="366" key="#xdebugger.evaluate/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189162998" />
-    <state x="527" y="28" width="1215" height="877" key="CommitChangelistDialog2" timestamp="1603188568006">
+    <state x="527" y="28" width="1215" height="877" key="CommitChangelistDialog2" timestamp="1603191396065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="527" y="28" width="1380" height="971" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603188568006" />
+    <state x="527" y="28" width="1380" height="971" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191396065" />
     <state x="2474" y="112" width="1215" height="877" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602822503065" />
     <state x="808" y="443" key="Github.Dialog.Accounts.Choose" timestamp="1602736559140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="443" key="Github.Dialog.Accounts.Choose/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602736559140" />
-    <state width="1877" height="404" key="GridCell.Tab.0.bottom" timestamp="1603189324189">
+    <state width="1877" height="236" key="GridCell.Tab.0.bottom" timestamp="1603191225811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="404" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
+    <state width="1877" height="236" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
     <state width="1877" height="207" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694633" />
-    <state width="1877" height="404" key="GridCell.Tab.0.center" timestamp="1603189324189">
+    <state width="1877" height="236" key="GridCell.Tab.0.center" timestamp="1603191225811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="404" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
+    <state width="1877" height="236" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
     <state width="1877" height="207" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694632" />
-    <state width="1877" height="404" key="GridCell.Tab.0.left" timestamp="1603189324189">
+    <state width="1877" height="236" key="GridCell.Tab.0.left" timestamp="1603191225811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="404" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
+    <state width="1877" height="236" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
     <state width="1877" height="207" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694632" />
-    <state width="1877" height="404" key="GridCell.Tab.0.right" timestamp="1603189324189">
+    <state width="1877" height="236" key="GridCell.Tab.0.right" timestamp="1603191225811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="404" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
+    <state width="1877" height="236" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
     <state width="1877" height="207" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694632" />
     <state width="1877" height="404" key="GridCell.Tab.1.bottom" timestamp="1603189324189">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -714,10 +715,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="976" y="466" key="VCS.ChangelistChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431030639" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603188572670">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603189373827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603188572670" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189373827" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602822507139" />
     <state width="855" height="528" key="XDebugger.FullValuePopup" timestamp="1603188918113">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -829,6 +830,11 @@
           <url>file://$PROJECT_DIR$/apps/recruit/utils/permissions.py</url>
           <line>17</line>
           <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/views/api.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="184" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
