@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^api-token-auth/', views.obtain_auth_token),
     url(r'^api/user/login/', obtain_jwt_token),
     path(r'recruit/', include('recruit.urls')),
+
 ]

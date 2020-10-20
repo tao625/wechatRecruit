@@ -46,8 +46,12 @@ class AnalyzeCharacter(object):
 
         :return:
         """
+
         data = sorted(scores.items(), key=lambda item: item[1], reverse=True)
+        if len(data) == 0:
+            return dict(data)
         return dict([data[0], data[1], data[2]])
+
 
     def get_answer_1(self, pk):
         """
@@ -76,8 +80,8 @@ class AnalyzeCharacter(object):
     def get_answer_2(self, pk):
         op_ids = {}
         answer = models.Answer.objects.get(id=pk)
-        answer_choice = answer.answer_choice
-        for k, v in json.loads(answer_choice).items():
+        answer_choice = json.loads(answer.answer_choice) or {}
+        for k, v in answer_choice.items():
             title = models.Options.objects.get(id=v[0]).title
             for name, val in character_2.items():
                 count = op_ids.get(name, 0)

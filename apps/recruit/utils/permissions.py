@@ -14,5 +14,12 @@ class CheckTokenPermission(permissions.BasePermission):
         """
         Return `True` if permission is granted, `False` otherwise.
         """
-        return True
+
+        if request.data.get('token'):
+            return True
+        if view.__class__.__name__ == 'RespondentsView' and view.action == 'post':
+            return True
+        if request.user.is_authenticated:
+            return True
+        return False
 

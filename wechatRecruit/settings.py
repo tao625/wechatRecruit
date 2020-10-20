@@ -214,6 +214,7 @@ REST_FRAMEWORK = {
                                'rest_framework.parsers.FileUploadParser',
                                ],
     'DEFAULT_PAGINATION_CLASS': 'wechatRecruit.pagination.MyPageNumberPagination',
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
 
 

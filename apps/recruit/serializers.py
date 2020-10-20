@@ -49,19 +49,75 @@ class RespondentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Respondents
         fields = ['id', 'name', 'email', 'phone', 'intention_position']
+        extra_kwargs = {
+            'name': {
+                'help_text': '请填写真实姓名',
+                'min_length': 1,
+                'max_length': 255,
+                'required': True,
+                'error_messages': {
+                    'min_length': '4个字符',
+                    'max_length': '255个字符'
+                }
+            },
+            'email': {
+                'help_text': '请输入邮箱',
+                'required': True,
+            },
+            'phone': {
+                'help_text': '请输入手机号',
+                'required': True,
+            },
+            'intention_position': {
+                'help_text': '请输入应聘职位',
+                'min_length': 1,
+                'max_length': 255,
+                'required': True,
+                'error_messages': {
+                    'min_length': '4个字符',
+                    'max_length': '255个字符'
+                }
+            }
+        }
 
 
 class AnswerSerializer(serializers.ModelSerializer):
     """
     答题卡序列化
     """
-    submit_user = serializers.SerializerMethodField()
+    token = serializers.CharField(help_text='应聘者信息生产的token', required=False)
+    wj_id = serializers.CharField(help_text='试卷ID', required=False)
     wj = serializers.SerializerMethodField()
 
     class Meta:
         model = Answer
-        fields = ['id', 'submit_ip', 'use_time', 'answer_choice', 'answer_text', 'submit_user', 'wj']
+        fields = ['id', 'submit_ip', 'use_time', 'answer_choice', 'answer_text', 'submit_user', 'wj', 'token', 'wj_id']
         depth = 1
+        extra_kwargs = {
+            'token': {
+                'help_text': '应聘者基本信息生产的Token值,非登陆用户token',
+                'required': True
+            },
+            'submit_ip': {
+                'help_text': '请输入邮箱',
+                'required': True
+            },
+            'use_time': {
+                'help_text': '答题耗时',
+                'required': True,
+            },
+            'wj_id': {
+                'help_text': '试卷ID',
+                'required': True
+            },
+            'answer_choice': {
+                'help_text': '选择题答案,字典的形式 {"题号":[答案ID]}',
+            },
+            'answer_text': {
+                'help_text': '主观题答案,字典的形式 {"题号": "答案"}',
+            }
+        }
+
 
     def get_submit_user(self, obj):
         user = Respondents.objects.filter(id=obj.submit_user.id)

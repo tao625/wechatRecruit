@@ -2,6 +2,7 @@
 # -*- encoding: utf-8 -*-
 from django.urls import path
 from recruit.views import api, analyze, files
+from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path(r'wj/', api.WjView.as_view({
@@ -21,8 +22,9 @@ urlpatterns = [
         'get': 'single',
     })),
 
-    path(r'user/', api.RespondentsView.as_view({
-        'get': 'get',
+    path(r'respondentor/', api.RespondentsView.as_view({
+        'get': 'list',
+        'post': 'post'
     })),
 
     path(r'report/<int:pk>/', analyze.AnalysisCharacterView.as_view({
@@ -33,6 +35,8 @@ urlpatterns = [
     path(r'file/', files.FileView.as_view({
         'post': 'create',
         'get': 'get',
-    }))
+    })),
+
+    path(r'docs/', include_docs_urls(title='接口文档'))
 
 ]
