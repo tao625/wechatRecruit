@@ -9,7 +9,8 @@ from djcelery.models import (
     TaskState, WorkerState,
     PeriodicTask, IntervalSchedule, CrontabSchedule,
 )
-from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, UploadFile
+from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, \
+    UploadFile, RespondentToken
 from django.utils.safestring import mark_safe
 from constance import config
 from constance.backends.database.models import Constance
@@ -20,16 +21,29 @@ class GlobalSettings(object):
     site_footer = "recruit"
 
 
+class RespondentTokenAdmin(object):
+    list_display = ['key', 'expiration_time', 'create_time', 'respondents']
+    readonly_fields = ['key', 'create_time']
+
+
 class RespondentsAdmin(object):
-    list_display = ["name", "email", "phone", "intention_position"]
+    list_display = ["name", "email", "phone", "intention_position", 'get_token']
     list_display_link = ["name"]
     search_fields = ["name", "email", "phone", "intention_position"]
     list_filter = ['name', 'intention_position', 'create_time', 'update_time']
     ordering = ['-update_time']
 
+    def get_token(self, obj):
+        key = RespondentToken.objects.get(respondents_id=obj).key
+        return key
+
+
+    get_token.short_description = "Token"
+    get_token.allow_tags = True
+
 
 class WjAdmin(object):
-    list_display = ["id", "title", "get_questions", "get_questions_qid", "status", "desc", "create_by"]
+    list_display = ["title", "wj_alias", "get_questions", "get_questions_qid", "status", "desc", "create_by"]
     list_display_link = ["title", "status", "create_by"]
     search_fields = ["title", "status"]
     list_filter = ["title", "status", "create_by", 'create_time', 'update_time']
@@ -50,8 +64,9 @@ class WjAdmin(object):
     get_questions_qid.short_description = "试题序号"
     get_questions_qid.allow_tags = True
 
+
 class QuestionAdmin(object):
-    list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "must", "create_by"]
+    list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "get_wj_alias", "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
     search_fields = ["title", "type"]
     list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
@@ -65,6 +80,12 @@ class QuestionAdmin(object):
 
     get_options.short_description = "选项"
     get_options.allow_tags = True
+
+    def get_wj_alias(self, obj):
+        return obj.wjId.wj_alias
+
+    get_wj_alias.short_description = "问卷别名"
+    get_wj_alias.allow_tags = True
 
 
 class OptionsAdmin(object):
@@ -152,3 +173,4 @@ xadmin.site.register(Character, CharacterAdmin)
 xadmin.site.register(AnalysisData, AnalysisDataAdmin)
 xadmin.site.register(Report, ReportAdmin)
 xadmin.site.register(UploadFile, UploadFileAdmin)
+xadmin.site.register(RespondentToken, RespondentTokenAdmin)
