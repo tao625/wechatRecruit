@@ -62,17 +62,17 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
     def post(self, request):
         """保存答卷"""
 
-        token = request.data['token']
-        wj_id = request.data['wj_id']
         submit_ip = request.data.get('submit_ip', '')
         use_time = request.data['use_time']
         answer_choice = json.dumps(request.data.get('answer_choice', ""))
         answer_text = json.dumps(request.data.get('answer_text', ""), ensure_ascii=False)
-
         try:
+            wj_id = request.data['wj_id']
             wj = models.Wj.objects.get(id=wj_id)
+            token = request.data['token']
             submit_user = models.RespondentToken.objects.get(key=token).respondents
-        except:
+        except Exception as e:
+            logger.error(str(e))
             return Response(response.ANSWER_PARA_ERROR)
 
         data = {
@@ -112,7 +112,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
         """查询指定答卷"""
 
         try:
-            queryset = self.queryset.filter(id=kwargs['pk'])
+            queryset = self.queryset.get(id=kwargs['pk'])
         except:
             return Response(response.ANSWER_NOT_EXIST)
 
@@ -146,7 +146,7 @@ class RespondentsView(GenericViewSet, mixins.ListModelMixin):
         return Response(s.data)
 
     def post(self, request, *args, **kwargs):
-        """ 保存答题卡信息"""
+        """ 保存应聘者信息"""
 
         ret = BaseResponse()
         serializer = self.serializer_class(data=request.data, context={'request': request})

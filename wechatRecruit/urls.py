@@ -22,6 +22,7 @@ from wechatRecruit import settings
 from django.views.static import serve
 from rest_framework_jwt.views import obtain_jwt_token
 
+
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),

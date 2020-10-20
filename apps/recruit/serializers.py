@@ -85,12 +85,13 @@ class AnswerSerializer(serializers.ModelSerializer):
     """
     答题卡序列化
     """
-    submit_user = serializers.SerializerMethodField()
+    token = serializers.CharField(help_text='应聘者信息生产的token', required=False)
+    wj_id = serializers.CharField(help_text='试卷ID', required=False)
     wj = serializers.SerializerMethodField()
 
     class Meta:
         model = Answer
-        fields = ['id', 'submit_ip', 'use_time', 'answer_choice', 'answer_text', 'submit_user', 'wj']
+        fields = ['id', 'submit_ip', 'use_time', 'answer_choice', 'answer_text', 'submit_user', 'wj', 'token', 'wj_id']
         depth = 1
         extra_kwargs = {
             'token': {
