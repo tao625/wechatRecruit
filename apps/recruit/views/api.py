@@ -29,10 +29,8 @@ class WjView(GenericViewSet):
 
     @method_decorator(request_log(level='DEBUG'))
     def single(self, request, **kwargs):
-        """
-        获取单个问卷
-        :return:
-        """
+        """获取单个问卷"""
+
         pk = kwargs['pk']
         try:
             obj = models.Wj.objects.filter(id=pk)
@@ -44,11 +42,8 @@ class WjView(GenericViewSet):
 
     @method_decorator(request_log(level='DEBUG'))
     def list(self, request):
-        """
-        获取所有问卷
-        :param request:
-        :return:
-        """
+        """获取所有问卷"""
+
         obj = models.Wj.objects.all()
         serializer = self.get_serializer(obj, many=True)
 
@@ -56,23 +51,8 @@ class WjView(GenericViewSet):
 
 
 class AnswerView(GenericViewSet, mixins.ListModelMixin):
-    """
-        {
-          "submit_user_id": 1,
-          "submit_ip": "172.3.100.101",
-          "use_time": 100,
-          "wj_id": 1,
-          "answer_choice": {
-            "1": [1],
-            "2": [1,2,3]
-          },
-          "answer_text": {
-            "3": "城南小陌又逢春，只见梅花不见人",
-            "4": "人有生老三千疾， 唯有相思不可医！"
-          }
-    }
+    """答卷相关接口"""
 
-    """
     serializer_class = serializers.AnswerSerializer
     pagination_class = pagination.MyCursorPagination
     permission_classes = (CheckTokenPermission,)
@@ -80,11 +60,8 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
     @method_decorator(request_log(level='DEBUG'))
     def post(self, request):
-        """
-        保存答卷
-        :param request:
-        :return:
-        """
+        """保存答卷"""
+
         token = request.data['token']
         wj_id = request.data['wj_id']
         submit_ip = request.data.get('submit_ip', '')
@@ -123,11 +100,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
     @method_decorator(request_log(level='DEBUG'))
     def list(self, request):
-        """
-        展示所有答题卡
-        :param request:
-        :return:
-        """
+        """展示所有答题卡"""
 
         querset = self.get_queryset()
         serializer = self.get_serializer(querset, many=True)
@@ -136,12 +109,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
     @method_decorator(request_log(level='DEBUG'))
     def single(self, request, **kwargs):
-        """
-        查询指定答卷
-        :param request:
-        :param kwargs: pk
-        :return:
-        """
+        """查询指定答卷"""
 
         try:
             queryset = self.queryset.filter(id=kwargs['pk'])
@@ -153,9 +121,7 @@ class AnswerView(GenericViewSet, mixins.ListModelMixin):
 
 
 class RespondentsView(GenericViewSet, mixins.ListModelMixin):
-    """
-    应聘者信息
-    """
+    """应聘者信息"""
 
     pagination_class = pagination.MyCursorPagination
     permission_classes = (CheckTokenPermission, )
@@ -163,19 +129,25 @@ class RespondentsView(GenericViewSet, mixins.ListModelMixin):
     queryset = models.Respondents.objects
 
     def get(self, request):
-        user_id = request.query_params.get('user_id')
-        if user_id:
-            try:
-                respondent = self.queryset.filter(id=user_id)
-            except:
-                return Response(response.RESPONDENT_NOT_EXIST)
-        else:
-            respondent = self.get_queryset()
+        """获取所有应聘者信息"""
 
+        respondent = self.get_queryset()
+        s = self.get_serializer(respondent, many=True)
+        return Response(s.data)
+
+    def single(self, request, **kwargs):
+        """获取某个应聘者信息信息"""
+
+        try:
+            respondent = self.queryset.filter(id=kwargs['pk'])
+        except:
+            return Response(response.RESPONDENT_NOT_EXIST)
         s = self.get_serializer(respondent, many=True)
         return Response(s.data)
 
     def post(self, request, *args, **kwargs):
+        """ 保存答题卡信息"""
+
         ret = BaseResponse()
         serializer = self.serializer_class(data=request.data, context={'request': request})
         if serializer.is_valid():
