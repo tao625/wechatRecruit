@@ -32,7 +32,7 @@ class WJSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Wj
-        fields = ['id', 'title', 'wj_alias', 'desc', 'questions']
+        fields = ['id', 'title', 'wj_alias', 'desc', 'questions', 'max_quiz_time']
         depth = 1
 
     def get_questions(self, obj):

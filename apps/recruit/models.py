@@ -85,6 +85,7 @@ class Wj(BaseTable):
     desc = models.TextField(verbose_name="问卷说明", null=True, blank=True)
     create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者")
     type = models.IntegerField(verbose_name="分析类型", null=True)
+    max_quiz_time = models.CharField(max_length=10, verbose_name="最大答题时间/秒", default=60*60)
 
     def __str__(self):
         return self.title
