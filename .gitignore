@@ -131,8 +131,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /extract_apps/xadmin/locale/
-/logs/
-/logs/
-/logs/
-/logs/
 /.idea/
+/logs/
