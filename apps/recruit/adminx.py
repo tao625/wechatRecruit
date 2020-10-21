@@ -22,7 +22,7 @@ class GlobalSettings(object):
 
 
 class RespondentTokenAdmin(object):
-    list_display = ['key', 'expiration_time', 'create_time', 'respondents']
+    list_display = ['key', 'create_time', 'respondents']
     readonly_fields = ['key', 'create_time']
 
 
@@ -43,12 +43,12 @@ class RespondentsAdmin(object):
 
 
 class WjAdmin(object):
-    list_display = ["title", "wj_alias", "get_questions", "get_questions_qid", "status", "desc", "create_by"]
+    list_display = ["title", "wj_alias", "get_questions", "get_questions_qid", "status", "desc", "create_by", 'max_quiz_time']
     list_display_link = ["title", "status", "create_by"]
     search_fields = ["title", "status"]
     list_filter = ["title", "status", "create_by", 'create_time', 'update_time']
     ordering = ['id']
-    list_editable = ['status']
+    list_editable = ['status', 'max_quiz_time']
 
 
     def get_questions(self, obj):
