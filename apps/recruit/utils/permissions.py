@@ -21,7 +21,7 @@ class CheckTokenPermission(permissions.BasePermission):
         token = request.data.get('token')
         if request.data.get('token'):
             try:
-                respondents_id = int(token.split('_')[-1])
+                respondents_id = int(token.split('&')[-1])
                 token_obj = RespondentToken.objects.get(key=token, respondents_id=respondents_id)
             except Exception as e:
                 logger.error(e)
@@ -30,6 +30,8 @@ class CheckTokenPermission(permissions.BasePermission):
             now = int(parser.string2time_stamp(str(datetime.datetime.now())))
             # 满足条件的话，就表示token已失效，提示用户重新登录刷新token.
             if now - token_created_time > RESPONDENT_TOKEN_EXPIRED:
+                token_obj.status = True
+                token_obj.save()
                 raise AuthenticationFailed('Token has expired')
             return True
         if view.__class__.__name__ == 'RespondentsView' and view.action == 'post':

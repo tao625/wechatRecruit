@@ -52,13 +52,14 @@ class RespondentToken(BaseTable):
 
     key = models.CharField(max_length=200, verbose_name="key", primary_key=True)
     respondents = models.OneToOneField(Respondents, on_delete=models.CASCADE, null=True)
+    status = models.BooleanField(default=False, verbose_name='是否过期', help_text='0:未过期, 1:过期')
 
     def __str__(self):
         return self.key
 
     def save(self, *args, **kwargs):
         if not self.key:
-            self.key = self.generate_key() + '_' + str(self.respondents.id)
+            self.key = self.generate_key() + '&' + str(self.respondents.id)
         return super().save(*args, **kwargs)
 
     def generate_key(self):

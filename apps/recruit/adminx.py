@@ -22,8 +22,8 @@ class GlobalSettings(object):
 
 
 class RespondentTokenAdmin(object):
-    list_display = ['key', 'create_time', 'respondents']
-    readonly_fields = ['key', 'create_time']
+    list_display = ['key', 'create_time', 'respondents', 'status']
+    readonly_fields = ['key', 'create_time', 'status', 'respondents']
 
 
 class RespondentsAdmin(object):
