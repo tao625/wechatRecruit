@@ -1,7 +1,11 @@
+import binascii
+import os
+
 from django.db import models
 from django.utils.html import format_html
 from django.utils.encoding import python_2_unicode_compatible
 from users.models import User
+from rest_framework.authtoken.models import Token
 
 # Create your models here.
 
@@ -46,13 +50,19 @@ class RespondentToken(BaseTable):
         verbose_name = "Respondent Token"
         verbose_name_plural = verbose_name
 
-    key = models.CharField(max_length=255, verbose_name="key", null=False)
-    expiration_time = models.IntegerField(verbose_name='过期时间', default=60*60)
+    key = models.CharField(max_length=200, verbose_name="key", primary_key=True)
     respondents = models.OneToOneField(Respondents, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.key
 
+    def save(self, *args, **kwargs):
+        if not self.key:
+            self.key = self.generate_key() + '_' + str(self.respondents.id)
+        return super().save(*args, **kwargs)
+
+    def generate_key(self):
+        return binascii.hexlify(os.urandom(20)).decode()
 
 @python_2_unicode_compatible
 class Wj(BaseTable):
@@ -75,6 +85,7 @@ class Wj(BaseTable):
     desc = models.TextField(verbose_name="问卷说明", null=True, blank=True)
     create_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="创建者")
     type = models.IntegerField(verbose_name="分析类型", null=True)
+    max_quiz_time = models.CharField(max_length=10, verbose_name="最大答题时间/秒", default=60*60)
 
     def __str__(self):
         return self.title

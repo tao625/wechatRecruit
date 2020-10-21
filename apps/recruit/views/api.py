@@ -3,6 +3,7 @@
 import json
 
 from rest_framework.authentication import SessionAuthentication
+from rest_framework.exceptions import ValidationError
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 from . import logger
@@ -19,7 +20,7 @@ from wechatRecruit import pagination
 from recruit import tasks
 from recruit.utils import parser
 from ..utils.permissions import CheckTokenPermission
-
+from rest_framework.authtoken.models import Token
 
 class WjView(GenericViewSet):
     serializer_class = serializers.WJSerializer
@@ -149,24 +150,17 @@ class RespondentsView(GenericViewSet, mixins.ListModelMixin):
         """ 保存应聘者信息"""
 
         ret = BaseResponse()
-        serializer = self.serializer_class(data=request.data, context={'request': request})
-        if serializer.is_valid():
-            user = serializer.save()
-            try:
-                token = models.RespondentToken.objects.get(respondents=user)
-                token.delete()
-            except:
-                pass
-            finally:
-                t_key_new = parser.get_token()
-                token, created = models.RespondentToken.objects.get_or_create(key=t_key_new, respondents=user)
-            # 自定义返回内容
-            ret.msg = "信息保存成功！"
-            ser_obj = self.serializer_class(user)
-            ret.data = ser_obj.data
-            ret.token = token.key
-        else:
-            # 登录失败时返回的内容
+        try:
+            serializer = self.serializer_class(data=request.data, context={'request': request})
+            if serializer.is_valid(raise_exception=True):
+                user = serializer.save()
+                token, created = models.RespondentToken.objects.get_or_create(respondents=user)
+                ret.msg = "信息保存成功！"
+                ser_obj = self.serializer_class(user)
+                ret.data = ser_obj.data
+                ret.token = token.key
+        except Exception as e:
+            logger.error(e)
             ret.code = 1013
-            ret.msg = "登录失败！参数错误！"
+            ret.msg = str(e)
         return Response(ret.dict)

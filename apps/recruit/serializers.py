@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 from rest_framework import serializers
 from recruit.models import Wj, Question, Options, Answer, Respondents, Character, Report, UploadFile
-from recruit.utils.parser import get_token
+
 
 class OptionsSerializer(serializers.ModelSerializer):
 
@@ -32,7 +32,7 @@ class WJSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Wj
-        fields = ['id', 'title', 'wj_alias', 'desc', 'questions']
+        fields = ['id', 'title', 'wj_alias', 'desc', 'questions', 'max_quiz_time']
         depth = 1
 
     def get_questions(self, obj):

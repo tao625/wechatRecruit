@@ -225,7 +225,7 @@ LOGGING = {
     'disable_existing_loggers': True,
     'formatters': {
         'standard': {
-            'format': '%(asctime)s [%(levelname)s] - %(message)s'}
+            'format': '%(asctime)s - [%(levelname)s] - [%(filename)s:%(lineno)s] - %(message)s'}
         # 日志格式
     },
     'filters': {
@@ -319,3 +319,7 @@ EMAIL_HOST_USER = email_host_user
 EMAIL_HOST_PASSWORD = email_host_password
 EMAIL_USE_TLS = email_use_tls
 EMAIL_FROM = email_from
+
+
+# RespondentToken 过期时间
+RESPONDENT_TOKEN_EXPIRED = 3600*7
