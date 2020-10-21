@@ -31,14 +31,13 @@ class WjView(GenericViewSet):
     @method_decorator(request_log(level='DEBUG'))
     def single(self, request, **kwargs):
         """获取单个问卷"""
-
-        pk = kwargs['pk']
         try:
-            obj = models.Wj.objects.filter(id=pk)
-        except:
-            return Response(response.WJ_NOT_EXISTS)
-
-        serializer = self.get_serializer(obj, many=True)
+            instance = self.get_object()
+        except Exception as e:
+            ret = response.WJ_NOT_EXISTS
+            ret['msg'] = str(e)
+            return Response(ret)
+        serializer = self.get_serializer(instance)
         return Response(serializer.data)
 
     @method_decorator(request_log(level='DEBUG'))
@@ -51,7 +50,7 @@ class WjView(GenericViewSet):
         return Response(serializer.data)
 
 
-class AnswerView(GenericViewSet, mixins.ListModelMixin):
+class AnswerView(GenericViewSet):
     """答卷相关接口"""
 
     serializer_class = serializers.AnswerSerializer
