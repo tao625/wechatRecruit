@@ -6,11 +6,11 @@ from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path(r'wj/', api.WjView.as_view({
-        "get": "list"
+        "post": "list"
     })),
 
     path(r'wj/<int:pk>/', api.WjView.as_view({
-        "get": "single",
+        "post": "single",
     })),
 
     path(r'answer/', api.AnswerView.as_view({

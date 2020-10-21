@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
+import datetime
 import json
+import time
+
 from recruit import models
 from random import Random
 
@@ -25,10 +28,18 @@ def get_question_detail(pk):
 
     return new_question
 
-def get_token():
-    length_r = 32
-    token = ''
-    random = Random()
-    for i in range(length_r):
-        token += random.choice("abcdefghihijklmnopqrstuvwxyz123456789")
-    return token
+
+def string2time_stamp(strValue):
+
+    try:
+        d = datetime.datetime.strptime(strValue, "%Y-%m-%d %H:%M:%S.%f")
+        t = d.timetuple()
+        timeStamp = int(time.mktime(t))
+        timeStamp = float(str(timeStamp) + str("%06d" % d.microsecond)) / 1000000
+        return timeStamp
+    except ValueError as e:
+        d = datetime.datetime.strptime(str2, "%Y-%m-%d %H:%M:%S")
+        t = d.timetuple()
+        timeStamp = int(time.mktime(t))
+        timeStamp = float(str(timeStamp) + str("%06d" % d.microsecond)) / 1000000
+        return timeStamp
