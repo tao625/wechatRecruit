@@ -37,6 +37,10 @@ urlpatterns = [
         'get': 'get',
     })),
 
+    path(r'postion/', api.PositionView.as_view({
+        'get': 'list',
+    })),
+
     path(r'docs/', include_docs_urls(title='接口文档'))
 
 ]

@@ -163,3 +163,10 @@ class RespondentsView(GenericViewSet, mixins.ListModelMixin):
             ret.code = 1013
             ret.msg = str(e)
         return Response(ret.dict)
+
+
+class PositionView(GenericViewSet, mixins.ListModelMixin):
+    pagination_class = pagination.MyCursorPagination
+    permission_classes = (CheckTokenPermission,)
+    serializer_class = serializers.PositionSerializer
+    queryset = models.Position.objects
