@@ -3,7 +3,7 @@ PLUGINS = (
     'actions',
     'filters',
     'bookmark',
-    'export',
+    # 'export',
     'layout',
     'refresh',
     'details',
@@ -29,7 +29,8 @@ PLUGINS = (
     'quickfilter',
     'sortablelist',
     'importexport',
-    "ueditor"
+    "ueditor",
+    'importexport'
 )
 
 

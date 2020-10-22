@@ -60,13 +60,14 @@ AUTH_USER_MODEL = 'users.User'
 # Application definition
 
 INSTALLED_APPS = [
+    'xadmin',
+    'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'xadmin',
     'password_reset',
     'crispy_forms',
     'DjangoUeditor',
@@ -323,3 +324,6 @@ EMAIL_FROM = email_from
 
 # RespondentToken 过期时间
 RESPONDENT_TOKEN_EXPIRED = 3600*7
+
+# 在导入数据时使用数据库事务，默认False
+IMPORT_EXPORT_USE_TRANSACTIONS = True

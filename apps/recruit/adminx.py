@@ -13,6 +13,8 @@ from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, C
     UploadFile, RespondentToken, Position
 from django.utils.safestring import mark_safe
 from constance import config
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin, ImportExportActionModelAdmin
 from constance.backends.database.models import Constance
 
 
@@ -21,10 +23,23 @@ class GlobalSettings(object):
     site_footer = "recruit"
 
 
+class BaseSettings(object):
+    enable_themes = True  # 使用主题功能
+    use_bootswatch = True
+
+
+xadmin.site.register(views.BaseAdminView, BaseSettings)
+
+class RespondentTokenResource(resources.ModelResource):
+
+    class Meta:
+        model = RespondentToken
+        import_id_fields = ['key']
+
 class RespondentTokenAdmin(object):
     list_display = ['key', 'create_time', 'respondents', 'status']
     readonly_fields = ['key', 'create_time', 'status', 'respondents']
-
+    import_export_args = {'import_resource_class': RespondentTokenResource, 'export_resource_class': RespondentTokenResource}
 
 class RespondentsAdmin(object):
     list_display = ["name", "email", "phone", "intention_position", 'get_token']
