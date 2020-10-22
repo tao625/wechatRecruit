@@ -2,9 +2,6 @@
 # -*- encoding: utf-8 -*-
 import json
 
-from rest_framework.authentication import SessionAuthentication
-from rest_framework.exceptions import ValidationError
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 from . import logger
 from django.utils.decorators import method_decorator
@@ -12,15 +9,13 @@ from django.utils.decorators import method_decorator
 from recruit import serializers, models
 from rest_framework.viewsets import GenericViewSet, mixins
 from rest_framework.response import Response
-from rest_framework.permissions import DjangoModelPermissions, AllowAny
 from recruit.utils import response
 from recruit.utils.base_return import BaseResponse
 from recruit.utils.decorator import request_log
 from wechatRecruit import pagination
 from recruit import tasks
-from recruit.utils import parser
 from ..utils.permissions import CheckTokenPermission
-from rest_framework.authtoken.models import Token
+
 
 class WjView(GenericViewSet):
     serializer_class = serializers.WJSerializer
@@ -44,7 +39,7 @@ class WjView(GenericViewSet):
     def list(self, request):
         """获取所有问卷"""
 
-        obj = models.Wj.objects.all()
+        obj = models.Wj.objects.filter(status=1).all()
         serializer = self.get_serializer(obj, many=True)
 
         return Response(serializer.data)
