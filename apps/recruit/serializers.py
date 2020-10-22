@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from rest_framework import serializers
-from recruit.models import Wj, Question, Options, Answer, Respondents, Character, Report, UploadFile
+from recruit.models import Wj, Question, Options, Answer, Respondents, Character, Report, UploadFile, Position
 
 
 class OptionsSerializer(serializers.ModelSerializer):
@@ -160,3 +160,12 @@ class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UploadFile
         fields = '__all__'
+
+class PositionSerializer(serializers.ModelSerializer):
+    """
+    职位
+    """
+
+    class Meta:
+        model = Position
+        fields = ['name']

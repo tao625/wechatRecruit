@@ -10,7 +10,7 @@ from djcelery.models import (
     PeriodicTask, IntervalSchedule, CrontabSchedule,
 )
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, \
-    UploadFile, RespondentToken
+    UploadFile, RespondentToken, Position
 from django.utils.safestring import mark_safe
 from constance import config
 from constance.backends.database.models import Constance
@@ -150,6 +150,9 @@ class UploadFileAdmin(object):
     list_display = ['name', 'file', 'status', 'create_by']
     readonly_fields = ['name', 'status', 'create_by', 'file']
 
+class PositionAdmin(object):
+    list_display = ['name']
+    list_editable = ['name']
 
 # 定时任务表
 # xadmin.site.register(IntervalSchedule)  # 存储循环任务设置的时间
@@ -174,3 +177,4 @@ xadmin.site.register(AnalysisData, AnalysisDataAdmin)
 xadmin.site.register(Report, ReportAdmin)
 xadmin.site.register(UploadFile, UploadFileAdmin)
 xadmin.site.register(RespondentToken, RespondentTokenAdmin)
+xadmin.site.register(Position, PositionAdmin)

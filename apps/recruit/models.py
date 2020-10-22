@@ -25,6 +25,18 @@ class BaseTable(models.Model):
 
 
 @python_2_unicode_compatible
+class Position(BaseTable):
+    class Meta:
+        verbose_name = "职位"
+        verbose_name_plural = verbose_name
+
+    name = models.CharField(max_length=255, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+@python_2_unicode_compatible
 class Respondents(BaseTable):
     """
     答题人

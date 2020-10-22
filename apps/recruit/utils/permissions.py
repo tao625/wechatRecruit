@@ -19,6 +19,12 @@ class CheckTokenPermission(permissions.BasePermission):
         Return `True` if permission is granted, `False` otherwise.
         """
         token = request.data.get('token')
+        if view.__class__.__name__ == 'RespondentsView' and view.action == 'post':
+            return True
+        if view.__class__.__name__ == 'PositionView' and view.action == 'list':
+            return True
+        if request.user.is_authenticated:
+            return True
         if request.data.get('token'):
             try:
                 respondents_id = int(token.split('&')[-1])
@@ -34,9 +40,6 @@ class CheckTokenPermission(permissions.BasePermission):
                 token_obj.save()
                 raise AuthenticationFailed('Token has expired')
             return True
-        if view.__class__.__name__ == 'RespondentsView' and view.action == 'post':
-            return True
-        if request.user.is_authenticated:
-            return True
+
         return False
 
