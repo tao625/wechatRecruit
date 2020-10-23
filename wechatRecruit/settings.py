@@ -11,12 +11,11 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 import configparser
 import os
+# *******configThis******** get form config.conf 快速切换环境
+import sys
 from collections import OrderedDict
 
 import djcelery
-
-# *******configThis******** get form config.conf 快速切换环境
-import sys
 
 env = 'dev'
 # env = 'prod'
@@ -55,7 +54,7 @@ SECRET_KEY = '+)x)!nq*end3=ryl#6^6)m^z0#wj^=9^#b(l-fx7xptn8-7+0^'
 DEBUG = log_level
 
 ALLOWED_HOSTS = ['*']
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'auth.User'
 
 # Application definition
 
@@ -72,7 +71,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'DjangoUeditor',
     'recruit',
-    'users',
+    # 'users',
     'djcelery',
     'rest_framework',
     'corsheaders',
@@ -339,5 +338,22 @@ SIMPLEUI_HOME_ACTION = False
 SIMPLEUI_HOME_QUICK = True
 # 服务器信息
 SIMPLEUI_HOME_INFO = False
+# 顶部首页跳转地址
+SIMPLEUI_INDEX = 'http://47.113.120.14/'
 # 自定义SIMPLEUI的Logo
 # SIMPLEUI_LOGO = "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1313600584,226648524&fm=26&gp=0.jpg"
+
+import time
+
+SIMPLEUI_CONFIG = {
+    'system_keep': True,
+    'dynamic': True,  # 设置是否开启动态菜单, 默认为False. 如果开启, 则会在每次用户登陆时动态展示菜单内容
+    'menus':
+        [
+            {
+                'name': '答题测试界面',
+                'icon': 'fas fa-code',
+                'url': 'http://47.113.120.14'
+            },
+        ]
+}

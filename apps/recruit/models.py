@@ -4,7 +4,6 @@ import os
 from django.db import models
 from django.utils.html import format_html
 from django.utils.encoding import python_2_unicode_compatible
-from users.models import User
 from rest_framework.authtoken.models import Token
 
 # Create your models here.
@@ -62,7 +61,7 @@ class RespondentToken(BaseTable):
         verbose_name = "Respondent Token"
         verbose_name_plural = verbose_name
 
-    key = models.CharField(max_length=200, verbose_name="key", primary_key=True)
+    key = models.CharField(max_length=200, verbose_name="key", primary_key=True, blank=True)
     respondents = models.OneToOneField(Respondents, on_delete=models.CASCADE, null=True)
     status = models.BooleanField(default=False, verbose_name='是否过期', help_text='0:未过期, 1:过期')
 
