@@ -2,20 +2,15 @@
 # -*- encoding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 import json
-
 import xadmin
 from xadmin import views
-from djcelery.models import (
-    TaskState, WorkerState,
-    PeriodicTask, IntervalSchedule, CrontabSchedule,
-)
+from constance import config
+from django.utils.safestring import mark_safe
+from constance.backends.database.models import Constance
+from djcelery.models import TaskState, WorkerState, PeriodicTask, IntervalSchedule, CrontabSchedule
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, \
     UploadFile, RespondentToken, Position
-from django.utils.safestring import mark_safe
-from constance import config
-from import_export import resources
-from import_export.admin import ImportExportModelAdmin, ImportExportActionModelAdmin
-from constance.backends.database.models import Constance
+from recruit.resource import RespondentTokenResource, AnalysisDataResource
 
 
 class GlobalSettings(object):
@@ -30,16 +25,14 @@ class BaseSettings(object):
 
 xadmin.site.register(views.BaseAdminView, BaseSettings)
 
-class RespondentTokenResource(resources.ModelResource):
 
-    class Meta:
-        model = RespondentToken
-        import_id_fields = ['key']
-
+# 模型注册类
 class RespondentTokenAdmin(object):
     list_display = ['key', 'create_time', 'respondents', 'status']
     readonly_fields = ['key', 'create_time', 'status', 'respondents']
-    import_export_args = {'import_resource_class': RespondentTokenResource, 'export_resource_class': RespondentTokenResource}
+    import_export_args = {'import_resource_class': RespondentTokenResource,
+                          'export_resource_class': RespondentTokenResource}
+
 
 class RespondentsAdmin(object):
     list_display = ["name", "email", "phone", "intention_position", 'get_token']
@@ -145,13 +138,17 @@ class CharacterAdmin(object):
 
 
 class AnalysisDataAdmin(object):
-    list_display = ["name", "tags", "content", "wj"]
+    list_display = ['id', "name", "tags", "content", "wj"]
     list_display_link = ["name", "tags", "wj"]
     search_fields = ["name", "content"]
     list_filter = ["name", "tags", "wj"]
     list_export = ["json", "xls", "csv"]
-    style_fields = {'tags': 'm2m_transfer'}
+    # style_fields = {'tags': 'm2m_transfer'}
+    import_export_args = {'import_resource_class': AnalysisDataResource, 'export_resource_class': AnalysisDataResource}
+    ordering = ['id']
 
+    def get_wj(self, obj):
+        return Wj.objects.all()
 
 class ReportAdmin(object):
     list_display = ['respondenter', 'answer', 'result']
