@@ -51,7 +51,7 @@ class RespondentsAdmin(object):
 
 
 class WjAdmin(object):
-    list_display = ["title", "wj_alias", "get_questions", "get_questions_qid", "status", "desc", "create_by", 'max_quiz_time']
+    list_display = ["title", "wj_alias", "status", "desc", "create_by", 'max_quiz_time']
     list_display_link = ["title", "status", "create_by"]
     search_fields = ["title", "status"]
     list_filter = ["title", "status", "create_by", 'create_time', 'update_time']
@@ -59,41 +59,41 @@ class WjAdmin(object):
     list_editable = ['status', 'max_quiz_time']
 
 
-    def get_questions(self, obj):
-        return Question.objects.filter(wjId=obj.id).count()
-
-    get_questions.short_description = "试题总数"
-    get_questions.allow_tags = True
-
-    def get_questions_qid(self, obj):
-        qu = Question.objects.filter(wjId=obj.id).values('qid')
-        return [i['qid'] for i in qu]
-
-    get_questions_qid.short_description = "试题序号"
-    get_questions_qid.allow_tags = True
+    # def get_questions(self, obj):
+    #     return Question.objects.filter(wjId=obj.id).count()
+    #
+    # get_questions.short_description = "试题总数"
+    # get_questions.allow_tags = True
+    #
+    # def get_questions_qid(self, obj):
+    #     qu = Question.objects.filter(wjId=obj.id).values('qid')
+    #     return [i['qid'] for i in qu]
+    #
+    # get_questions_qid.short_description = "试题序号"
+    # get_questions_qid.allow_tags = True
 
 
 class QuestionAdmin(object):
-    list_display = ["qid", "title", "type", "wjId", 'animal', 'get_options', "get_wj_alias", "must", "create_by"]
+    list_display = ["qid", "title", "type", "wj_name", 'animal_name', "must", "create_by"]
     list_display_link = ["title", "type", "create_by"]
     search_fields = ["title", "type"]
-    list_filter = ["title", "type", "create_by", 'wjId', 'create_time', 'update_time']
+    list_filter = ["title", "type", "create_by", 'create_time', 'update_time']
     ordering = ['qid']
-    list_editable = ["title", "type", "wjId", 'animal', 'get_options', "must", "create_by"]
+    list_editable = ["title", "type", 'animal_name', 'get_options', "must", "create_by"]
     list_per_page = 20
 
-    def get_options(self, obj):
-        options = Question.objects.get(id=obj.id).options.values('title')
-        return json.dumps([i['title'] for i in options], ensure_ascii=False)
-
-    get_options.short_description = "选项"
-    get_options.allow_tags = True
-
-    def get_wj_alias(self, obj):
-        return obj.wjId.wj_alias
-
-    get_wj_alias.short_description = "问卷别名"
-    get_wj_alias.allow_tags = True
+    # def get_options(self, obj):
+    #     options = Question.objects.get(id=obj.id).options.values('title')
+    #     return json.dumps([i['title'] for i in options], ensure_ascii=False)
+    #
+    # get_options.short_description = "选项"
+    # get_options.allow_tags = True
+    #
+    # def get_wj_alias(self, obj):
+    #     return obj.wjId.wj_alias
+    #
+    # get_wj_alias.short_description = "问卷别名"
+    # get_wj_alias.allow_tags = True
 
 
 class OptionsAdmin(object):
@@ -138,20 +138,17 @@ class CharacterAdmin(object):
 
 
 class AnalysisDataAdmin(object):
-    list_display = ['id', "name", "tags", "content", "wj"]
-    list_display_link = ["name", "tags", "wj"]
+    list_display = ['id', "name", "tags", "wj_name", "content"]
+    list_display_link = ["name", "tags", "wj_name"]
     search_fields = ["name", "content"]
-    list_filter = ["name", "tags", "wj"]
+    list_filter = ["name", "tags", "wj_name"]
     list_export = ["json", "xls", "csv"]
-    # style_fields = {'tags': 'm2m_transfer'}
     import_export_args = {'import_resource_class': AnalysisDataResource, 'export_resource_class': AnalysisDataResource}
     ordering = ['id']
 
-    def get_wj(self, obj):
-        return Wj.objects.all()
 
 class ReportAdmin(object):
-    list_display = ['respondenter', 'answer', 'result']
+    list_display = ['respondenter_name', 'answer', 'result']
 
 class ConstanceAdmin(object):
     list_display = ['key', 'value']

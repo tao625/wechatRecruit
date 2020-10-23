@@ -60,7 +60,7 @@ AUTH_USER_MODEL = 'users.User'
 # Application definition
 
 INSTALLED_APPS = [
-    'xadmin',
+    'simpleui',
     'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -327,3 +327,17 @@ RESPONDENT_TOKEN_EXPIRED = 3600*7
 
 # 在导入数据时使用数据库事务，默认False
 IMPORT_EXPORT_USE_TRANSACTIONS = True
+# 关闭LOADING
+SIMPLEUI_LOADING = False
+# 加载本地静态资源
+SIMPLEUI_STATIC_OFFLINE = True
+# 不收集分析信息
+SIMPLEUI_ANALYSIS = False
+# 是否隐藏首页最近动作
+SIMPLEUI_HOME_ACTION = False
+# 快速操作
+SIMPLEUI_HOME_QUICK = True
+# 服务器信息
+SIMPLEUI_HOME_INFO = False
+# 自定义SIMPLEUI的Logo
+# SIMPLEUI_LOGO = "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1313600584,226648524&fm=26&gp=0.jpg"
