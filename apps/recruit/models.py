@@ -228,12 +228,13 @@ class AnalysisData(BaseTable):
 @python_2_unicode_compatible
 class Report(BaseTable):
     class Meta:
-        verbose_name = "分析报告"
+        verbose_name = "最终分析报告"
         verbose_name_plural = verbose_name
 
     respondenter_name = models.CharField(max_length=100, verbose_name='应聘者姓名')
     answer = models.OneToOneField(Answer, on_delete=models.CASCADE, verbose_name='答卷')
-    result = models.TextField(verbose_name='最终报告', null=True, blank=True)
+    result = models.TextField(verbose_name='分析结果', null=True, blank=True)
+    total_scores = models.TextField(verbose_name='得分汇总', null=True, blank=True)
 
     def __str__(self):
         return self.result

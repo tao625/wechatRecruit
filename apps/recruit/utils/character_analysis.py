@@ -23,7 +23,7 @@ class AnalyzeCharacter(object):
             character = self.analyze_2(scores)
             logger.info({"pk": pk, "type": 2, "scores": scores, "character": character})
 
-        return character
+        return character, scores
 
     def analyze_1(self, scores):
         """分析 PDP性格测试
@@ -64,9 +64,10 @@ class AnalyzeCharacter(object):
         answer_choice = answer.answer_choice
         wj = answer.wj
         for k, v in json.loads(answer_choice).items():
-            animal = models.Question.objects.get(qid=k, wjId=wj).animal
-            if animal:
-                name = animal.name
+            wj_name = wj.title
+            animal_name = models.Question.objects.get(qid=int(k), wj_name=wj.title).animal_name
+            if animal_name:
+                name = animal_name
             else:
                 name = "total"
             old = op_ids.get(name)
