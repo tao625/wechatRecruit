@@ -176,7 +176,7 @@ class Question(BaseTable):
     title = models.CharField(max_length=100, verbose_name='题目标题')
     type = models.IntegerField(verbose_name='题目类型', choices=q_type, default=1)
     wj_name = models.CharField(max_length=255, verbose_name="试卷名称", null=True, blank=True)
-    must = models.BooleanField(verbose_name='是否必填')
+    must = models.BooleanField(verbose_name='是否必填', default=True)
     options = models.TextField(verbose_name="选项", null=True, blank=True, help_text='多个选项之间用"|"隔开')
     create_by = models.CharField(max_length=100, verbose_name='创建者', null=True, blank=True)
     animal_name = models.CharField(max_length=200, null=True, blank=True, verbose_name='动物')

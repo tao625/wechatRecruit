@@ -38,6 +38,7 @@ class QuestionAdmin(ImportExportActionModelAdmin):
 
 class OptionsAdmin(ImportExportActionModelAdmin):
     resource_class = OptionsResource
+    list_display = [obj.name for obj in Options._meta.fields]
 
 
 class AnswerAdmin(ImportExportActionModelAdmin):
