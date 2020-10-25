@@ -36,7 +36,7 @@ class WJSerializer(serializers.ModelSerializer):
         depth = 1
 
     def get_questions(self, obj):
-        qu = Question.objects.filter(wjId=obj.id)
+        qu = Question.objects.filter(wj_name=obj.title)
         serializer = QuestionSerializer(qu, many=True)
         return serializer.data
 

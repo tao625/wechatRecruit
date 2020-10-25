@@ -54,7 +54,7 @@ class AnalysisDataResource(BaseTableResource):
         model = AnalysisData
 
 
-class ReportDataResource(BaseTableResource):
+class ReportResource(BaseTableResource):
     class Meta:
         model = Report
 
