@@ -93,10 +93,10 @@ class Wj(BaseTable):
 
     title = models.CharField(max_length=255, verbose_name="试卷名称", unique=True)
     wj_alias = models.CharField(max_length=255, verbose_name="试卷别名", unique=True, null=True)
-    status = models.IntegerField(choices=status_type, verbose_name='是否发布', default=0)
+    status = models.IntegerField(choices=status_type, verbose_name='是否发布', default=0, help_text='0:未发布, 1:已发布')
     desc = models.TextField(verbose_name="问卷说明", null=True, blank=True)
     create_by = models.CharField(max_length=100, verbose_name='创建者', null=True, blank=True)
-    type = models.IntegerField(verbose_name="分析类型", null=True)
+    type = models.IntegerField(verbose_name="分析类型", null=True, help_text="1:PDF性格测试, 2:霍兰德职业测试")
     max_quiz_time = models.CharField(max_length=10, verbose_name="最大答题时间/秒", default=60*60)
 
     def __str__(self):
