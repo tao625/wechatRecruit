@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from django.urls import path
-from recruit.views import api, analyze, files
+from recruit.views import api, analyze, files, docs
 from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
@@ -41,6 +41,6 @@ urlpatterns = [
         'get': 'list',
     })),
 
-    path(r'docs/', include_docs_urls(title='接口文档')),
-
+    path(r'admin-help-docs/', docs.background_docs),
+    path(r'api_documentation/', docs.api_documentation),
 ]

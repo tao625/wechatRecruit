@@ -348,5 +348,22 @@ SIMPLEUI_CONFIG = {
                 'icon': 'fas fa-code',
                 'url': 'http://47.113.120.14'
             },
+            {
+                'app': 'recruit',
+                'name': '帮助',
+                'icon': 'fas fa-code',
+                'models': [
+                    {
+                        'name': '接口文档',
+                        'icon': 'fas fa-code',
+                        'url': '/recruit/api_documentation/'
+                    },
+                    {
+                        'name': '后台使用文档',
+                        'icon': 'fas fa-code',
+                        'url': '/recruit/admin-help-docs/'
+                    },
+                ]
+            },
         ]
 }
