@@ -26,17 +26,23 @@ class RespondentTokenAdmin(admin.ModelAdmin):
 class RespondentsAdmin(ImportExportActionModelAdmin):
     resource_class = RespondentsResource
     list_display = [obj.name for obj in Respondents._meta.fields]
+    search_fields = ['name', 'email', 'phone', 'intention_position']
+    list_filter = ['intention_position']
 
 
 class WjAdmin(ImportExportActionModelAdmin):
     resource_class = WJResource
     list_display = [obj.name for obj in Wj._meta.fields]
+    search_fields = ['title', 'wj_alias', 'desc', 'intention_position']
+    list_filter = ['status', 'create_by', 'type', 'max_quiz_time']
 
 
 class QuestionAdmin(ImportExportActionModelAdmin):
     ordering = ['qid']
     resource_class = QuestionResource
     list_display = [obj.name for obj in Question._meta.fields]
+    search_fields = ['type', 'wj_name', 'animal_name', 'create_by']
+    list_filter = ['type', 'wj_name', 'animal_name', 'create_by']
 
 
 class OptionsAdmin(ImportExportActionModelAdmin):
@@ -48,6 +54,9 @@ class AnswerAdmin(ImportExportActionModelAdmin):
     refresh_times = [1, 30, 60, 300]
     resource_class = AnswerResource
     list_display = [obj.name for obj in Answer._meta.fields]
+    search_fields = ['wj', 'submit_ip', 'submit_user', 'use_time']
+    list_filter = ['wj', 'submit_user']
+    date_hierarchy = 'create_time'
     actions = [force_analysis]
 
     force_analysis.short_description = '手动更新'
@@ -60,29 +69,36 @@ class AnswerAdmin(ImportExportActionModelAdmin):
     # analyze.allow_tags = '手动分析'
 
 
-
 class AnimalAdmin(ImportExportActionModelAdmin):
     resource_class = AnimalResource
     list_display = [obj.name for obj in Animal._meta.fields]
+    search_fields = ['name', 'wj', 'feature']
+    list_filter = ['name', 'wj']
 
 
 class CharacterAdmin(ImportExportActionModelAdmin):
     resource_class = CharacterResource
     list_display = [obj.name for obj in Character._meta.fields]
+    search_fields = ['name', 'content', 'wj']
+    list_filter = ['animal', 'name', 'wj']
 
 
 class AnalysisDataAdmin(ImportExportActionModelAdmin):
     resource_class = AnalysisDataResource
     list_display = [obj.name for obj in AnalysisData._meta.fields]
+    search_fields = ['tags', 'wj_name', 'content']
+    list_filter = ['tags', 'wj_name', 'name']
 
 
 class ReportAdmin(ImportExportActionModelAdmin):
     resource_class = ReportResource
     list_display = [obj.name for obj in Report._meta.fields] + ["analyze"]
+    search_fields = ['respondenter_name', 'result', 'answer']
+    list_filter = ['respondenter_name', 'answer']
 
     def analyze(self, obj):
         url = "{ip}/recruit/report/{id}/".format(ip=config.URL, id=str(obj.id))
-        return mark_safe('<a href={url}>分析结果</a>'.format(url=url))
+        return mark_safe('<a href={url} target="_blank">分析结果</a>'.format(url=url))
 
     analyze.short_description = "页面展示"
     analyze.allow_tags = '页面展示'
