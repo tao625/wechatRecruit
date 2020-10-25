@@ -58,7 +58,7 @@ class UploadFileAdmin(admin.ModelAdmin):
 
 
 class PositionAdmin(ImportExportActionModelAdmin):
-    resource_name = PositionDataResource
+    resource_class = PositionDataResource
 
 
 admin.site.register(Respondents, RespondentsAdmin)
