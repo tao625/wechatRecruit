@@ -344,14 +344,9 @@ SIMPLEUI_CONFIG = {
     'menus':
         [
             {
-                'name': '答题测试界面',
+                'name': '用户答题界面',
                 'icon': 'fas fa-code',
                 'url': 'http://47.113.120.14'
-            },
-            {
-                'name': '用户分析图表',
-                'icon': 'fas fa-code',
-                'url': 'http://127.0.0.1:8000/recruit/result/'
             },
         ]
 }

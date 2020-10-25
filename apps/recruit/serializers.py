@@ -19,7 +19,8 @@ class QuestionSerializer(serializers.ModelSerializer):
         fields = ['qid', 'title', 'type', 'must', 'options']
 
     def get_options(self, obj):
-        op = Options.objects.filter(question__id=obj.id)
+        q_options = obj.options.strip().split('|')
+        op = Options.objects.filter(title__in=q_options)
         serializer = OptionsSerializer(op, many=True)
         return serializer.data
 
