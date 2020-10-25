@@ -147,7 +147,7 @@ class Character(BaseTable):
         verbose_name_plural = verbose_name
 
     name = models.CharField(max_length=255, null=True, blank=True, verbose_name="类型名称")
-    animal = models.OneToOneField(Animal, null=True, blank=True, on_delete=models.CASCADE, help_text="仅PDP性格测试需要选择", verbose_name="类型别名")
+    animal = models.CharField(max_length=200, null=True, blank=True, verbose_name="类型别名")
     content = models.TextField(verbose_name='主要表现', null=True, blank=True)
     professional = models.TextField(verbose_name='代表职业', null=True, blank=True)
     wj = models.CharField(max_length=255, verbose_name="试卷名称", null=True, blank=True)

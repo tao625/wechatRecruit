@@ -24,46 +24,52 @@ class RespondentsAdmin(ImportExportActionModelAdmin):
     resource_class = RespondentsResource
     list_display = [obj.name for obj in Respondents._meta.fields]
 
+
 class WjAdmin(ImportExportActionModelAdmin):
     resource_class = WJResource
     list_display = [obj.name for obj in Wj._meta.fields]
+
 
 class QuestionAdmin(ImportExportActionModelAdmin):
     ordering = ['qid']
     resource_class = QuestionResource
     list_display = [obj.name for obj in Question._meta.fields]
 
+
 class OptionsAdmin(ImportExportActionModelAdmin):
     resource_class = OptionsResource
+
 
 class AnswerAdmin(ImportExportActionModelAdmin):
     refresh_times = [1, 30, 60, 300]
     resource_class = AnswerResource
     list_display = [obj.name for obj in Answer._meta.fields]
 
+
 class AnimalAdmin(ImportExportActionModelAdmin):
     resource_class = AnimalResource
     list_display = [obj.name for obj in Animal._meta.fields]
+
 
 class CharacterAdmin(ImportExportActionModelAdmin):
     resource_class = CharacterResource
     list_display = [obj.name for obj in Character._meta.fields]
 
+
 class AnalysisDataAdmin(ImportExportActionModelAdmin):
     resource_class = AnalysisDataResource
     list_display = [obj.name for obj in AnalysisData._meta.fields]
+
 
 class ReportAdmin(ImportExportActionModelAdmin):
     resource_class = ReportResource
     list_display = [obj.name for obj in Report._meta.fields]
 
-class UploadFileAdmin(admin.ModelAdmin):
-    list_display = [obj.name for obj in UploadFile._meta.fields]
-
 
 class PositionAdmin(ImportExportActionModelAdmin):
     resource_class = PositionDataResource
     list_display = [obj.name for obj in Position._meta.fields]
+
 
 admin.site.register(Respondents, RespondentsAdmin)
 admin.site.register(Wj, WjAdmin)
@@ -74,6 +80,5 @@ admin.site.register(Animal, AnimalAdmin)
 admin.site.register(Character, CharacterAdmin)
 admin.site.register(AnalysisData, AnalysisDataAdmin)
 admin.site.register(Report, ReportAdmin)
-admin.site.register(UploadFile, UploadFileAdmin)
 admin.site.register(RespondentToken, RespondentTokenAdmin)
 admin.site.register(Position, PositionAdmin)
