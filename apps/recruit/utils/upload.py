@@ -4,7 +4,8 @@ import json
 import os
 
 import pandas as pd
-from recruit.models import Question, Wj, User, Animal, Options, UploadFile
+from django.contrib.auth.models import User
+from recruit.models import Question, Wj, Animal, Options, UploadFile
 from . import logger
 from celery import shared_task
 

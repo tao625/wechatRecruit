@@ -11,12 +11,11 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 import configparser
 import os
+# *******configThis******** get form config.conf 快速切换环境
+import sys
 from collections import OrderedDict
 
 import djcelery
-
-# *******configThis******** get form config.conf 快速切换环境
-import sys
 
 env = 'dev'
 # env = 'prod'
@@ -32,13 +31,13 @@ database_host = cf.get(env + '-config', 'HOST')
 database_port = cf.getint(env + '-config', 'PORT')
 invalid_time = cf.getint(env + '-config', 'INVALID_TIME')
 log_level = cf.getboolean(env + '-config', 'DEBUG')
-email_host = cf.get(env+'-config', 'EMAIL_HOST')
-email_port = cf.getint(env+'-config', 'EMAIL_PORT')
-email_host_user = cf.get(env+'-config', 'EMAIL_HOST_USER')
-email_host_password = cf.get(env+'-config', 'EMAIL_HOST_PASSWORD')
-email_use_tls = cf.getboolean(env+'-config', 'EMAIL_USE_TLS')
-email_from = cf.get(env+'-config', 'EMAIL_FROM')
-REPORTS_HOST = cf.get(env+'-config', 'REPORTS_HOST')
+email_host = cf.get(env + '-config', 'EMAIL_HOST')
+email_port = cf.getint(env + '-config', 'EMAIL_PORT')
+email_host_user = cf.get(env + '-config', 'EMAIL_HOST_USER')
+email_host_password = cf.get(env + '-config', 'EMAIL_HOST_PASSWORD')
+email_use_tls = cf.getboolean(env + '-config', 'EMAIL_USE_TLS')
+email_from = cf.get(env + '-config', 'EMAIL_FROM')
+REPORTS_HOST = cf.get(env + '-config', 'REPORTS_HOST')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,23 +54,23 @@ SECRET_KEY = '+)x)!nq*end3=ryl#6^6)m^z0#wj^=9^#b(l-fx7xptn8-7+0^'
 DEBUG = log_level
 
 ALLOWED_HOSTS = ['*']
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'auth.User'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'simpleui',
+    'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'xadmin',
     'password_reset',
     'crispy_forms',
     'DjangoUeditor',
     'recruit',
-    'users',
     'djcelery',
     'rest_framework',
     'corsheaders',
@@ -165,8 +164,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 处理跨域
 CORS_ALLOW_CREDENTIALS = True
@@ -195,7 +193,6 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with',
 )
 
-
 # rest_framework config
 
 REST_FRAMEWORK = {
@@ -216,7 +213,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'wechatRecruit.pagination.MyPageNumberPagination',
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
-
 
 # 日志处理
 
@@ -283,7 +279,6 @@ LOGGING = {
     }
 }
 
-
 # 常量动态管理
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 CONSTANCE_IGNORE_ADMIN_VERSION_CHECK = True
@@ -294,7 +289,6 @@ CONSTANCE_CONFIG = OrderedDict({
     'PROMINENT': (5, '某一项分高于其它四项中此值以上，性格突出'),
     'URL': ('http://172.16.4.110:8000', '分析结果的跳转地址')
 })
-
 
 djcelery.setup_loader()
 BROKER_URL = 'redis://localhost:6379'
@@ -310,7 +304,7 @@ CELERY_TASK_RESULT_EXPIRES = 3600
 CELERYD_CONCURRENCY = 1 if DEBUG else 4  # 并发的worker数量
 CELERYD_MAX_TASKS_PER_CHILD = 100  # 每个worker最多执行100次任务被销毁，防止内存泄漏
 CELERY_FORCE_EXECV = True  # 有些情况可以防止死锁
-CELERY_TASK_TIME_LIMIT = 3*60*60  # 单个任务最大运行时间
+CELERY_TASK_TIME_LIMIT = 3 * 60 * 60  # 单个任务最大运行时间
 
 # 邮件
 EMAIL_HOST = email_host
@@ -320,6 +314,56 @@ EMAIL_HOST_PASSWORD = email_host_password
 EMAIL_USE_TLS = email_use_tls
 EMAIL_FROM = email_from
 
-
 # RespondentToken 过期时间
-RESPONDENT_TOKEN_EXPIRED = 3600*7
+RESPONDENT_TOKEN_EXPIRED = 3600 * 7
+
+# 在导入数据时使用数据库事务，默认False
+IMPORT_EXPORT_USE_TRANSACTIONS = True
+# 关闭LOADING
+SIMPLEUI_LOADING = False
+# 加载本地静态资源
+SIMPLEUI_STATIC_OFFLINE = True
+# 不收集分析信息
+SIMPLEUI_ANALYSIS = False
+# 是否隐藏首页最近动作
+SIMPLEUI_HOME_ACTION = False
+# 快速操作
+SIMPLEUI_HOME_QUICK = True
+# 服务器信息
+SIMPLEUI_HOME_INFO = False
+# 顶部首页跳转地址
+SIMPLEUI_INDEX = 'http://47.113.120.14/'
+# 自定义SIMPLEUI的Logo
+# SIMPLEUI_LOGO = "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1313600584,226648524&fm=26&gp=0.jpg"
+
+import time
+
+SIMPLEUI_CONFIG = {
+    'system_keep': True,
+    'dynamic': True,  # 设置是否开启动态菜单, 默认为False. 如果开启, 则会在每次用户登陆时动态展示菜单内容
+    'menus':
+        [
+            {
+                'name': '用户答题界面',
+                'icon': 'fas fa-code',
+                'url': 'http://47.113.120.14'
+            },
+            {
+                'app': 'recruit',
+                'name': '帮助',
+                'icon': 'fas fa-code',
+                'models': [
+                    {
+                        'name': '接口文档',
+                        'icon': 'fas fa-code',
+                        'url': '/recruit/api_documentation/'
+                    },
+                    {
+                        'name': '后台使用文档',
+                        'icon': 'fas fa-code',
+                        'url': '/recruit/admin-help-docs/'
+                    },
+                ]
+            },
+        ]
+}

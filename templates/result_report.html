@@ -20,13 +20,20 @@
             word-wrap: break-word !important;
             *white-space: normal !important;
         }
+        h3 {
+            color:red;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <h2 style="color: #0000cc">分析结果:</h2>
-        {% for k, v in anaylze_result.features.items %}
+        <h3>姓名: {{ anaylze_result.respondenter_name }}</h3>
+        <h3>试卷: {{ anaylze_result.wj_name }}</h3>
+        <h3>答题耗时: {% widthratio anaylze_result.time_consum 60 1 %} 分钟</h3>
+        <br>
+        <h3 style="color: #0000cc">分析结果:</h3>
+        {% for k, v in anaylze_result.final_analysis_data.features.items %}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
@@ -44,7 +51,7 @@
         {% endfor %}
     </div>
     <h2 style="color: #0000cc">综合推荐:</h2>
-    <h3 style="color: red">{{ anaylze_result.job }}</h3>
+    <h3 style="color: red">{{ anaylze_result.final_analysis_data.job }}</h3>
 </div>
 
 </body>

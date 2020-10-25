@@ -65,10 +65,12 @@ class AnswerView(GenericViewSet):
             wj_id = request.data['wj_id']
             wj = models.Wj.objects.get(id=wj_id)
             token = request.data['token']
-            submit_user = models.RespondentToken.objects.get(key=token).respondents
+            submit_user = models.RespondentToken.objects.get(key=token, status=False).respondents
         except Exception as e:
             logger.error(str(e))
-            return Response(response.ANSWER_PARA_ERROR)
+            error_return = response.ANSWER_PARA_ERROR
+            error_return.update(msg=str(e))
+            return Response(error_return)
 
         data = {
             'wj': wj,
