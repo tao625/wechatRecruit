@@ -1,4 +1,3 @@
-
 ANSWER_SAVE_SUCCESS = {
     "code": "0001",
     "success": True,
@@ -63,4 +62,11 @@ NOT_FOUND_EXCEL = {
     "code": "0223",
     "success": False,
     "msg": "本地文件不存在"
+}
+
+
+ANALYSIS_DOES_NOT_EXIST = {
+    "code": "0224",
+    "success": False,
+    "msg": "分析报告不存在"
 }

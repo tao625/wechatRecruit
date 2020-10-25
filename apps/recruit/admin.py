@@ -3,8 +3,11 @@
 from __future__ import absolute_import, unicode_literals
 
 from django.contrib import admin
+from constance import config
+from django.utils.safestring import mark_safe
 from import_export.admin import ImportExportActionModelAdmin
 
+from recruit.utils.actions import force_analysis
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, \
     UploadFile, RespondentToken, Position
 from recruit.resources import WJResource, QuestionResource, OptionsResource, AnswerResource, \
@@ -45,6 +48,17 @@ class AnswerAdmin(ImportExportActionModelAdmin):
     refresh_times = [1, 30, 60, 300]
     resource_class = AnswerResource
     list_display = [obj.name for obj in Answer._meta.fields]
+    actions = [force_analysis]
+
+    force_analysis.short_description = '手动更新'
+
+    # def analyze(self, obj):
+    #     url = "{ip}/recruit/report/{id}/".format(ip=config.URL, id=str(obj.id))
+    #     return mark_safe('<a href={url}>手动分析</a>'.format(url=url))
+    #
+    # analyze.short_description = "手动分析"
+    # analyze.allow_tags = '手动分析'
+
 
 
 class AnimalAdmin(ImportExportActionModelAdmin):
@@ -64,7 +78,14 @@ class AnalysisDataAdmin(ImportExportActionModelAdmin):
 
 class ReportAdmin(ImportExportActionModelAdmin):
     resource_class = ReportResource
-    list_display = [obj.name for obj in Report._meta.fields]
+    list_display = [obj.name for obj in Report._meta.fields] + ["analyze"]
+
+    def analyze(self, obj):
+        url = "{ip}/recruit/report/{id}/".format(ip=config.URL, id=str(obj.id))
+        return mark_safe('<a href={url}>分析结果</a>'.format(url=url))
+
+    analyze.short_description = "页面展示"
+    analyze.allow_tags = '页面展示'
 
 
 class PositionAdmin(ImportExportActionModelAdmin):

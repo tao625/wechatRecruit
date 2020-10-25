@@ -31,13 +31,13 @@ database_host = cf.get(env + '-config', 'HOST')
 database_port = cf.getint(env + '-config', 'PORT')
 invalid_time = cf.getint(env + '-config', 'INVALID_TIME')
 log_level = cf.getboolean(env + '-config', 'DEBUG')
-email_host = cf.get(env+'-config', 'EMAIL_HOST')
-email_port = cf.getint(env+'-config', 'EMAIL_PORT')
-email_host_user = cf.get(env+'-config', 'EMAIL_HOST_USER')
-email_host_password = cf.get(env+'-config', 'EMAIL_HOST_PASSWORD')
-email_use_tls = cf.getboolean(env+'-config', 'EMAIL_USE_TLS')
-email_from = cf.get(env+'-config', 'EMAIL_FROM')
-REPORTS_HOST = cf.get(env+'-config', 'REPORTS_HOST')
+email_host = cf.get(env + '-config', 'EMAIL_HOST')
+email_port = cf.getint(env + '-config', 'EMAIL_PORT')
+email_host_user = cf.get(env + '-config', 'EMAIL_HOST_USER')
+email_host_password = cf.get(env + '-config', 'EMAIL_HOST_PASSWORD')
+email_use_tls = cf.getboolean(env + '-config', 'EMAIL_USE_TLS')
+email_from = cf.get(env + '-config', 'EMAIL_FROM')
+REPORTS_HOST = cf.get(env + '-config', 'REPORTS_HOST')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -164,8 +164,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 处理跨域
 CORS_ALLOW_CREDENTIALS = True
@@ -194,7 +193,6 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with',
 )
 
-
 # rest_framework config
 
 REST_FRAMEWORK = {
@@ -215,7 +213,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'wechatRecruit.pagination.MyPageNumberPagination',
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
-
 
 # 日志处理
 
@@ -282,7 +279,6 @@ LOGGING = {
     }
 }
 
-
 # 常量动态管理
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 CONSTANCE_IGNORE_ADMIN_VERSION_CHECK = True
@@ -293,7 +289,6 @@ CONSTANCE_CONFIG = OrderedDict({
     'PROMINENT': (5, '某一项分高于其它四项中此值以上，性格突出'),
     'URL': ('http://172.16.4.110:8000', '分析结果的跳转地址')
 })
-
 
 djcelery.setup_loader()
 BROKER_URL = 'redis://localhost:6379'
@@ -309,7 +304,7 @@ CELERY_TASK_RESULT_EXPIRES = 3600
 CELERYD_CONCURRENCY = 1 if DEBUG else 4  # 并发的worker数量
 CELERYD_MAX_TASKS_PER_CHILD = 100  # 每个worker最多执行100次任务被销毁，防止内存泄漏
 CELERY_FORCE_EXECV = True  # 有些情况可以防止死锁
-CELERY_TASK_TIME_LIMIT = 3*60*60  # 单个任务最大运行时间
+CELERY_TASK_TIME_LIMIT = 3 * 60 * 60  # 单个任务最大运行时间
 
 # 邮件
 EMAIL_HOST = email_host
@@ -319,9 +314,8 @@ EMAIL_HOST_PASSWORD = email_host_password
 EMAIL_USE_TLS = email_use_tls
 EMAIL_FROM = email_from
 
-
 # RespondentToken 过期时间
-RESPONDENT_TOKEN_EXPIRED = 3600*7
+RESPONDENT_TOKEN_EXPIRED = 3600 * 7
 
 # 在导入数据时使用数据库事务，默认False
 IMPORT_EXPORT_USE_TRANSACTIONS = True
@@ -353,6 +347,11 @@ SIMPLEUI_CONFIG = {
                 'name': '答题测试界面',
                 'icon': 'fas fa-code',
                 'url': 'http://47.113.120.14'
+            },
+            {
+                'name': '用户分析图表',
+                'icon': 'fas fa-code',
+                'url': 'http://127.0.0.1:8000/recruit/result/'
             },
         ]
 }

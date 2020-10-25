@@ -29,7 +29,7 @@ urlpatterns = [
 
     path(r'report/<int:pk>/', analyze.AnalysisCharacterView.as_view({
         'get': 'get',
-        'post': 'post'
+        'post': 'post',
     })),
 
     path(r'file/', files.FileView.as_view({
@@ -41,6 +41,6 @@ urlpatterns = [
         'get': 'list',
     })),
 
-    path(r'docs/', include_docs_urls(title='接口文档'))
+    path(r'docs/', include_docs_urls(title='接口文档')),
 
 ]

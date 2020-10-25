@@ -62,11 +62,18 @@ def async_analysis(pk):
     anaylze_result['features'] = data if bool(result) else {'无': ['无符合的性格推荐', "0"]}
 
     result_format = json.dumps(anaylze_result, ensure_ascii=False)
-    flag = models.Report.objects.update_or_create(
+    _, flag = models.Report.objects.update_or_create(
         respondenter_name=answer.submit_user,
         answer=answer,
         total_scores=json.dumps(scores, ensure_ascii=False),
         defaults={"result": result_format}
     )
     logger.info(anaylze_result)
+
+    if flag:
+        logger.info("强制更新:===>%s SUCESSS" % pk)
+    else:
+        logger.info("强制更新:===>%s Failure" % pk)
     logger.info("分析结果完成.....")
+
+    return flag
