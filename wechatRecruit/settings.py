@@ -71,7 +71,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'DjangoUeditor',
     'recruit',
-    # 'users',
     'djcelery',
     'rest_framework',
     'corsheaders',

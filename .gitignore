@@ -133,3 +133,4 @@ dmypy.json
 /extract_apps/xadmin/locale/
 /.idea/
 /logs/
+config.conf

@@ -29937,3 +29937,88 @@ AssertionError: The field 'wj_id' was declared on serializer AnswerSerializer, b
 2020-10-20 18:56:14,490 [INFO] - "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
 2020-10-20 18:56:19,490 [INFO] - "GET /xadmin/database/constance/ HTTP/1.1" 200 8239
 2020-10-20 18:56:20,938 [INFO] - "GET /xadmin/ HTTP/1.1" 200 26328
+2020-10-25 08:35:36,371 - [INFO] - [basehttp.py:124] - "GET /admin/ HTTP/1.1" 302 0
+2020-10-25 08:35:36,402 - [INFO] - [basehttp.py:124] - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3702
+2020-10-25 08:35:36,431 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/elementui/theme-chalk/index.css HTTP/1.1" 200 232850
+2020-10-25 08:35:36,451 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/css/login.css?_=2.1 HTTP/1.1" 200 538
+2020-10-25 08:35:36,454 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/js/vue.min.js?_=2020.9.26 HTTP/1.1" 200 93680
+2020-10-25 08:35:36,460 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css HTTP/1.1" 200 55115
+2020-10-25 08:35:36,464 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/elementui/index.js?_=2020.9.26 HTTP/1.1" 200 568472
+2020-10-25 08:35:36,470 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/js/login.js?_=3.3 HTTP/1.1" 200 693
+2020-10-25 08:35:36,478 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/particles/particles.js HTTP/1.1" 200 52787
+2020-10-25 08:35:36,487 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/particles/app.js HTTP/1.1" 200 3859
+2020-10-25 08:35:36,490 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/img/bg.svg HTTP/1.1" 200 9639
+2020-10-25 08:35:36,496 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/img/logo.png HTTP/1.1" 200 115997
+2020-10-25 08:35:36,801 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74256
+2020-10-25 08:35:36,873 - [WARNING] - [base.py:93] - Not Found: /favicon.ico
+2020-10-25 08:35:36,874 - [WARNING] - [basehttp.py:124] - "GET /favicon.ico HTTP/1.1" 404 2444
+2020-10-25 08:35:38,172 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff HTTP/1.1" 200 28200
+2020-10-25 08:35:38,410 - [INFO] - [basehttp.py:124] - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2020-10-25 08:35:38,460 - [INFO] - [basehttp.py:124] - "GET /admin/ HTTP/1.1" 200 21825
+2020-10-25 08:35:38,497 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/css/index.css?_=3.2 HTTP/1.1" 200 7575
+2020-10-25 08:35:38,497 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 HTTP/1.1" 200 3867
+2020-10-25 08:35:38,516 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/automatic/dicts.js?_=2020.9.26 HTTP/1.1" 200 6338
+2020-10-25 08:35:38,519 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/automatic/segment.js?_=2020.9.26 HTTP/1.1" 200 1241
+2020-10-25 08:35:38,519 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/locale/zh-hans.js?_=2020.9.26 HTTP/1.1" 200 1297
+2020-10-25 08:35:38,520 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/locale/en-us.js?_=2020.9.26 HTTP/1.1" 200 852
+2020-10-25 08:35:38,522 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/js/cookie.js?_=2020.9.26 HTTP/1.1" 200 540
+2020-10-25 08:35:38,522 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/theme/theme.js?_=2020.9.26 HTTP/1.1" 200 4451
+2020-10-25 08:35:38,524 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/waves/waves.min.js?_=2020.9.26 HTTP/1.1" 200 6330
+2020-10-25 08:35:38,527 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/js/index.js?_=2020.9.26 HTTP/1.1" 200 21357
+2020-10-25 08:35:38,733 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13552
+2020-10-25 08:35:41,794 - [INFO] - [basehttp.py:124] - "GET /admin/auth/user/ HTTP/1.1" 200 29909
+2020-10-25 08:35:41,826 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 HTTP/1.1" 200 852
+2020-10-25 08:35:41,827 - [INFO] - [basehttp.py:124] - "GET /static/admin/css/base.css?_=2.7 HTTP/1.1" 200 17187
+2020-10-25 08:35:41,827 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/js/language.js?_=2.1.2 HTTP/1.1" 200 198
+2020-10-25 08:35:41,828 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/css/base.css?_=2.7 HTTP/1.1" 200 3416
+2020-10-25 08:35:41,828 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/theme/simpleui.css HTTP/1.1" 200 4640
+2020-10-25 08:35:41,829 - [INFO] - [basehttp.py:124] - "GET /static/admin/css/changelists.css?_=20180905 HTTP/1.1" 200 6651
+2020-10-25 08:35:41,836 - [INFO] - [basehttp.py:124] - "GET /static/admin/css/responsive.css?_=20180905 HTTP/1.1" 200 18831
+2020-10-25 08:35:41,836 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/js/cookie.js HTTP/1.1" 200 540
+2020-10-25 08:35:41,850 - [INFO] - [basehttp.py:124] - "GET /static/admin/css/fonts.css HTTP/1.1" 200 443
+2020-10-25 08:35:41,857 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 371
+2020-10-25 08:35:41,862 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 7374
+2020-10-25 08:35:41,867 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/core.js HTTP/1.1" 200 7336
+2020-10-25 08:35:41,873 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/urlify.js HTTP/1.1" 200 8923
+2020-10-25 08:35:41,880 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/automatic/segment.js HTTP/1.1" 200 1241
+2020-10-25 08:35:41,884 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/locale/zh-hans.js HTTP/1.1" 200 1297
+2020-10-25 08:35:41,888 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1586
+2020-10-25 08:35:41,894 - [INFO] - [basehttp.py:124] - "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-25 08:35:41,896 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/automatic/dicts.js HTTP/1.1" 200 6338
+2020-10-25 08:35:41,897 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/actions.js HTTP/1.1" 200 6933
+2020-10-25 08:35:41,897 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 134016
+2020-10-25 08:35:41,902 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 370437
+2020-10-25 08:35:41,903 - [INFO] - [basehttp.py:124] - "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 200 85663
+2020-10-25 08:35:41,936 - [INFO] - [basehttp.py:124] - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 452
+2020-10-25 08:35:42,058 - [INFO] - [basehttp.py:124] - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1168
+2020-10-25 08:35:42,060 - [INFO] - [basehttp.py:124] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+2020-10-25 08:35:42,102 - [INFO] - [basehttp.py:124] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+2020-10-25 08:35:42,102 - [INFO] - [basehttp.py:124] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+2020-10-25 08:35:43,073 - [INFO] - [basehttp.py:124] - "GET /admin/auth/group/ HTTP/1.1" 200 22924
+2020-10-25 08:35:43,104 - [INFO] - [basehttp.py:124] - "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+2020-10-25 08:35:54,450 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/theme/layui.css HTTP/1.1" 200 4714
+2020-10-25 08:35:56,672 - [INFO] - [basehttp.py:124] - "GET /static/admin/simpleui-x/theme/admin.lte.css HTTP/1.1" 200 4756
+2020-10-25 08:36:16,634 - [ERROR] - [exception.py:118] - Internal Server Error: /admin/constance/config/
+Traceback (most recent call last):
+  File "D:\envs\wechat\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\envs\wechat\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\envs\wechat\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\envs\wechat\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\envs\wechat\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\envs\wechat\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\envs\wechat\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\envs\wechat\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\envs\wechat\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\envs\wechat\lib\site-packages\constance\admin.py", line 232, in changelist_view
+    if not self.has_view_or_change_permission(request):
+AttributeError: 'ConstanceAdmin' object has no attribute 'has_view_or_change_permission'
+2020-10-25 08:36:16,696 - [ERROR] - [basehttp.py:124] - "GET /admin/constance/config/ HTTP/1.1" 500 112968
