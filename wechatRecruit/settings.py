@@ -345,22 +345,22 @@ SIMPLEUI_CONFIG = {
         [
             {
                 'name': '用户答题界面',
-                'icon': 'fas fa-code',
+                'icon': 'fab fa-internet-explorer',
                 'url': 'http://47.113.120.14'
             },
             {
                 'app': 'recruit',
                 'name': '帮助',
-                'icon': 'fas fa-code',
+                'icon': 'fas fa-question-circle',
                 'models': [
                     {
                         'name': '接口文档',
-                        'icon': 'fas fa-code',
+                        'icon': 'fab fa-usb',
                         'url': '/recruit/api_documentation/'
                     },
                     {
                         'name': '后台使用文档',
-                        'icon': 'fas fa-code',
+                        'icon': 'fab fa-audible',
                         'url': '/recruit/admin-help-docs/'
                     },
                 ]
