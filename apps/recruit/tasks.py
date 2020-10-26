@@ -50,6 +50,7 @@ def async_analysis(pk):
     for c, t in contrast.items():
         if t == ''.join(result.keys()):
             anaylze_result['job'] = c
+            break
         else:
             anaylze_result['job'] = "无符合的职业推荐"
 

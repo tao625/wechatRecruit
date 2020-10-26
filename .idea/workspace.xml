@@ -2,402 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf81d3e4-f40b-46cf-8c0a-defb6ce3ba3d" name="Default" comment="feat: 自定义权限">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wechatRecruit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wechatRecruit.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/recruit/views/docs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recruit/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recruit/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/.tx/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/adminx.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/filters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/layout.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/de_DE/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/de_DE/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/en/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/en/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/en/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/en/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/es_MX/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/es_MX/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/eu/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/eu/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/eu/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/id_ID/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/id_ID/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ja/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ja/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ja/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/lt/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/lt/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/lt/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/nl_NL/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pl/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pl/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pt_BR/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ru_RU/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/migrations/0002_log.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/migrations/0003_auto_20160715_0100.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/actions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/aggregation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/ajax.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/auth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/batch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/bookmark.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/chart.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/comments.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/details.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/editable.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/excel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/export.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/filters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/images.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/importexport.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/inline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/language.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/layout.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/mobile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/multiselect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/passwords.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/portal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/quickfilter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/quickform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/refresh.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/relate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/relfield.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/sitemenu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/sortablelist.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/themes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/topnav.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/ueditor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/wizard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/plugins/xversion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/sites.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/component.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/themes/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.page.dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.plugin.formset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.plugins.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.widget.editable.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.page.dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.page.form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.page.list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.batch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.charts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.details.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.editable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.filters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.formset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.portal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.revision.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.plugin.themes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.responsive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.ueditor.all.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.ueditor.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.widget.datetime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/js/xadmin.widget.select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/autotype/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/excanvas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/excanvas.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/load-image/load-image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/load-image/load-image.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/select2/select2x2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/selectize/selectize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/selectize/selectize.default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/selectize/selectize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/selectize/selectize.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/snapjs/snap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/snapjs/snap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/static/xadmin/vendor/snapjs/snap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/auth/password_reset/complete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/auth/password_reset/confirm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/auth/password_reset/done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/auth/password_reset/email.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/auth/password_reset/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/auth/user/add_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/auth/user/change_password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/base_site.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/comm.top.setlang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/comm.top.theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/comm.top.topnav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/edit_inline/accordion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/edit_inline/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/edit_inline/blank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/edit_inline/one.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/edit_inline/stacked.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/edit_inline/tab.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/edit_inline/tabular.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/excel/model_list.top_toolbar.import.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/char.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/checklist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/date.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/fk_search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/number.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/quickfilter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/filters/rel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/forms/transfer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/grids/thumbnails.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/import_export/export_action.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/import_export/import.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/includes/box.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/includes/pagination.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/includes/sitemenu_accordion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/includes/sitemenu_default.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/includes/submit_line.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/includes/toggle_back.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/includes/toggle_menu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/layout/field_value.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/layout/field_value_td.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/layout/fieldset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/layout/input_group.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/layout/td-field.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/app_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/batch_change_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/invalid_setup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/logged_out.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/model_dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/model_delete_confirm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/model_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/model_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/model_history.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/model_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/quick_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/quick_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/recover_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/recover_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/revision_diff.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/views/revision_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/widgets/addform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/widgets/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/widgets/chart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/widgets/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templates/xadmin/widgets/qbutton.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templatetags/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/templatetags/xadmin_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/util.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/vendors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/dashboard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/delete.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/detail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/edit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/form.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/views/website.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_apps/xadmin/widgets.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechatRecruit/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechatRecruit/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -426,29 +33,51 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechatRecruit/settings.py">
+        <entry file="file://$PROJECT_DIR$/apps/recruit/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="311">
+              <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+              <folding>
+                <element signature="e#48#76#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.conf">
+        <entry file="file://$PROJECT_DIR$/wechatRecruit/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="361">
+              <caret line="362" column="41" selection-start-line="362" selection-start-column="33" selection-end-line="362" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/recruit/views/docs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="55" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/templates/background_to_help_document.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="175">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/recruit/utils/permissions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-300" />
           </provider>
         </entry>
       </file>
@@ -457,10 +86,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ForeignKey</find>
+      <find>response</find>
+      <find>import_data</find>
+      <find>respondenter</find>
+      <find>result</find>
+      <find>SIMPLEUI_CONFIG</find>
+      <find>menus</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\Box\wechatRecruit\extract_apps\simpleui</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -473,9 +119,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wechatRecruit/settings.py" />
         <option value="$PROJECT_DIR$/config.conf" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/apps/recruit/views/api.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/resources.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/utils/character_analysis.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/models.py" />
+        <option value="$PROJECT_DIR$/templates/result.html" />
+        <option value="D:/envs/wechat/Lib/site-packages/constance/admin.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/utils/action_custome.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/tasks.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/utils/actions.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/utils/response.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/views/analyze.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/admin.py" />
+        <option value="$PROJECT_DIR$/templates/result_report.html" />
+        <option value="$PROJECT_DIR$/apps/recruit/serializers.py" />
+        <option value="$PROJECT_DIR$/templates/api_documentation.html" />
+        <option value="$PROJECT_DIR$/apps/recruit/urls.py" />
+        <option value="$PROJECT_DIR$/wechatRecruit/settings.py" />
+        <option value="$PROJECT_DIR$/apps/recruit/views/docs.py" />
+        <option value="$PROJECT_DIR$/templates/background_to_help_document.html" />
       </list>
     </option>
   </component>
@@ -487,8 +151,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="824" />
-    <option name="y" value="138" />
+    <option name="x" value="259" />
+    <option name="y" value="79" />
     <option name="width" value="1031" />
     <option name="height" value="819" />
   </component>
@@ -510,7 +174,25 @@
             <path>
               <item name="wechatRecruit" type="b2602c69:ProjectViewProjectNode" />
               <item name="wechatRecruit" type="462c0819:PsiDirectoryNode" />
-              <item name="extract_apps" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechatRecruit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechatRecruit" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="recruit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechatRecruit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechatRecruit" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="recruit" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechatRecruit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechatRecruit" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wechatRecruit" type="b2602c69:ProjectViewProjectNode" />
@@ -535,24 +217,30 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/recruit/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Box\wechatRecruit\templates" />
+      <recent name="D:\Box\wechatRecruit\extract_apps\simpleui\static\admin\simpleui-x\img" />
+      <recent name="D:\myproject\wechatRecruit\apps\recruit\utils" />
+      <recent name="D:\myproject\wechatRecruit" />
+      <recent name="D:\myproject\wechatRecruit\media\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\myproject\wechatRecruit\static\boostrap\css" />
       <recent name="D:\myproject\wechatRecruit\apps\recruit" />
       <recent name="D:\myproject\wechatRecruit\docs" />
       <recent name="D:\myproject\wechatRecruit\apps" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\myproject\wechatRecruit\apps\recruit\utils" />
-      <recent name="D:\myproject\wechatRecruit" />
-      <recent name="D:\myproject\wechatRecruit\media\images" />
-      <recent name="D:\myproject\wechatRecruit\static\boostrap\js" />
-      <recent name="D:\myproject\wechatRecruit\static\boostrap\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -571,26 +259,7 @@
     <configuration name="change_list.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/wechatRecruit/site-packages/constance/templates/admin/constance/change_list.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="celery" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="wechatRecruit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechatRecruit" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\myproject\wechatRecruit\wechatRecruit\celery.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+    <configuration name="result.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/wechatRecruit/templates/result.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="character_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -686,13 +355,14 @@
     <list>
       <item itemvalue="Django server.wechatRecruit" />
       <item itemvalue="JavaScript Debug.change_list.html" />
-      <item itemvalue="Python.celery" />
       <item itemvalue="Python.character_analysis" />
       <item itemvalue="Python.tests" />
       <item itemvalue="Python.tasks" />
+      <item itemvalue="JavaScript Debug.result.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.result.html" />
         <item itemvalue="Python.tests" />
         <item itemvalue="Python.tasks" />
         <item itemvalue="JavaScript Debug.change_list.html" />
@@ -750,70 +420,7 @@
       <workItem from="1602847503719" duration="868000" />
       <workItem from="1603089530757" duration="26750000" />
       <workItem from="1603165342171" duration="17664000" />
-      <workItem from="1603585792612" duration="631000" />
-    </task>
-    <task id="LOCAL-00006" summary="feat: Update wj interface&#10;&#10;- get and list">
-      <created>1600843839426</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1600843839426</updated>
-    </task>
-    <task id="LOCAL-00007" summary="feat: Add answer interface&#10;&#10;- 增加答题保存接口">
-      <created>1600849931352</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1600849931352</updated>
-    </task>
-    <task id="LOCAL-00008" summary="feat: Optimization model">
-      <created>1600850956386</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1600850956386</updated>
-    </task>
-    <task id="LOCAL-00009" summary="feat: fixbug for plugin">
-      <created>1600855006219</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1600855006219</updated>
-    </task>
-    <task id="LOCAL-00010" summary="feat: Optimization model">
-      <created>1600859090561</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1600859090561</updated>
-    </task>
-    <task id="LOCAL-00011" summary="feat: 优化代码结构">
-      <created>1600915820248</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1600915820248</updated>
-    </task>
-    <task id="LOCAL-00012" summary="feat: 序列化答题卡">
-      <created>1600917257951</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1600917257951</updated>
-    </task>
-    <task id="LOCAL-00013" summary="feat: 更改结构">
-      <created>1600921866511</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1600921866511</updated>
-    </task>
-    <task id="LOCAL-00014" summary="feat: 修复xadmin bug">
-      <created>1600922047514</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1600922047514</updated>
+      <workItem from="1603585792612" duration="42443000" />
     </task>
     <task id="LOCAL-00015" summary="feat: add requirements.txt">
       <created>1600927534603</created>
@@ -1095,33 +702,96 @@
       <option name="project" value="LOCAL" />
       <updated>1603189370607</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="feat: 修复选项表导入导出bug">
+      <created>1603589982779</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1603589982780</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat: 修改模型描述">
+      <created>1603591504376</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1603591504376</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat: admin导入导出全局配置和序列BUG修复">
+      <created>1603594688530</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1603594688530</updated>
+    </task>
+    <task id="LOCAL-00058" summary="feat: 修改model">
+      <created>1603601501657</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1603601501657</updated>
+    </task>
+    <task id="LOCAL-00059" summary="feat: update model and admin">
+      <created>1603603055367</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1603603055367</updated>
+    </task>
+    <task id="LOCAL-00060" summary="feat: 重构试卷分析">
+      <created>1603610183493</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1603610183493</updated>
+    </task>
+    <task id="LOCAL-00061" summary="feat: 数据分析展示页面">
+      <created>1603622787738</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1603622787738</updated>
+    </task>
+    <task id="LOCAL-00062" summary="feat: 优化序列化逻辑">
+      <created>1603627127848</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1603627127848</updated>
+    </task>
+    <task id="LOCAL-00063" summary="feat: 修复部分bug,添加文档">
+      <created>1603633741315</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1603633741316</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="631000" />
+    <option name="totallyTimeSpent" value="42443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32962137" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@wechatRecruit" weight="0.32962137" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32962137" />
+      <window_info anchor="bottom" id="Python Console" order="3" weight="0.32962137" />
+      <window_info anchor="bottom" id="Messages" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32962137" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="manage.py@wechatRecruit" order="7" weight="0.32962137" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.43207127" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="Run" order="14" visible="true" weight="0.37527838" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Database" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1137,15 +807,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 增加结果分析" />
-    <MESSAGE value="feat: update0928" />
-    <MESSAGE value="feat: over game" />
-    <MESSAGE value="feat: 增加异步生成报告" />
-    <MESSAGE value="feat: 增加list_editable" />
-    <MESSAGE value="feat: 提交答卷的时候自动分析" />
-    <MESSAGE value="feat: 去除多余的代码" />
-    <MESSAGE value="feat: readonly_fields" />
-    <MESSAGE value="feat: Update requirements.txt" />
     <MESSAGE value="feat: 美化后台" />
     <MESSAGE value="feat: Update&#10;&#10;1. &quot;answer_choice&quot; 类型更改&#10;2. 增加批量导入试题&#10;3. 优化日志，修复乱码" />
     <MESSAGE value="feat: Update and add new function&#10;&#10;1. 修复xadmin.py中&quot;search_fields&quot;中的外键字段&#10;2. 优化分析结构" />
@@ -1162,123 +823,82 @@
     <MESSAGE value="feat: 自动生成接口文档" />
     <MESSAGE value="feat: update" />
     <MESSAGE value="feat: 自定义权限" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 自定义权限" />
+    <MESSAGE value="feat: 修复选项表导入导出bug" />
+    <MESSAGE value="feat: 修改模型描述" />
+    <MESSAGE value="feat: admin导入导出全局配置和序列BUG修复" />
+    <MESSAGE value="feat: 修改model" />
+    <MESSAGE value="feat: update model and admin" />
+    <MESSAGE value="feat: 重构试卷分析" />
+    <MESSAGE value="feat: 数据分析展示页面" />
+    <MESSAGE value="feat: 优化序列化逻辑" />
+    <MESSAGE value="feat: 修复部分bug,添加文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 修复部分bug,添加文档" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Notifications" timestamp="1600738333632">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="178" key="#Notifications/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600738333632" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601456308352">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601456308352" />
-    <state x="1125" y="366" key="#xdebugger.evaluate" timestamp="1603189162998">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1125" y="366" key="#xdebugger.evaluate/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189162998" />
-    <state x="527" y="28" width="1215" height="877" key="CommitChangelistDialog2" timestamp="1603191396065">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="527" y="28" width="1380" height="971" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191396065" />
-    <state x="2474" y="112" width="1215" height="877" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602822503065" />
-    <state x="808" y="443" key="Github.Dialog.Accounts.Choose" timestamp="1602736559140">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="808" y="443" key="Github.Dialog.Accounts.Choose/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602736559140" />
-    <state width="1877" height="236" key="GridCell.Tab.0.bottom" timestamp="1603191225811">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="236" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
-    <state width="1877" height="207" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694633" />
-    <state width="1877" height="236" key="GridCell.Tab.0.center" timestamp="1603191225811">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="236" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
-    <state width="1877" height="207" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694632" />
-    <state width="1877" height="236" key="GridCell.Tab.0.left" timestamp="1603191225811">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="236" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
-    <state width="1877" height="207" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694632" />
-    <state width="1877" height="236" key="GridCell.Tab.0.right" timestamp="1603191225811">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="236" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603191225811" />
-    <state width="1877" height="207" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602836694632" />
-    <state width="1877" height="404" key="GridCell.Tab.1.bottom" timestamp="1603189324189">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934381" />
-    <state width="1877" height="404" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
-    <state width="1877" height="404" key="GridCell.Tab.1.center" timestamp="1603189324189">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934381" />
-    <state width="1877" height="404" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
-    <state width="1877" height="404" key="GridCell.Tab.1.left" timestamp="1603189324189">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934380" />
-    <state width="1877" height="404" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
-    <state width="1877" height="404" key="GridCell.Tab.1.right" timestamp="1603189324189">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603122934381" />
-    <state width="1877" height="404" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189324189" />
-    <state x="965" y="262" key="RollbackChangesDialog" timestamp="1601431051175">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="965" y="262" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431051175" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1603186033010">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603186033010" />
-    <state x="976" y="466" key="VCS.ChangelistChooser" timestamp="1601431030639">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="976" y="466" key="VCS.ChangelistChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601431030639" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603189373827">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603189373827" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602822507139" />
-    <state width="855" height="528" key="XDebugger.FullValuePopup" timestamp="1603188918113">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="855" height="528" key="XDebugger.FullValuePopup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603188918113" />
-    <state x="506" y="225" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1601351025424">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="506" y="225" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601351025423" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600835377252">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600835377252" />
-    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603183725054">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603183725054" />
-    <state x="360" y="41" width="1260" height="880" key="find.popup" timestamp="1603101497296">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="360" y="41" width="1260" height="880" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603101497296" />
-    <state x="660" y="311" key="git4idea.merge.GitPullDialog" timestamp="1600686480425">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="660" y="311" key="git4idea.merge.GitPullDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600686480425" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1603102160761">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="600" height="424" key="javadoc.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603102160761" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601375405645">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601375405645" />
+    <state x="552" y="178" key="#Notifications" />
+    <state x="552" y="178" key="#Notifications/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="1125" y="366" key="#xdebugger.evaluate" />
+    <state x="1125" y="366" key="#xdebugger.evaluate/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="527" y="28" width="1215" height="877" key="CommitChangelistDialog2" />
+    <state x="527" y="28" width="1380" height="971" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2474" y="112" width="1215" height="877" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" />
+    <state x="808" y="443" key="Github.Dialog.Accounts.Choose" />
+    <state x="808" y="443" key="Github.Dialog.Accounts.Choose/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.bottom" />
+    <state width="1877" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.center" />
+    <state width="1877" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="207" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.left" />
+    <state width="1877" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="207" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.right" />
+    <state width="1877" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="236" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.bottom" />
+    <state width="1877" height="296" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.center" />
+    <state width="1877" height="296" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.left" />
+    <state width="1877" height="296" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.right" />
+    <state width="1877" height="296" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="404" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="965" y="262" key="RollbackChangesDialog" />
+    <state x="965" y="262" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="461" y="162" key="SettingsEditor" />
+    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="976" y="466" key="VCS.ChangelistChooser" />
+    <state x="976" y="466" key="VCS.ChangelistChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" />
+    <state width="855" height="528" key="XDebugger.FullValuePopup" />
+    <state width="855" height="528" key="XDebugger.FullValuePopup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="506" y="225" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" />
+    <state x="506" y="225" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" />
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="360" y="41" width="1260" height="880" key="find.popup" />
+    <state x="360" y="41" width="1260" height="880" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="660" y="311" key="git4idea.merge.GitPullDialog" />
+    <state x="660" y="311" key="git4idea.merge.GitPullDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state width="600" height="424" key="javadoc.popup" />
+    <state width="600" height="424" key="javadoc.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1325,7 +945,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/recruit/views/api.py</url>
-          <line>160</line>
+          <line>162</line>
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -1339,29 +959,39 @@
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/recruit/utils/character_analysis.py</url>
-          <line>83</line>
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/recruit/utils/character_analysis.py</url>
-          <line>93</line>
-          <option name="timeStamp" value="178" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/recruit/views/api.py</url>
-          <line>89</line>
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/recruit/utils/permissions.py</url>
           <line>17</line>
           <option name="timeStamp" value="183" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/recruit/views/api.py</url>
-          <line>133</line>
+          <line>135</line>
           <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/utils/character_analysis.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/utils/character_analysis.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/views/analyze.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/utils/actions.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/recruit/views/analyze.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="231" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1387,38 +1017,420 @@
     <SUITE FILE_PATH="coverage/wechatRecruit$tests.coverage" NAME="tests Coverage Results" MODIFIED="1602649311024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/recruit" />
     <SUITE FILE_PATH="coverage/wechatRecruit$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1601367802604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/recruit" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>Options.objects.get(=q_options)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Options.objects.get(title__in=q_options)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj.options.strip().split('|')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj.options.strip()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj.options</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>serializer.data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>[i.id for i in queryset]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>queryset</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>for obj in queryset.all():
+    print(obj.id)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://D:/envs/wechat/Lib/site-packages/rest_framework/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/import_export/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="746" column="8" selection-start-line="746" selection-start-column="8" selection-end-line="746" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/import_export/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/views/decorators/cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/contrib/admin/sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/resource2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="73" column="77" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/views/decorators/csrf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/rest_framework/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/rest_framework/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="504" selection-start-line="504" selection-end-line="504" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/utils/character_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/upload_excel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-534" />
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/constance/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/constance/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="237" column="28" lean-forward="true" selection-start-line="237" selection-start-column="28" selection-end-line="237" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-530">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="21" />
+          <folding>
+            <element signature="e#48#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+          <folding>
+            <element signature="e#48#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/utils/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#48#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/contrib/admin/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="1341" column="12" selection-start-line="1341" selection-start-column="12" selection-end-line="1341" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/celery/app/task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="427" selection-start-line="427" selection-end-line="427" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/celery/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/utils/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+          <folding>
+            <element signature="e#48#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/utils/decorator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/utils/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/result_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#h3#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extract_apps/simpleui/static/admin/simpleui-x/img/logo1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extract_apps/simpleui/static/admin/simpleui-x/img/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requestment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1199" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding>
+            <element signature="e#48#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="833" column="8" selection-start-line="833" selection-start-column="8" selection-end-line="833" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/recruit/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1550">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="176">
+          <caret line="106" column="6" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="6" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requestment.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://D:/envs/wechat/Lib/site-packages/rest_framework/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="1904" selection-start-line="1904" selection-end-line="1904" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/rest_framework/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="677" selection-start-line="677" selection-end-line="677" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/views/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechatRecruit/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-364" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/views/analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/shortcuts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#48#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/api_documentation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/envs/wechat/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/utils/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wechatRecruit/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="361">
+          <caret line="362" column="41" selection-start-line="362" selection-start-column="33" selection-end-line="362" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.conf">
+    <entry file="file://$PROJECT_DIR$/apps/recruit/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="311">
+          <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+          <folding>
+            <element signature="e#48#76#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/templates/api_documentation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="-75" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/recruit/views/docs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/background_to_help_document.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
