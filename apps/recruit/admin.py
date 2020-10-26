@@ -2,17 +2,17 @@
 # -*- encoding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 
-from django.contrib import admin
 from constance import config
+from django.contrib import admin
 from django.utils.safestring import mark_safe
 from import_export.admin import ImportExportActionModelAdmin
 
-from recruit.utils.actions import force_analysis
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, \
-    UploadFile, RespondentToken, Position
+    RespondentToken, Position
 from recruit.resources import WJResource, QuestionResource, OptionsResource, AnswerResource, \
     AnimalResource, CharacterResource, AnalysisDataResource, ReportResource, PositionDataResource, \
     RespondentsResource
+from recruit.utils.actions import force_analysis
 
 admin.site.site_header = '瑞云问卷调查后台'
 admin.site.site_title = '瑞云问卷调查'
@@ -60,13 +60,6 @@ class AnswerAdmin(ImportExportActionModelAdmin):
     actions = [force_analysis]
 
     force_analysis.short_description = '手动更新'
-
-    # def analyze(self, obj):
-    #     url = "{ip}/recruit/report/{id}/".format(ip=config.URL, id=str(obj.id))
-    #     return mark_safe('<a href={url}>手动分析</a>'.format(url=url))
-    #
-    # analyze.short_description = "手动分析"
-    # analyze.allow_tags = '手动分析'
 
 
 class AnimalAdmin(ImportExportActionModelAdmin):

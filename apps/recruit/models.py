@@ -2,9 +2,9 @@ import binascii
 import os
 
 from django.db import models
-from django.utils.html import format_html
 from django.utils.encoding import python_2_unicode_compatible
 from rest_framework.authtoken.models import Token
+
 
 # Create your models here.
 

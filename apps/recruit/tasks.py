@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-import time
 import json
 import logging
 import random
 import traceback
+
 from celery import shared_task
 
-from recruit.utils.character_analysis import AnalyzeCharacter
 from recruit import models
+from recruit.utils.character_analysis import AnalyzeCharacter
 
 logger = logging.getLogger('recruit')
 
@@ -35,17 +35,6 @@ def async_analysis(pk):
     if analyze:
         for item in analyze.values('content', 'tags').all():
             contrast[item['content']] = item['tags']
-    # if analyze:
-    #     analyze_data = analyze.values('content', 'tags')
-    #     for per in analyze_data:
-    #         animal_name = per['tags']
-    #         content = per['content']
-    #         name = models.Animal.objects.get(name=animal_name, wj=analyze.wj_name).name
-    #         val = contrast.get(content)
-    #         if val:
-    #             val.append(name)
-    #         else:
-    #             contrast[content] = [name]
 
     for c, t in contrast.items():
         if t == ''.join(result.keys()):
@@ -72,9 +61,9 @@ def async_analysis(pk):
     logger.info(anaylze_result)
 
     if flag:
-        logger.info("强制更新:===>%s SUCESSS" % pk)
+        logger.info("【分析创建成功】答卷ID:=>%s" % pk)
     else:
-        logger.info("强制更新:===>%s Failure" % pk)
+        logger.info("【分析更新成功】答卷ID:=>%s" % pk)
     logger.info("分析结果完成.....")
 
     return flag
