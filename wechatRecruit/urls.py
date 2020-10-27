@@ -25,6 +25,7 @@ from wechatRecruit import settings
 urlpatterns = [
     path(r'admin/', admin.site.urls),
     path('captcha/', include('captcha.urls')),
+    path('admin/doc/', include('django.contrib.admindocs.urls')),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     # drf自带的token认证模式
     url(r'^api-token-auth/', views.obtain_auth_token),
