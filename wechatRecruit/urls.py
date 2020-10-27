@@ -13,19 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include, re_path
-from django.conf.urls import url
-from rest_framework.authtoken import views
-from wechatRecruit import settings
 from django.views.static import serve
+from rest_framework.authtoken import views
 from rest_framework_jwt.views import obtain_jwt_token
 
+from wechatRecruit import settings
 
 urlpatterns = [
-    # path('xadmin/database/constance/', admin.site.urls),
-    # path('xadmin/', xadmin.site.urls),
     path(r'admin/', admin.site.urls),
+    path('captcha/', include('captcha.urls')),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     # drf自带的token认证模式
     url(r'^api-token-auth/', views.obtain_auth_token),

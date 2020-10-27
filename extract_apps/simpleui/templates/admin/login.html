@@ -36,6 +36,23 @@
                 padding: 20px 0;
                 position: relative;
             }
+        #id_captcha_1{
+            position: absolute;
+            margin:0 0 0 8px; /*上右下左*/
+            width: 265px;
+            font-size: inherit;
+            -webkit-appearance: none;
+            border-radius: 4px;
+            border: 1px solid #DCDFE6;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            outline: 0;
+            padding: 0 15px;
+            transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+            text-align: center;
+        }
         </style>
     {% endblock %}
 
@@ -91,6 +108,11 @@
                           @keyup.enter.native="login()"
                           placeholder="{% trans 'password' %}" show-password></el-input>
             </div>
+            <!-- 显示验证码 -->
+            <div>
+                {{ form.captcha }}
+            </div>
+
             <div class="simpleui-input-inline login-btn">
                 <el-button :icon="loading?'el-icon-loading':''" @click="login()"
                            type="primary">{% trans 'Log in' %}</el-button>

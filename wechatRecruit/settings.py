@@ -61,6 +61,7 @@ AUTH_USER_MODEL = 'auth.User'
 INSTALLED_APPS = [
     'simpleui',
     'import_export',
+    'multi_captcha_admin', #  登陆验证码
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -367,3 +368,16 @@ SIMPLEUI_CONFIG = {
             },
         ]
 }
+
+
+# 验证码配置
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
+# 验证码图片大小
+CAPTCHA_IMAGE_SIZE = (78, 35)
+# 字符个数
+CAPTCHA_LENGTH = 4
+# 超时
+CAPTCHA_TIMEOUT = 1
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
