@@ -33,7 +33,7 @@ class RespondentsAdmin(ImportExportActionModelAdmin):
 class WjAdmin(ImportExportActionModelAdmin):
     resource_class = WJResource
     list_display = [obj.name for obj in Wj._meta.fields]
-    search_fields = ['title', 'wj_alias', 'desc', 'intention_position']
+    search_fields = ['title', 'wj_alias', 'desc']
     list_filter = ['status', 'create_by', 'type', 'max_quiz_time']
 
 
@@ -41,7 +41,7 @@ class QuestionAdmin(ImportExportActionModelAdmin):
     ordering = ['qid']
     resource_class = QuestionResource
     list_display = [obj.name for obj in Question._meta.fields]
-    search_fields = ['type', 'wj_name', 'animal_name', 'create_by']
+    search_fields = ['title']
     list_filter = ['type', 'wj_name', 'animal_name', 'create_by']
 
 
@@ -54,18 +54,20 @@ class AnswerAdmin(ImportExportActionModelAdmin):
     refresh_times = [1, 30, 60, 300]
     resource_class = AnswerResource
     list_display = [obj.name for obj in Answer._meta.fields]
-    search_fields = ['wj', 'submit_ip', 'submit_user', 'use_time']
+    search_fields = ['submit_ip', 'use_time']
     list_filter = ['wj', 'submit_user']
     date_hierarchy = 'create_time'
     actions = [force_analysis]
 
     force_analysis.short_description = '手动更新'
+    force_analysis.type = 'warning'
+    force_analysis.confirm = '确定？一定？以及肯定？'
 
 
 class AnimalAdmin(ImportExportActionModelAdmin):
     resource_class = AnimalResource
     list_display = [obj.name for obj in Animal._meta.fields]
-    search_fields = ['name', 'wj', 'feature']
+    search_fields = ['feature', 'name']
     list_filter = ['name', 'wj']
 
 
