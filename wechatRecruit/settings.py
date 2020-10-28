@@ -61,6 +61,8 @@ AUTH_USER_MODEL = 'auth.User'
 INSTALLED_APPS = [
     'simpleui',
     'import_export',
+    'django.contrib.admindocs',
+    'multi_captcha_admin', #  登陆验证码
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -320,7 +322,7 @@ RESPONDENT_TOKEN_EXPIRED = 3600 * 7
 # 在导入数据时使用数据库事务，默认False
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 # 关闭LOADING
-SIMPLEUI_LOADING = False
+SIMPLEUI_LOADING = True
 # 加载本地静态资源
 SIMPLEUI_STATIC_OFFLINE = True
 # 不收集分析信息
@@ -336,6 +338,8 @@ SIMPLEUI_INDEX = 'http://47.113.120.14/'
 # 自定义SIMPLEUI的Logo
 # SIMPLEUI_LOGO = "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1313600584,226648524&fm=26&gp=0.jpg"
 
+SIMPLEUI_DEFAULT_ICON = False
+
 import time
 
 SIMPLEUI_CONFIG = {
@@ -345,25 +349,38 @@ SIMPLEUI_CONFIG = {
         [
             {
                 'name': '用户答题界面',
-                'icon': 'fas fa-code',
+                'icon': 'fab fa-internet-explorer',
                 'url': 'http://47.113.120.14'
             },
             {
                 'app': 'recruit',
                 'name': '帮助',
-                'icon': 'fas fa-code',
+                'icon': 'fas fa-question-circle',
                 'models': [
                     {
                         'name': '接口文档',
-                        'icon': 'fas fa-code',
+                        'icon': 'fab fa-usb',
                         'url': '/recruit/api_documentation/'
                     },
                     {
                         'name': '后台使用文档',
-                        'icon': 'fas fa-code',
+                        'icon': 'fab fa-audible',
                         'url': '/recruit/admin-help-docs/'
                     },
                 ]
             },
         ]
 }
+
+
+# 验证码配置
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
+# 验证码图片大小
+CAPTCHA_IMAGE_SIZE = (78, 35)
+# 字符个数
+CAPTCHA_LENGTH = 4
+# 超时
+CAPTCHA_TIMEOUT = 1
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'

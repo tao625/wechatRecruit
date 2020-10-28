@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 from django.urls import path
+
 from recruit.views import api, analyze, files, docs
-from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path(r'wj/', api.WjView.as_view({
