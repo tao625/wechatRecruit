@@ -4,8 +4,8 @@ from __future__ import absolute_import, unicode_literals
 
 from constance import config
 from django.contrib import admin
+from django.contrib.admin.models import LogEntry
 from django.utils.safestring import mark_safe
-from django.core.paginator import Paginator
 from import_export.admin import ImportExportActionModelAdmin
 
 from recruit.models import Respondents, Wj, Question, Options, Answer, Animal, Character, AnalysisData, Report, \
@@ -18,6 +18,8 @@ from recruit.utils.actions import force_analysis
 admin.site.site_header = '瑞云调查问卷后台'
 admin.site.site_title = '瑞云调查问卷'
 
+
+# @admin.register(LogEntry)
 class CommonSettingAdmin(admin.ModelAdmin):
     list_per_page = 20
 
@@ -107,6 +109,13 @@ class ReportAdmin(ImportExportActionModelAdmin, CommonSettingAdmin):
 class PositionAdmin(ImportExportActionModelAdmin, CommonSettingAdmin):
     resource_class = PositionDataResource
     list_display = [obj.name for obj in Position._meta.fields]
+    skip_admin_log = True
+
+
+@admin.register(LogEntry)
+class LogEntryAdmin(admin.ModelAdmin):
+    list_per_page = 20
+    list_display = ['object_repr', 'action_flag', 'user', 'change_message', 'action_time']
 
 
 admin.site.register(Respondents, RespondentsAdmin)
