@@ -36,8 +36,8 @@ class AnalyzeCharacter(object):
             charater = [data[0]]
         elif data[1][1] - data[2][1] > config.COMMON:
             charater = [data[0], data[1]]
-        elif data[0][1] < config.BALANCE:
-            charater = 0
+        elif data[0][1] - data[-1][1] <= config.BALANCE:
+            charater = data
 
         return dict(charater)
 

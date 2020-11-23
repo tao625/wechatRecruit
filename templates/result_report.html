@@ -31,6 +31,7 @@
         <h3>姓名: {{ anaylze_result.respondenter_name }}</h3>
         <h3>试卷: {{ anaylze_result.wj_name }}</h3>
         <h3>答题耗时: {% widthratio anaylze_result.time_consum 60 1 %} 分钟</h3>
+        <h3>得分: {{ anaylze_result.total_scores }} </h3>
         <br>
         <h3 style="color: #0000cc">分析结果:</h3>
         {% for k, v in anaylze_result.final_analysis_data.features.items %}

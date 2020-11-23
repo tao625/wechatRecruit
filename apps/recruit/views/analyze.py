@@ -16,7 +16,7 @@ class AnalysisCharacterView(GenericViewSet):
 
     @method_decorator(request_log(level='DEBUG'))
     def post(self, request, **kwargs):
-        tasks.async_analysis(pk=kwargs["pk"])
+        tasks.async_analysis.delay(pk=kwargs["pk"])
         return Response("测试 async_analysis")
 
     @method_decorator(request_log(level='DEBUG'))
@@ -44,6 +44,9 @@ class AnalysisCharacterView(GenericViewSet):
 
 
 class ResultView(GenericViewSet):
+    """查询所欲分析结果，暂时不使用.
+
+    """
 
     @method_decorator(request_log(level='DEBUG'))
     def get(self, request):
