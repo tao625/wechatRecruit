@@ -20,4 +20,5 @@ if __name__ == '__main__':
     # print(obj.execute(pk=26))
     # print(obj.execute(pk=27))
     # tasks.async_analysis(29)
-    upload.get_data(r"D:\test\试题.xls")
+    # upload.get_data(r"D:\test\试题.xls")
+    tasks.check_token()

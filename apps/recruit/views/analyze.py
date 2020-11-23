@@ -2,6 +2,8 @@
 # -*- encoding: utf-8 -*-
 import json
 from django.utils.decorators import method_decorator
+from rest_framework.permissions import IsAuthenticated
+
 from recruit import serializers, models
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.response import Response
@@ -13,11 +15,12 @@ from recruit import tasks
 
 class AnalysisCharacterView(GenericViewSet):
     serializer_class = serializers.ReportSerializer
+    # permission_classes = (IsAuthenticated,)
 
     @method_decorator(request_log(level='DEBUG'))
     def post(self, request, **kwargs):
-        tasks.async_analysis(pk=kwargs["pk"])
-        return Response("测试 async_analysis")
+        tasks.async_analysis.delay(pk=kwargs["pk"])
+        return Response("async_analysis......")
 
     @method_decorator(request_log(level='DEBUG'))
     def get(self, request, **kwargs):
@@ -44,6 +47,9 @@ class AnalysisCharacterView(GenericViewSet):
 
 
 class ResultView(GenericViewSet):
+    """查询所欲分析结果，暂时不使用.
+
+    """
 
     @method_decorator(request_log(level='DEBUG'))
     def get(self, request):

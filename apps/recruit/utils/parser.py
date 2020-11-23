@@ -38,7 +38,7 @@ def string2time_stamp(strValue):
         timeStamp = float(str(timeStamp) + str("%06d" % d.microsecond)) / 1000000
         return timeStamp
     except ValueError as e:
-        d = datetime.datetime.strptime(str2, "%Y-%m-%d %H:%M:%S")
+        d = datetime.datetime.strptime(strValue, "%Y-%m-%d %H:%M:%S")
         t = d.timetuple()
         timeStamp = int(time.mktime(t))
         timeStamp = float(str(timeStamp) + str("%06d" % d.microsecond)) / 1000000
