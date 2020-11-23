@@ -4,11 +4,11 @@ import datetime
 from rest_framework.exceptions import AuthenticationFailed
 
 from . import logger
+from constance import config
 from recruit.utils import parser
 from rest_framework import permissions
 from django.contrib.auth import get_user_model
 from recruit.models import RespondentToken, Respondents
-from wechatRecruit.settings import RESPONDENT_TOKEN_EXPIRED
 UserModel = get_user_model()
 
 
@@ -35,7 +35,7 @@ class CheckTokenPermission(permissions.BasePermission):
             token_created_time = int(parser.string2time_stamp(str(token_obj.create_time)))
             now = int(parser.string2time_stamp(str(datetime.datetime.now())))
             # 满足条件的话，就表示token已失效，提示用户重新登录刷新token.
-            if now - token_created_time > RESPONDENT_TOKEN_EXPIRED:
+            if now - token_created_time > config.RESPONDENT_TOKEN_EXPIRED:
                 token_obj.status = True
                 token_obj.save()
                 raise AuthenticationFailed('Token has expired')

@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
+import datetime
 import json
 import logging
 import random
 import traceback
 
 from celery import shared_task
-
+from constance import config
 from recruit import models
+from recruit.utils import parser
 from recruit.utils.character_analysis import AnalyzeCharacter
 
 logger = logging.getLogger('recruit')
@@ -67,3 +69,13 @@ def async_analysis(pk):
     logger.info("分析结果完成.....")
 
     return flag
+
+@shared_task
+def check_token():
+    tokens = models.RespondentToken.objects.filter(status=False)
+    for token_obj in tokens:
+        token_created_time = int(parser.string2time_stamp(str(token_obj.create_time)))
+        now = int(parser.string2time_stamp(str(datetime.datetime.now())))
+        if now - token_created_time > config.RESPONDENT_TOKEN_EXPIRED:
+            token_obj.status = True
+            token_obj.save()

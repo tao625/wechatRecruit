@@ -22,7 +22,8 @@ env = 'dev'
 # ***************configThis********************
 
 cf = configparser.ConfigParser()
-cf.read(r"./config.conf")
+# cf.read(r"./config.conf")
+cf.read(r"D:\myproject\wechatRecruit\config.conf")
 
 database_name = cf.get(env + '-config', 'NAME')
 database_user = cf.get(env + '-config', 'USER')
@@ -289,7 +290,8 @@ CONSTANCE_CONFIG = OrderedDict({
     'BALANCE': (3, '各项分数小于此值是面面俱到性格', int),
     'COMMON': (3, '某两项分均超过此值, 大众性格', int),
     'PROMINENT': (5, '某一项分高于其它四项中此值以上，性格突出'),
-    'URL': ('http://172.16.4.110:8000', '分析结果的跳转地址')
+    'URL': ('http://172.16.4.110:8000', '分析结果的跳转地址'),
+    'RESPONDENT_TOKEN_EXPIRED': (3600*7, 'Token过期时间(秒)', int)
 })
 
 djcelery.setup_loader()
@@ -316,8 +318,6 @@ EMAIL_HOST_PASSWORD = email_host_password
 EMAIL_USE_TLS = email_use_tls
 EMAIL_FROM = email_from
 
-# RespondentToken 过期时间
-RESPONDENT_TOKEN_EXPIRED = 3600 * 7
 
 # 在导入数据时使用数据库事务，默认False
 IMPORT_EXPORT_USE_TRANSACTIONS = True
