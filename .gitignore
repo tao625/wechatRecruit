@@ -207,6 +207,6 @@ dmypy.json
 !/logs/
 .idea/encodings.xml
 .idea/inspectionProfiles/
-.idea/modules.xml
 .idea/vcs.xml
 apps/recruit/migrations/0005_auto_20201026_1437.py
+!/.idea/
