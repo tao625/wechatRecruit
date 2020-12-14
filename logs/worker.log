@@ -1,9 +1,0 @@
-celery beat v3.1.26.post2 (Cipater) is starting.
-__    -    ... __   -        _
-Configuration ->
-    . broker -> redis://localhost:6379//
-    . loader -> djcelery.loaders.DjangoLoader
-    . scheduler -> djcelery.schedulers.DatabaseScheduler
-
-    . logfile -> [stderr]@%INFO
-    . maxinterval -> now (0s)
