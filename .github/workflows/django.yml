@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: centos7
+    runs-on: centos
     strategy:
       max-parallel: 4
       matrix:
